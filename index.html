@@ -212,7 +212,7 @@ tempoMinut = tempoMinut%60;
 else{
 tempoMinut = tempoMinut;
 }
-var tempoSeg = (jsonResponse.routes[0].duration%60);
+var tempoSeg = Math.floor(jsonResponse.routes[0].duration%60);
 
 // Adiciona os totais na caixa de informação
 document.getElementById('calculated-line').innerHTML = '<br>Distância: ' + distance.toFixed(2) + ' km<br>Duração: ' 
