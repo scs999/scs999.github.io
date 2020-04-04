@@ -1,0 +1,22 @@
+var pontos ={
+"type": "FeatureCollection",
+"name": "earthquakes",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4674" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Nome": "Ponto01", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2659923914, -22.8573743649 ] } },
+{ "type": "Feature", "properties": { "id": 2, "Nome": "Ponto02", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2661897138, -22.8563353464 ] } },
+{ "type": "Feature", "properties": { "id": 3, "Nome": "Ponto03", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2649183941, -22.8546651076 ] } },
+{ "type": "Feature", "properties": { "id": 4, "Nome": "Ponto04", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2631143041, -22.85594831 ] } },
+{ "type": "Feature", "properties": { "id": 5, "Nome": "Ponto05", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2658542658, -22.8555326992 ] } },
+{ "type": "Feature", "properties": { "id": 6, "Nome": "Ponto06", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2642474981, -22.8552989176 ] } },
+{ "type": "Feature", "properties": { "id": 7, "Nome": "Ponto07", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2648056385, -22.856789918 ] } },
+{ "type": "Feature", "properties": { "id": 8, "Nome": "Ponto08", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2626463683, -22.8547690111 ] } },
+{ "type": "Feature", "properties": { "id": 9, "Nome": "Ponto09", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2620431257, -22.8557924561 ] } },
+{ "type": "Feature", "properties": { "id": 10, "Nome": "Ponto10", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2673313645, -22.8536104828 ] } },
+{ "type": "Feature", "properties": { "id": 11, "Nome": "Ponto11", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2644899227, -22.8538702434 ] } },
+{ "type": "Feature", "properties": { "id": 12, "Nome": "Ponto12", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2647718118, -22.8526961217 ] } },
+{ "type": "Feature", "properties": { "id": 13, "Nome": "Ponto13", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2690565255, -22.8534857976 ] } },
+{ "type": "Feature", "properties": { "id": 14, "Nome": "Ponto14", "Score": 2.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2640050735, -22.8521973766 ] } },
+{ "type": "Feature", "properties": { "id": 15, "Nome": "Ponto15", "Score": 4.0 }, "geometry": { "type": "Point", "coordinates": [ -43.2675681513, -22.855418406 ] } }
+]
+}
