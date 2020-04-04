@@ -3,7 +3,6 @@ var dados_cad = {
 "name": "dados_cad",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4674" } },
 "features": [
-
 { "type": "Feature", "properties": { "id": 109, "Total": null, "icon": "circle", "Nome": "Auto Escola Pinheiro", "Endereco": "Rua Uranos", "tipo": "Serviços" }, "geometry": { "type": "Point", "coordinates": [ -43.260143323074843, -22.855385599979371 ] } },
 { "type": "Feature", "properties": { "id": 990, "Total": null, "icon": "bank", "Nome": "Banco do Brasil", "Endereco": "Rua Prof.Lace", "tipo": "Banco" }, "geometry": { "type": "Point", "coordinates": [ -43.261118117382246, -22.855036943068406 ] } },
 { "type": "Feature", "properties": { "id": 116, "Total": null, "icon": "restaurant", "Nome": "Bobs", "Endereco": "Rua Euclides Farias", "tipo": "Refeição" }, "geometry": { "type": "Point", "coordinates": [ -43.26337080282952, -22.85516843174446 ] } },
@@ -55,6 +54,5 @@ var dados_cad = {
 { "type": "Feature", "properties": { "id": 115, "Total": null, "icon": "square", "Nome": "Sesc", "Endereco": "Rua Euclides Farias", "tipo": "Social" }, "geometry": { "type": "Point", "coordinates": [ -43.264008769292559, -22.855021180182927 ] } },
 { "type": "Feature", "properties": { "id": 107, "Total": null, "icon": "square", "Nome": "Social Ramos Clube", "Endereco": "Rua Aureliano Lessa", "tipo": "Social" }, "geometry": { "type": "Point", "coordinates": [ -43.261287953600942, -22.856753518767515 ] } },
 { "type": "Feature", "properties": { "id": 120, "Total": null, "icon": "restaurant", "Nome": "Subway", "Endereco": "Rua Euclides Farias", "tipo": "Refeição" }, "geometry": { "type": "Point", "coordinates": [ -43.261510314586147, -22.854272311410323 ] } },
-
 ]
 }
