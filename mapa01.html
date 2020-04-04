@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador UBER</title>
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.css' type='text/css' />
+
+	<script src='bairros_rj.geojson'></script>
+	<script src='earthquakes.geojson'></script>
+	<script src='limite_ramos.geojson'></script>
+
+
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+.info-box {
+height: 300px;
+width: 150px;
+position: absolute;
+top: 20px;
+left: 10px;
+background-color: rgba(255, 255, 255, .9);
+padding: 15px;
+text-align: left;
+font-family: 'Arial';
+margin: 0;
+font-size: 13px;
+}
+
+#calculated-line {
+border:1px solid black;
+height: 120px;
+width: 150px;
+position: absolute;
+top: 30px;
+left: 150px;
+background-color:#F0F8FF;
+padding: 5px;
+text-align: left;
+margin: 5px 10px;
+color:#2F4F4F;
+font:600 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+}
+
+#calculated-line:before {
+content: "RESULTADO";
+
+}
+
+.draw {
+position:fixed;
+z-index:1;
+width:5%;
+left:85%;
+margin-left:-5%;
+top:10px;
+}
+
+.draw:after {
+//content: "Desenho";
+}
+
+.geocoder {
+position:fixed;
+z-index:1;
+width:50%;
+left:40%;
+margin-left:-15%;
+top:10px;
+}
+
+</style>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.css' type='text/css'/>
+<body>
+<div id='map'></div>
+<div class='info-box'>
+<p>  Utilize a ferramenta de desenho para adicionar pontos e traçar a rota(25 pontos max). 
+Para finalizar a rota clique novamente no ultimo ponto.  
+Pode-se mover o Ponto/Linha, com um clique no mesmo.</p>
+<div id='calculated-line'></div>
+<div id='draw' class='draw'>Desenhar Rota</div>
+<div id='geocoder' class='geocoder'></div>
+</div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+style: 'mapbox://styles/mapbox/streets-v9?optimize=true', //hosted style id
+center: [-43.265983,-22.855412], // starting position
+zoom: 13, // starting zoom
+minZoom: 9 // keep it local
+});
+
+            //Add Navigation controls to the map to the top-right corner of the map
+            var nav = new mapboxgl.NavigationControl();
+            map.addControl(nav, 'top-right');
+
+
+            //Add a 'full screen' button to the map
+            map.addControl(new mapboxgl.FullscreenControl());
+            
+            //Add a Scale to the map
+            map.addControl(new mapboxgl.ScaleControl({
+                maxWidth: 100,
+                unit: 'metric' //imperial for miles
+            }));
+
+            //Add Geolocation control to the map (will only render when page is opened over HTTPS)
+            map.addControl(new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true
+            }));
+
+var draw = new MapboxDraw({
+displayControlsDefault: false,
+controls: {
+line_string: true,
+trash: true
+},
+styles: [
+// ACTIVE (being drawn)
+// line stroke
+{
+"id": "gl-draw-line",
+"type": "line",
+"filter": ["all", ["==", "$type", "LineString"], ["!=", "mode", "static"]],
+"layout": {
+"line-cap": "round",
+"line-join": "round"
+},
+"paint": {
+"line-color": "#3b9ddd",
+"line-dasharray": [0.2, 2],
+"line-width": 2,
+"line-opacity": 0.7
+}
+},
+// vertex point halos
+{
+"id": "gl-draw-polygon-and-line-vertex-halo-active",
+"type": "circle",
+"filter": ["all", ["==", "meta", "vertex"], ["==", "$type", "Point"], ["!=", "mode", "static"]],
+"paint": {
+"circle-radius": 10,
+"circle-color": "#FFF"
+}
+},
+// vertex points
+{
+"id": "gl-draw-polygon-and-line-vertex-active",
+"type": "circle",
+"filter": ["all", ["==", "meta", "vertex"], ["==", "$type", "Point"], ["!=", "mode", "static"]],
+"paint": {
+"circle-radius": 6,
+"circle-color": "#f30",
+}
+},
+]
+});
+
+// add the draw tool to the map
+//map.addControl(draw);
+
+// use the coordinates you just drew to make your directions request
+function updateRoute() {
+removeRoute(); // overwrite any existing layers
+var data = draw.getAll();
+var answer = document.getElementById('calculated-line');
+var lastFeature = data.features.length - 1;
+var coords = data.features[lastFeature].geometry.coordinates;
+var newCoords = coords.join(';')
+getMatch(newCoords);
+}
+
+// make a directions request
+function getMatch(e) {
+// https://www.mapbox.com/api-documentation/#directions
+var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + e +'?geometries=geojson&steps=true&&access_token=' + mapboxgl.accessToken;
+
+var req = new XMLHttpRequest();
+req.responseType = 'json';
+req.open('GET', url, true);
+req.onload  = function() {
+var jsonResponse = req.response;
+var distance = jsonResponse.routes[0].distance*0.001; // convert to km
+// var duration = jsonResponse.routes[0].duration/60; // convert to minutes
+var tempoHora = Math.floor(jsonResponse.routes[0].duration/3600);
+var tempoMinut = Math.floor(jsonResponse.routes[0].duration/60);
+if (tempoMinut > 59){
+tempoMinut = tempoMinut%60;
+}
+else{
+tempoMinut = tempoMinut;
+}
+var tempoSeg = Math.floor(jsonResponse.routes[0].duration%60);
+
+// Adiciona os totais na caixa de informação
+document.getElementById('calculated-line').innerHTML = '<br>Distância: ' + distance.toFixed(2) + ' km<br>Duração: ' 
++ tempoHora + ':' + tempoMinut + ':'+ tempoSeg + '<br>' 
++ 'Valor Total:R$  ' + Math.abs(jsonResponse.routes[0].distance*0.00225).toFixed(2);
+var coords = jsonResponse.routes[0].geometry;
+// add the route to the map
+addRoute(coords);
+};
+req.send();
+}
+
+// adds the route as a layer on the map
+function addRoute (coords) {
+// check if the route is already loaded
+if (map.getSource('route')) {
+map.removeLayer('route')
+map.removeSource('route')
+} else{
+map.addLayer({
+"id": "route",
+"type": "line",
+"source": {
+"type": "geojson",
+"data": {
+"type": "Feature",
+"properties": {},
+"geometry": coords
+}
+},
+"layout": {
+"line-join": "round",
+"line-cap": "round"
+},
+"paint": {
+"line-color": "#808080",
+"line-width": 6,
+"line-opacity": 0.8
+}
+
+});
+};
+}
+
+// remove the layer if it exists
+function removeRoute () {
+if (map.getSource('route')) {
+map.removeLayer('route');
+map.removeSource('route');
+document.getElementById('calculated-line').innerHTML = '';
+} else  {
+return;
+}
+}
+
+// add create, update, or delete actions
+map.on('draw.create', updateRoute);
+map.on('draw.update', updateRoute);
+map.on('draw.delete', removeRoute);
+
+var geocoder = new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+flyTo: {
+bearing: 280,
+pitch: 200,
+
+// These options control the flight curve, making it move
+// slowly and zoom out almost completely before starting
+// to pan.
+speed: 0.5, // make the flying slow
+curve: 1, // change the speed at which it zooms out
+zoom:18,
+// This can be any easing function: it takes a number between
+// 0 and 1 and returns another number between 0 and 1.
+easing: function (t) { return t; }
+},
+mapboxgl: mapboxgl
+});
+
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+document.getElementById('draw').appendChild(draw.onAdd(map));
+
+//ADICIONAR CLUSTERS
+
+// filters for classifying earthquakes into five categories based on Scorenitude
+var Score1 = ["<", ["get", "Score"], 2];
+var Score2 = ["all", [">=", ["get", "Score"], 2], ["<", ["get", "Score"], 3]];
+var Score3 = ["all", [">=", ["get", "Score"], 3], ["<", ["get", "Score"], 4]];
+var Score4 = ["all", [">=", ["get", "Score"], 4], ["<", ["get", "Score"], 5]];
+var Score5 = [">=", ["get", "Score"], 5];
+
+// colors to use for the categories
+var colors = ['#228B22', '#D2691E', '#FF7F50', '#C0C0C0', '#FFFAF0'];
+
+map.on('load', function () {
+    // add a clustered GeoJSON source for a sample set of earthquakes
+    map.addSource('earthquakes', {
+        "type": "geojson",
+        "data": pontos,
+        "cluster": true,
+        "clusterRadius": 30,
+        "clusterProperties": { // keep separate counts for each Scorenitude category in a cluster
+            "Score1": ["+", ["case", Score1, 1, 0]],
+            "Score2": ["+", ["case", Score2, 1, 0]],
+            "Score3": ["+", ["case", Score3, 1, 0]],
+            "Score4": ["+", ["case", Score4, 1, 0]],
+            "Score5": ["+", ["case", Score5, 1, 0]]
+        }
+    });
+    // circle and symbol layers for rendering individual earthquakes (unclustered points)
+    map.addLayer({
+        "id": "earthquake_circle",
+        "type": "circle",
+        "source": "earthquakes",
+        "filter": ["!=", "cluster", true],
+        "paint": {
+            "circle-color": ["case",
+                Score1, colors[4],
+                Score2, colors[3],
+                Score3, colors[2],
+                Score4, colors[1], colors[0]],
+            "circle-opacity": 0.5,
+            "circle-radius": 10
+        }
+    });
+    map.addLayer({
+        "id": "earthquake_label",
+        "type": "symbol",
+        "source": "earthquakes",
+        "filter": ["!=", "cluster", true],
+        "layout": {
+            "text-field": ["number-format", ["get", "Score"], {"min-fraction-digits": 1, "max-fraction-digits": 1}],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-size": 10
+        },
+        "paint": {
+            "text-color": ["case", ["<", ["get", "Score"], 3], "red", "black"]
+        }
+    });
+
+    // objects for caching and keeping track of HTML marker objects (for performance)
+    var markers = {};
+    var markersOnScreen = {};
+
+    function updateMarkers() {
+        var newMarkers = {};
+        var features = map.querySourceFeatures('earthquakes');
+
+        // for every cluster on the screen, create an HTML marker for it (if we didn't yet),
+        // and add it to the map if it's not there already
+        for (var i = 0; i < features.length; i++) {
+            var coords = features[i].geometry.coordinates;
+            var props = features[i].properties;
+            if (!props.cluster) continue;
+            var id = props.cluster_id;
+
+            var marker = markers[id];
+            if (!marker) {
+                var el = createDonutChart(props);
+                marker = markers[id] = new mapboxgl.Marker({element: el}).setLngLat(coords);
+            }
+            newMarkers[id] = marker;
+
+            if (!markersOnScreen[id])
+                marker.addTo(map);
+        }
+        // for every marker we've added previously, remove those that are no longer visible
+        for (id in markersOnScreen) {
+            if (!newMarkers[id])
+                markersOnScreen[id].remove();
+        }
+        markersOnScreen = newMarkers;
+    }
+
+    // after the GeoJSON data is loaded, update markers on the screen and do so on every map move/moveend
+    map.on('data', function (e) {
+        if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) return;
+
+        map.on('move', updateMarkers);
+        map.on('moveend', updateMarkers);
+        updateMarkers();
+    });
+});
+
+// code for creating an SVG donut chart from feature properties
+function createDonutChart(props) {
+    var offsets = [];
+    var counts = [props.Score1, props.Score2, props.Score3, props.Score4, props.Score5];
+    var total = 0;
+    for (var i = 0; i < counts.length; i++) {
+        offsets.push(total);
+        total += counts[i];
+    }
+    var fontSize = total >= 1000 ? 22 : total >= 100 ? 20 : total >= 10 ? 18 : 16;
+    var r = total >= 1000 ? 50 : total >= 100 ? 32 : total >= 10 ? 24 : 18;
+    var r0 = Math.round(r * 0.6);
+    var w = r * 2;
+
+    var html = '<svg width="' + w + '" height="' + w + '" viewbox="0 0 ' + w + ' ' + w +
+        '" text-anchor="middle" style="font: ' + fontSize + 'px sans-serif">';
+
+    for (i = 0; i < counts.length; i++) {
+        html += donutSegment(offsets[i] / total, (offsets[i] + counts[i]) / total, r, r0, colors[i]);
+    }
+    html += '<circle cx="' + r + '" cy="' + r + '" r="' + r0 +
+        '" fill="white" /><text dominant-baseline="central" transform="translate(' +
+        r + ', ' + r + ')">' + total.toLocaleString() + '</text></svg>';
+
+    var el = document.createElement('div');
+    el.innerHTML = html;
+    return el.firstChild;
+}
+
+function donutSegment(start, end, r, r0, color) {
+    if (end - start === 1) end -= 0.00001;
+    var a0 = 2 * Math.PI * (start - 0.25);
+    var a1 = 2 * Math.PI * (end - 0.25);
+    var x0 = Math.cos(a0), y0 = Math.sin(a0);
+    var x1 = Math.cos(a1), y1 = Math.sin(a1);
+    var largeArc = end - start > 0.5 ? 1 : 0;
+
+    return ['<path d="M', r + r0 * x0, r + r0 * y0, 'L', r + r * x0, r + r * y0,
+        'A', r, r, 0, largeArc, 1, r + r * x1, r + r * y1,
+        'L', r + r0 * x1, r + r0 * y1, 'A',
+        r0, r0, 0, largeArc, 0, r + r0 * x0, r + r0 * y0,
+        '" fill="' + color + '" />'].join(' ');
+}
+
+//ADICIONAR POLIGONOS
+
+map.on('load', function () {
+// Add a layer showing the state polygons.
+map.addLayer({
+'id': 'states-layer',
+'type': 'fill',
+'source': {
+'type': 'geojson',
+'data': bairros
+},
+'paint': {
+'fill-color': 'rgba(200, 100, 240, 0.4)',
+'fill-outline-color': 'rgba(200, 100, 240, 1)'
+}
+});
+ 
+// When a click event occurs on a feature in the states layer, open a popup at the
+// location of the click, with description HTML from its properties.
+map.on('click', 'earthquake_label', function (e) {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML(e.features[0].properties.Nome)
+.addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'earthquake_label', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'earthquake_label', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+
+//CLUSTER 2
+
+    // Target the relevant span tags in the quakeInfo div
+    var magDisplay = document.getElementById('mag');
+    var locDisplay = document.getElementById('loc');
+    var dateDisplay = document.getElementById('date');
+
+    // JavaScript date constructor:
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    var today = new Date();
+    // Use JavaScript to get the date a week ago
+    var priorDate = new Date().setDate(today.getDate() - 7);
+    // Set that to an ISO8601 timestamp as required by the USGS earthquake API
+    var priorDateTs = new Date(priorDate);
+    var sevenDaysAgo = priorDateTs.toISOString();
+
+    map.on('load', function() {
+
+      map.addSource('earthquakes', {
+        'type': 'geojson',
+        'data': pontos
+      });
+
+      map.addLayer({
+        'id': 'earthquakes-viz',
+        'type': 'circle',
+        'source': 'earthquakes',
+        'paint': {
+          // The feature-state dependent circle-radius expression will render
+          // the radius size according to its magnitude when
+          // a feature's hover state is set to true
+          'circle-radius': [
+            'case',
+            ['boolean',
+              ['feature-state', 'hover'],
+              true
+            ],
+            [
+              'interpolate', ['linear'],
+              ['get', 'Score'],
+              1, 8,
+              1.5, 10,
+              2, 10,
+              2.5, 14,
+              3, 12,
+              3.5, 17,
+              4, 14,
+              5, 16,
+              8.5, 24,
+              10.5, 26
+            ],
+            5
+          ],
+          'circle-stroke-color': '#000',
+          'circle-stroke-width': 1,
+          // The feature-state dependent circle-color expression will render
+          // the color according to its magnitude when
+          // a feature's hover state is set to true
+          'circle-color': [
+            'case',
+            ['boolean',
+              ['feature-state', 'hover'],
+              true
+            ],
+            [
+              'interpolate', ['linear'],
+              ['get', 'Score'],
+              1, '#fff7ec',
+              1.5, '#fee8c8',
+              2, '#fdd49e',
+              2.5, '#fdbb84',
+              3, '#fc8d59',
+              3.5, '#ef6548',
+              4, '#d7301f',
+              6.5, '#b30000',
+              8.5, '#7f0000',
+              10.5, '#000'
+            ],
+            '#000'
+          ],
+            'circle-opacity': 0.6,
+        }
+      });
+
+    });
+
+    var quakeID = null;
+
+    map.on('mousemove', 'earthquakes-viz', (e) => {
+
+      map.getCanvas().style.cursor = 'pointer';
+      // Set variables equal to the current feature's magnitude, location, and time
+      var quakeMagnitude = e.features[0].properties.Nome;
+      var quakeLocation = e.features[0].properties.Score;
+      var quakeDate = new Date(e.features[0].properties.time);
+
+      // Check whether features exist
+      if (e.features.length > 0) {
+        // Display the magnitude, location, and time in the sidebar
+        magDisplay.textContent = quakeMagnitude;
+        locDisplay.textContent = quakeLocation;
+        dateDisplay.textContent = quakeDate;
+
+        // If quakeID for the hovered feature is not null,
+        // use removeFeatureState to reset to the default behavior
+        if (quakeID) {
+          map.removeFeatureState({
+            source: "earthquakes",
+            id: quakeID
+          });
+        }
+
+        quakeID = e.features[0].id;
+        
+        // When the mouse moves over the earthquakes-viz layer, set the
+        // feature state for the feature under the mouse
+        map.setFeatureState({
+          source: 'earthquakes',
+          id: quakeID,
+        }, {
+          hover: true
+        });
+
+      }
+    });
+
+    map.on("mouseleave", "earthquakes-viz", function() {
+      
+      if (quakeID) {
+        map.setFeatureState({
+          source: 'earthquakes',
+          id: quakeID
+        }, {
+          hover: false
+        });
+      }
+      quakeID = null;
+      // Remove the information from the previously hovered feature from the sidebar
+      magDisplay.textContent = '';
+      locDisplay.textContent = '';
+      dateDisplay.textContent = '';
+      // Reset the cursor style
+      map.getCanvas().style.cursor = '';
+    });
+
+</script>
+</body>
+</html>
