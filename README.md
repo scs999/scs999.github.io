@@ -1,5 +1,5 @@
 # Site
-![Preview](preview.jpg)
+![Preview](dashboard.png)
 ## Site
 - Site https://scs999.github.io/
 ## Credits (and licenses)
