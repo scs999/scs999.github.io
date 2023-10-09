@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Show and hide layers</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+		<!-- W3css -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+		<!-- W3css -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>		
+	
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    #menu {
+        background: white  ;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        max-width: 60%;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+    #menu a {
+	        background-color: blue;
+        color: #ffffff;
+		font-size: 11px;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        text-align: center;
+		text-transform:uppercase;
+    }
+    #menu a:last-child {
+        border: none;
+    }
+    #menu a:hover {
+        background-color: yellow;
+        color: #404040;
+		font-size: 12px;
+    }
+    #menu a.active {
+        background-color:green;
+        color: white;
+		font-size: 11px;
+		text-transform:uppercase;
+    }
+    #menu a.active:hover {
+        background: yellow;
+    }
+	@media screen and (max-width: 900px) {
+
+	.map-overlay {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    max-height: 100%;
+    overflow: hidden;
+}
+	.map-overlay fieldset {
+    display: none;
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    margin: 0;
+}
+	.map-overlay input {
+    display: block;
+    border: none;
+    width: 80%;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0;
+}
+	.map-overlay .listing {
+    overflow: auto;
+    max-height: 100%;
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #404;
+}
+	.map-overlay .listing > * {
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+}
+	.map-overlay .listing a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #404;
+    text-decoration: none;
+}
+	.map-overlay .listing a:last-child {
+    border: none;
+}
+	.map-overlay .listing a:hover {
+    background: white;
+    color: black;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+	.map-overlay .listing a:hover a:before {
+    background: white;
+    color: black;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+	.map-overlay .titulo {
+    display: block;
+    background: #ddd;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    color: black;
+}	
+	
+  }
+	.map-overlay {
+    position: absolute;
+    max-width: 60%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color:  transparent;
+    max-height: 100%;
+    overflow: hidden;
+}
+	.map-overlay fieldset {
+    display: none;
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    margin: 0;
+}
+	.map-overlay input {
+    display: block;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0;
+}
+	.map-overlay .listing {
+    overflow: auto;
+    max-height: 80%;
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #404;
+}
+	.map-overlay .listing > * {
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+}
+	.map-overlay .listing a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #404;
+    text-decoration: none;
+}
+	.map-overlay .listing a:last-child {
+    border: none;
+}
+	.map-overlay .listing a:hover {
+    background: white;
+    color: blue;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+	.map-overlay .listing a:hover a:before {
+    background: white;
+    color: blue;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+	.map-overlay .titulo {
+    display: block;
+    background: #ddd;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    color: blue;
+}
+	.mapboxgl-popup {
+    max-width: 80%;
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #404;
+	word-wrap: break-word;
+}
+
+</style>
+</head>
+<body>
+
+<nav id="menu"></nav>
+<div id="map"></div>
+
+<div class='map-overlay'>
+<div class='titulo'>
+<h3><center>Censo - 2022</center></h3>
+</div>
+    <fieldset>
+        <input id='feature-filter' type='text' placeholder='Filtrar por nome' />
+    </fieldset>
+    <div id='feature-listing' class='listing'></div>
+</div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
+
+//LIMITES DO MAPA
+var bounds = [
+[-43.73725, -23.05836], // Coordenadas SUDOESTE (Baixo/Esquerda)
+[-43.14261, -22.76805]  // Coordenadas NORDESTE(Alto/Direita)
+];
+//COORDENADAS LATITUDE/LONGITUDE
+	var latY = '-22.855412'; 	
+	var longX = ' -43.265983';	 
+
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/scs999999/ckyirya3x0wjx14k4l52an0hb',
+		center: [longX,latY], // POSIÇÃO INICIAL [LONG, LAT]
+		maxZoom: 22,
+		minZoom: 8,
+		zoom: 9,
+		maxBounds: bounds // Sets bounds as max
+	});
+
+//INICIO ADICIONADO
+//Função para separar informações Latitude/Longitude
+function divideCoord1(coords) {
+    return coords.slice(1,2);
+}
+function divideCoord2(coords) {
+    return coords.slice(0,1);
+}
+// Definir variável de informações/Camada
+var roads = [];
+// Criar PopUp.
+var popup = new mapboxgl.Popup({
+    closeButton: false
+});
+var filterEl = document.getElementById('feature-filter');
+var listingEl = document.getElementById('feature-listing');
+function renderListings(features) {
+    // Clear any existing listings
+    listingEl.innerHTML = '';
+    if (features.length) {
+        features.forEach(function(feature) {
+		  var coordd1 = divideCoord1(feature.geometry.coordinates);
+		  var coordd2 = divideCoord2(feature.geometry.coordinates);
+		  var prop = feature.properties;
+            var item = document.createElement('a');
+            item.href ='https://www.google.com.br/maps/@'+ coordd1 + ',' + coordd2 + ',20z';
+            item.target = '_blank';
+            item.textContent = prop.Name + '('+ feature.properties.pop +')';
+            item.addEventListener('mouseover', function() {
+                // Highlight corresponding feature on the map
+                popup.setLngLat(feature.geometry.coordinates)
+            .setText(feature.properties.Name + ' ( ' + feature.properties.pop + ' Habitantes)')
+                    .addTo(map);
+            });
+            listingEl.appendChild(item);
+        });
+        // Show the filter input
+        filterEl.parentNode.style.display = 'block';
+    } else {
+        var empty = document.createElement('p');
+        empty.textContent = 'Arraste o mapa para preencher os resultados';
+        listingEl.appendChild(empty);
+
+        // Hide the filter input
+        filterEl.parentNode.style.display = 'none';
+
+        // remove features filter
+        map.setFilter('pontos_interesse', ['has', 'Name']);
+    }
+}
+function normalize(string) {
+    return string.trim().toLowerCase();
+}
+function getUniqueFeatures(array, comparatorProperty) {
+    var existingFeatureKeys = {};
+    // Because features come from tiled vector data, feature geometries may be split
+    // or duplicated across tile boundaries and, as a result, features may appear
+    // multiple times in query results.
+    var uniqueFeatures = array.filter(function(el) {
+        if (existingFeatureKeys[el.properties[comparatorProperty]]) {
+            return false;
+        } else {
+            existingFeatureKeys[el.properties[comparatorProperty]] = true;
+            return true;
+        }
+    });
+    return uniqueFeatures;
+}
+
+//FIM ADICIONADO	
+	
+		// Wait until the map has finished loading.
+
+		// After the last frame rendered before the map enters an "idle" state.
+		map.on('load', function () {
+			// If these two layers have been added to the style,
+			// add the toggle buttons.
+	
+				// Cria lista de Camadas(de acordo com as camadas no MAPBOX STUDIO
+				// Essa lista vai formar o MENU(localizado no canto Superior/Direito)
+				var toggleableLayerIds = [
+				'setores_censo_comp_ale22',
+				'pontos_interesse',
+				'ruas',
+				'ruas_nomes'];
+				// Enumera a lista
+				for (var i = 0; i < toggleableLayerIds.length; i++) 
+				{
+					var id = toggleableLayerIds[i];
+					if (!document.getElementById(id)) {
+						// Cria o LINK no MENU
+						var link = document.createElement('a');
+						link.id = id;
+						link.href = '#';
+						link.textContent = id;
+						link.className = 'active';
+						// Show or hide layer when the toggle is clicked.
+						link.onclick = function (e) {
+							var clickedLayer = this.textContent;
+							e.preventDefault();
+							e.stopPropagation();
+							var visibility = map.getLayoutProperty(
+								clickedLayer,
+								'visibility'
+							);
+							// Toggle layer visibility by changing the layout object's visibility property.
+							if (visibility == 'visible') {
+								map.setLayoutProperty(
+									clickedLayer,
+									'visibility',
+									'none'
+								);
+								this.className = 'active';
+							} else {
+								map.setLayoutProperty(
+									clickedLayer,
+									'visibility',
+									'visible'
+								);
+								this.className = '';
+							}
+						};
+						var layers = document.getElementById('menu');
+						layers.appendChild(link);
+					}
+				}
+			
+//ADICIONADO
+
+    map.on('moveend', function() {
+        var features = map.queryRenderedFeatures({layers:['pontos_interesse']});
+        if (features) {
+            var uniqueFeatures = getUniqueFeatures(features, "Name");
+            // Populate features for the listing overlay.
+            renderListings(uniqueFeatures);
+            // Clear the input container
+            filterEl.value = '';
+            // Store the current features in sn `roads` variable to
+            // later use for filtering on `keyup`.
+            roads = uniqueFeatures;
+        }
+    });
+    map.on('mousemove', 'pontos_interesse', function(e) {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = 'pointer';
+
+        // Populate the popup and set its coordinates based on the feature.
+        var feature = e.features[0];
+        popup.setLngLat(feature.geometry.coordinates)
+            .setText(feature.properties.Name + ' ( ' + feature.properties.pop + ' Habitantes)')
+            .addTo(map);
+    });
+    map.on('mouseleave', 'pontos_interesse', function() {
+        map.getCanvas().style.cursor = '';
+        popup.remove();
+    });
+    filterEl.addEventListener('keyup', function(e) {
+        var value = normalize(e.target.value);
+        // Filter visible features that don't match the input value.
+        var filtered = roads.filter(function(feature) {
+            var name = normalize(feature.properties.Name);
+            return name.indexOf(value) > -1 ;
+        });
+        // Populate the sidebar with filtered results
+        renderListings(filtered);
+        // Set the filter to populate features into the layer.
+        map.setFilter('pontos_interesse', ['match', ['get', 'Name'], filtered.map(function(feature) {
+            return feature.properties.Name;
+        }), true, false]);
+    });
+    // Call this function on initialization
+    // passing an empty array to render an empty state
+    renderListings([]);			
+		});
+</script>
+</body>
+</html>

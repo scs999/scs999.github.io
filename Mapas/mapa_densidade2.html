@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Update a choropleth layer by zoom level</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+	<script src="geojson/limite_ramos.geojson" type="text/javascript"></script>	
+<style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+<style>
+	.legend {
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+	}
+	.legend h4 {
+    margin: 0 0 10px;
+	}
+	.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+	}
+</style>
+</head>
+<body>
+<div id='map'></div>
+<div id='state-legend' class='legend'>
+    <h4>Rio de Janeiro - Cidade</h4>
+    <h4>População</h4>
+<hr/>
+    <div><span style='background-color: #f5e4db'></span>Até 50.000</div>
+    <div><span style='background-color: #f28621'></span>De 50.000 a 100.000</div>
+    <div><span style='background-color: #4b0202'></span>Acima de 100.000</div>
+</div>
+<div id='county-legend' class='legend' style='display: none;'>
+    <h4>...</h4>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA&language=pt-BR';
+//var bounds = [
+//[-44.794344,-23.058757], // Southwest coordinates
+//[-40.428599,-21.154359]  // Northeast coordinates
+//];
+//var filterGroup = document.getElementById('filter-group');
+	var latY = '-22.86264189'; 	var longX = '-43.26269047'; // Rio de Janeiro zoom 8
+//Brasil zoom 4	var latY = '-13.399697'; 	var longX = '-52.031122';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/scs999999/cjxryon3s6xpo1dpl62xinjwy',
+    center: [longX,latY],
+    zoom: 10,
+		minZoom: 10,
+	maxZoom: 19
+//maxBounds: bounds // Sets bounds as max
+});
+var zoomThreshold = 14;
+map.on('load', function() {
+    map.addSource('bairros1', {
+        'type': 'geojson',
+        'data': limites
+    });
+    map.addLayer({
+        'id': 'state-population',
+        'source': 'bairros1',
+        'source-layer': 'bairros1',
+        'maxzoom': zoomThreshold,
+        'type': 'fill',
+        'paint': {
+            'fill-color': [
+                'interpolate',
+                ['linear'],
+                ['get', 'SHAPESTAre'],
+                0, '#F2F12D',
+                500000, '#EED322',
+                750000, '#E6B71E',
+                1000000, '#DA9C20',
+                2500000, '#CA8323',
+                5000000, '#B86B25',
+                7500000, '#A25626',
+                10000000, '#8B4225',
+                25000000, '#723122'
+            ],
+            'fill-opacity': 0.75
+        }
+    }, 'waterway-label');
+    map.addLayer({
+        'id': 'county-population',
+        'source': 'bairros',
+        'source-layer': 'bairros2',
+        'minzoom': zoomThreshold,
+        'type': 'fill',
+        'paint': {
+            'fill-color': [
+                'interpolate',
+                ['linear'],
+                ['get', 'SHAPESTAre'],
+                0, '#F2F12D',
+                100, '#EED322',
+                1000, '#E6B71E',
+                5000, '#DA9C20',
+                10000, '#CA8323',
+                50000, '#B86B25',
+                100000, '#A25626',
+                500000, '#8B4225',
+                1000000, '#723122'
+            ],
+            'fill-opacity': 0.75
+        }
+    }, 'waterway-label');
+});
+var stateLegendEl = document.getElementById('state-legend');
+var countyLegendEl = document.getElementById('county-legend');
+map.on('zoom', function() {
+    if (map.getZoom() > zoomThreshold) {
+        stateLegendEl.style.display = 'none';
+        countyLegendEl.style.display = 'block';
+    } else {
+        stateLegendEl.style.display = 'block';
+        countyLegendEl.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>
