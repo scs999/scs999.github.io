@@ -1,0 +1,2581 @@
+var bairros = {
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Moneró",
+        "Score": 6476,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.197388,
+          -22.796531
+        ],
+        "type": "Point"
+      },
+      "id": "09630cd90b3b8b23121f7cdb49a68d61"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Tauá",
+        "Score": 29567,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.186767,
+          -22.797769
+        ],
+        "type": "Point"
+      },
+      "id": "1289b45e007acc98ab4db670763aa326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jardim Carioca",
+        "Score": 24848,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.192993,
+          -22.805468
+        ],
+        "type": "Point"
+      },
+      "id": "1a786c329c45e4749f60ca681412433e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Maré",
+        "Score": 129770,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.242595,
+          -22.85927
+        ],
+        "type": "Point"
+      },
+      "id": "1eb3c98a146da6de250776cadcbcce64"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Galeão",
+        "Score": 22971,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.235908,
+          -22.807824
+        ],
+        "type": "Point"
+      },
+      "id": "23d4067081f6b91f6cddf9bcb59d1eb7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Lapa",
+        "Score": 15634,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.182236,
+          -22.913118
+        ],
+        "type": "Point"
+      },
+      "id": "3879e1aeaccf966e02dc439345227f65"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Higienópolis",
+        "Score": 15734,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261368,
+          -22.874017
+        ],
+        "type": "Point"
+      },
+      "id": "5e531684e8dd29aabd5a677c3816110a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Zumbi",
+        "Score": 2016,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.175909,
+          -22.821343
+        ],
+        "type": "Point"
+      },
+      "id": "6cd9a0493a13af470259fd8718b500d6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Pitangueiras",
+        "Score": 11756,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.18,
+          -22.817169
+        ],
+        "type": "Point"
+      },
+      "id": "7096a8bc745c960fdf7ff8f6444bd62e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Ribeira",
+        "Score": 3528,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.170634,
+          -22.825403
+        ],
+        "type": "Point"
+      },
+      "id": "7146013a90adc09ae3a3d6c77e6e8f7f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Praia da Bandeira",
+        "Score": 5948,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.179905,
+          -22.810395
+        ],
+        "type": "Point"
+      },
+      "id": "718ead98af1052427d456bbb4dc17ddd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Joá",
+        "Score": 818,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.287308,
+          -23.007875
+        ],
+        "type": "Point"
+      },
+      "id": "7778ef387ae4b5cb3c306bcbb2aa95f2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Penha",
+        "Score": 78678,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.276449,
+          -22.838156
+        ],
+        "type": "Point"
+      },
+      "id": "7fbfbd5a148328f53d6ad9e19ad9550c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila Kennedy",
+        "Score": 41500,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.488337,
+          -22.860407
+        ],
+        "type": "Point"
+      },
+      "id": "9396c3985bd6ee71a711e102fa9729fc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Freguesia(Ilha)",
+        "Score": 19437,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.169506,
+          -22.785129
+        ],
+        "type": "Point"
+      },
+      "id": "9a4069db9f044888e3990576bdaf9f30"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jardim Guanabara",
+        "Score": 29509,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.200703,
+          -22.81304
+        ],
+        "type": "Point"
+      },
+      "id": "9b7ff2810adcadbf32e581b576d644ce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jacaré",
+        "Score": 9276,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.257133,
+          -22.893239
+        ],
+        "type": "Point"
+      },
+      "id": "ae28d25aa9afe81e12c76657fceac3f4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Santa Cruz",
+        "Score": 217333,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.683304,
+          -22.918128
+        ],
+        "type": "Point"
+      },
+      "id": "c1b42cdc626550abc8543280f8f17edf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cacuia",
+        "Score": 11013,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.183822,
+          -22.82185
+        ],
+        "type": "Point"
+      },
+      "id": "cdb71abb957e12c783139ce3a6ca9bce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Portuguesa",
+        "Score": 23856,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.206757,
+          -22.800076
+        ],
+        "type": "Point"
+      },
+      "id": "ce24d08dc0cdc2a5b9ab424631d54c71"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Manguinhos",
+        "Score": 36610,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.245676,
+          -22.880029
+        ],
+        "type": "Point"
+      },
+      "id": "e0aba6ef090784b0e63b23cde6f11e3a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cocotá",
+        "Score": 4877,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.180559,
+          -22.805085
+        ],
+        "type": "Point"
+      },
+      "id": "e2c9d6731b973de653905e11d96913b1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Bancários",
+        "Score": 12512,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.180903,
+          -22.791845
+        ],
+        "type": "Point"
+      },
+      "id": "f42be4fbccac802d9fbfde48db5852e2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Leme",
+        "Score": 14799,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1669,
+          -22.9617
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10042716993222250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vidigal",
+        "Score": 12797,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2409,
+          -22.9952
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10067807583571230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Parque Anchieta",
+        "Score": 26212,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4156,
+          -22.8352
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10084132363919360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Estácio",
+        "Score": 17189,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2036,
+          -22.9166
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10115940022517860"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Lagoa",
+        "Score": 21198,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.202785,
+          -22.962316
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10126278359533740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Campinho",
+        "Score": 10156,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3477,
+          -22.8852
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10160292655770940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Bento Ribeiro",
+        "Score": 43707,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3608,
+          -22.8667
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10217991617362240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Santíssimo",
+        "Score": 41458,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5199,
+          -22.8752
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10245173193848730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Oswaldo Cruz",
+        "Score": 34040,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.350346,
+          -22.870729
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10279487007838390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cachambi",
+        "Score": 42415,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2745,
+          -22.8898
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10489977128526580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Deodoro",
+        "Score": 10842,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.387,
+          -22.8512
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10510005975108250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Ipanema",
+        "Score": 42743,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2022,
+          -22.984
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10510039992431460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Tijuca",
+        "Score": 163805,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2381,
+          -22.9332
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10613067150977460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Água Santa",
+        "Score": 8756,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3121,
+          -22.9111
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10681065866391180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cidade Universitária",
+        "Score": 1556,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.231,
+          -22.8558
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10693257227139790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Riachuelo",
+        "Score": 12653,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2552,
+          -22.9027
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10724250291621910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "wikidata": "Q1121664",
+        "place_name": "Complexo Do Alemão",
+        "Score": 69143
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2738,
+          -22.8606
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.10920359442379240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Catete",
+        "Score": 24057,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1802,
+          -22.9269
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11099267852004690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vasco da Gama",
+        "Score": 20126,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2267,
+          -22.8915
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11281913144466710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Inhoaíba",
+        "Score": 64649,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5933,
+          -22.9132
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11394413438478620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Glória",
+        "Score": 9661,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1739,
+          -22.9183
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11686360303160360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vista Alegre",
+        "Score": 8622,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3151,
+          -22.8296
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11718994569109450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Marechal Hermes",
+        "Score": 48061,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3705,
+          -22.86
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11790156179994470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Pilares",
+        "Score": 27250,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2955,
+          -22.8791
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11856491258019990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vigário Geral",
+        "Score": 41820,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3097,
+          -22.8095
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.11909868685306690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Freguesia (Jacarepaguá)",
+        "Score": 70511,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.34,
+          -22.94
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12004801678288310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Pechincha",
+        "Score": 34709,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3534,
+          -22.929
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12312669216986600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila Isabel",
+        "Score": 86018,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2473,
+          -22.9152
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12346135779865770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jardim Botânico",
+        "Score": 18009,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2233,
+          -22.9636
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12362431709842810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila Kosmos",
+        "Score": 18274,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3032,
+          -22.8536
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12532278099818240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Acari",
+        "Score": 27347,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3407,
+          -22.8222
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12539574500491390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Campo Grande",
+        "Score": 328370,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5701,
+          -22.8772
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12637279526450440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Irajá",
+        "Score": 96382,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3234,
+          -22.8351
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.12742178593138240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Gamboa",
+        "Score": 13108,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1929,
+          -22.8977
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13002066588919050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Caju",
+        "Score": 20477,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2215,
+          -22.8803
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13038928208643890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "São Conrado",
+        "Score": 10980,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2675,
+          -22.9914
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13040743820522630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Realengo",
+        "Score": 180123,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4301,
+          -22.8773
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13166837125020690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Sepetiba",
+        "Score": 56575,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.6941,
+          -22.968
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13198024530463140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Gardênia Azul",
+        "Score": 17715,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3512,
+          -22.9583
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13253024686764510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Abolição",
+        "Score": 11356,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2998,
+          -22.8862
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13330732240388050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Honório Gurgel",
+        "Score": 21989,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3561,
+          -22.8466
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13378251781285850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Costa Barros",
+        "Score": 28442,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3698,
+          -22.8247
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13381865811089050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jacarepaguá",
+        "Score": 157326,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3713,
+          -22.9665
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13553215513895860"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Ricardo de Albuquerque",
+        "Score": 29310,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3963,
+          -22.8381
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13575079006471750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Guadalupe",
+        "Score": 47144,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3752,
+          -22.8376
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13604859944016770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Bras de Pina",
+        "Score": 59222,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2977,
+          -22.8319
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.13750097210965040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Turiaçu",
+        "Score": 17246,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3418,
+          -22.8617
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14141462482967070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Urca",
+        "Score": 7061,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1623,
+          -22.9504
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14297818609997500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Inhaúma",
+        "Score": 45698,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2823,
+          -22.8715
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14446941839097410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Itanhangá",
+        "Score": 41801,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3049,
+          -22.9871
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14595097356096120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Madureira",
+        "Score": 50106,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3372,
+          -22.8717
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14784732227586830"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Rocha",
+        "Score": 8766,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2488,
+          -22.8996
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.14867959624903540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Taquara",
+        "Score": 102126,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3846,
+          -22.9219
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15080150688599070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Quintino Bocaiúva",
+        "Score": 31185,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3253,
+          -22.8956
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15171677352492160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Paciência",
+        "Score": 201002,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.637,
+          -22.8987
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15210159688465580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Praça Seca",
+        "Score": 64147,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3528,
+          -22.8993
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15556118842686870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "wikidata": "Q1759656",
+        "place_name": "Ramos",
+        "Score": 40792
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2556,
+          -22.852
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15578745209886430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Barros Filho",
+        "Score": 14049,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3632,
+          -22.8349
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15745033172314040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Botafogo",
+        "Score": 82890,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1863,
+          -22.9515
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15795686435610770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "São Cristóvão",
+        "Score": 26510,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2219,
+          -22.8993
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.15826003293851090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Engenho Novo",
+        "Score": 42172,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2678,
+          -22.9091
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.1640944984430030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Rio Comprido",
+        "Score": 43764,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2089,
+          -22.9279
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.16995484531166800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Copacabana",
+        "Score": 146392,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1843,
+          -22.972
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.17023325156635630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Encantado",
+        "Score": 15021,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3042,
+          -22.8975
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.17098542687492950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Penha Circular",
+        "Score": 47816,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2842,
+          -22.8326
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.17100192000246950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Senador Camará",
+        "Score": 105515,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4892,
+          -22.8984
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.1793445541003200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cascadura",
+        "Score": 34456,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3284,
+          -22.8842
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.18468930173093500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Tomás Coelho",
+        "Score": 22676,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3061,
+          -22.8677
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.19021616125938260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jacarezinho",
+        "Score": 37839,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2579,
+          -22.8875
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.19779691911754380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vaz Lobo",
+        "Score": 15167,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3279,
+          -22.859
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.2225510797292340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Del Castilho",
+        "Score": 15610,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2724,
+          -22.8796
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.2923997108913900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cosme Velho",
+        "Score": 7178,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2006,
+          -22.9415
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.3423091493534450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Guaratiba",
+        "Score": 110049,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5849,
+          -22.9906
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.3454961363744600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Piedade",
+        "Score": 43378,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.311,
+          -22.8927
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.3583188949153290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Paquetá",
+        "Score": 3361,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1092,
+          -22.7589
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.3662152581370470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Sampaio",
+        "Score": 10895,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2602,
+          -22.9022
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.3846829241125000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Gericinó",
+        "Score": 15167,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.47,
+          -22.84
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.4034213868247100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jardim América",
+        "Score": 25226,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3232,
+          -22.81
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.4083775460875120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Andaraí",
+        "Score": 39365,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2535,
+          -22.9291
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.4833877595272580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Engenho da Rainha",
+        "Score": 26659,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2938,
+          -22.8626
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.4866028418055280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Senador Vasconcelos",
+        "Score": 30600,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5289,
+          -22.8954
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.4939744771637650"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila Militar",
+        "Score": 13184,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4029,
+          -22.8603
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5088913530288580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Barra da Tijuca",
+        "Score": 394037,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.366,
+          -22.9997
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5120423465685240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Recreio dos Bandeirantes",
+        "Score": 82240,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4634,
+          -23.0185
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5512120143206490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Campo dos Afonsos",
+        "Score": 1365,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3804,
+          -22.8795
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5518290520696750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Barra de Guaratiba",
+        "Score": 3577,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5521,
+          -23.036
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5602857355148810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Saúde",
+        "Score": 2749,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1842,
+          -22.8972
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5608981611518980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Gávea",
+        "Score": 17475,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2383,
+          -22.9814
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5630404277588760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cidade Nova",
+        "Score": 5466,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2018,
+          -22.9101
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5721485496719380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Magalhães Bastos",
+        "Score": 24430,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4136,
+          -22.8725
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5759570695453450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Benfica",
+        "Score": 25081,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2403,
+          -22.8923
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.5996264654432940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cosmos",
+        "Score": 77007,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.6145,
+          -22.9078
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6096578434402140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "wikidata": "Q3881465",
+        "place_name": "Olaria",
+        "Score": 57514
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2706,
+          -22.8485
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6111062026015630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Lins de Vasconcelos",
+        "Score": 37487,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2844,
+          -22.9141
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6519885438208200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Maracanã",
+        "Score": 25256,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.228,
+          -22.9137
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6669695124379510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Pedra de Guaratiba",
+        "Score": 9488,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.6389,
+          -22.9984
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6717006903754940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila Valqueire",
+        "Score": 32279,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3658,
+          -22.8886
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6718610442028800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "São Francisco Xavier",
+        "Score": 8343,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.244,
+          -22.9048
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.6837420592232180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Engenheiro Leal",
+        "Score": 6113,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3255,
+          -22.8744
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7016811401236730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Bangu",
+        "Score": 243125,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4649,
+          -22.8753
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7145624736669930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Santo Cristo",
+        "Score": 12330,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2034,
+          -22.9008
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7154022022881640"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cordovil",
+        "Score": 45202,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2916,
+          -22.8194
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7229023965933460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Rocha Miranda",
+        "Score": 44188,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3463,
+          -22.8503
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7451721400390170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Mangueira",
+        "Score": 17835,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2365,
+          -22.9042
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7508833135933170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Jardim Sulacap",
+        "Score": 13062,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.393,
+          -22.8957
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7550493714277150"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vicente de Carvalho",
+        "Score": 24964,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3158,
+          -22.8572
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7609580024227020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Flamengo",
+        "Score": 50043,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1746,
+          -22.934
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7615596427063320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vila da Penha",
+        "Score": 25465,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3101,
+          -22.8435
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7616138165356340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Méier",
+        "Score": 49828,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2817,
+          -22.9026
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7686292057494520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "wikidata": "Q3642236",
+        "place_name": "Bonsucesso",
+        "Score": 18711
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2533,
+          -22.8659
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7737779221060370"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Padre Miguel",
+        "Score": 64228,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4486,
+          -22.8788
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7774895235874860"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cavalcante",
+        "Score": 16141,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3165,
+          -22.8705
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7796069639726770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Grumari",
+        "Score": 167,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.5335,
+          -23.047
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7883625492048480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Parque Colúmbia",
+        "Score": 9202,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.34236,
+          -22.814272
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.7946386442482090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Laranjeiras",
+        "Score": 45554,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1878,
+          -22.9343
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8059808923446450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Alto da Boa Vista",
+        "Score": 9343,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2536,
+          -22.9621
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8154891248265900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Maria da Graça",
+        "Score": 7972,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2639,
+          -22.883
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8236661392774500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Catumbi",
+        "Score": 12556,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1971,
+          -22.9195
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8404067237263000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Centro",
+        "Score": 41142,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1831,
+          -22.9044
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8503267899840440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Humaitá",
+        "Score": 13285,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2005,
+          -22.9546
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8744453360025940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Colégio",
+        "Score": 29245,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3358,
+          -22.8398
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8747110003383970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Parada de Lucas",
+        "Score": 23923,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3012,
+          -22.8167
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8817727196297870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Tanque",
+        "Score": 37856,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3557,
+          -22.9152
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8884495202304310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Coelho Neto",
+        "Score": 32423,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3502,
+          -22.8322
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8981927183217920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Santa Teresa",
+        "Score": 40926,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.1971,
+          -22.9321
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8985957904509150"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Curicica",
+        "Score": 31189,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3873,
+          -22.952
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.8987524872474280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Pavuna",
+        "Score": 120000,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3593,
+          -22.8122
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9005666033457570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vargem Pequena",
+        "Score": 27250,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4578,
+          -22.9818
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9026519377750380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Anil",
+        "Score": 24172,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3384,
+          -22.9558
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9087620355994390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Grajaú",
+        "Score": 38671,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2695,
+          -22.9299
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9107727363333440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Engenho de Dentro",
+        "Score": 45540,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2968,
+          -22.9027
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9357452146728890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Camorim",
+        "Score": 1970,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4312,
+          -22.9711
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9493544569368000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Leblon",
+        "Score": 46044,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2249,
+          -22.9836
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9574075174574350"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Vargem Grande",
+        "Score": 14039,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.4969,
+          -22.9708
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9710505649962770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Rocinha",
+        "Score": 69356,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2483,
+          -22.9889
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9732473596768760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Cidade de Deus",
+        "Score": 36515,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3629,
+          -22.948
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9734237958689010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Anchieta",
+        "Score": 55652,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.3991,
+          -22.8232
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9785057004096760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Todos os Santos",
+        "Score": 24646,
+        "wikidata": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2851,
+          -22.8946
+        ],
+        "type": "Point"
+      },
+      "id": "neighborhood.9870566933183050"
+    }
+  ],
+  "type": "FeatureCollection"
+}

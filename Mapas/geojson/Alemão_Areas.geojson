@@ -1,0 +1,19 @@
+var pontos ={
+"type": "FeatureCollection",
+"name": "dados_cad",
+"features": [
+{ "type": "Feature", "properties": { "Cod": "1", "Nome": "Equipe 1" }, "geometry": { "type": "Point", "coordinates": [ -43.280670801110276, -22.864080356725211 ] } },
+
+{ "type": "Feature", "properties": { "Cod": "2", "Nome": "Equipe 2" }, "geometry": { "type": "Point", "coordinates": [ -43.27691482780665, -22.861794037867369 ] } },
+
+{ "type": "Feature", "properties": {"Cod": "3", "Nome": "Equipe 3" }, "geometry": { "type": "Point", "coordinates": [ -43.277430963295039, -22.857171280099994 ] } },
+
+{ "type": "Feature", "properties": { "Cod": "4", "Nome": "Equipe 4" }, "geometry": { "type": "Point", "coordinates": [ -43.268871953119017, -22.857515700331376 ] } },
+
+{ "type": "Feature", "properties": { "Cod": "5", "Nome": "Equipe 5" }, "geometry": { "type": "Point", "coordinates": [ -43.270624421202008, -22.863023122111912 ] } },
+
+{ "type": "Feature", "properties": { "Cod": "6", "Nome": "Equipe 6" }, "geometry": { "type": "Point", "coordinates": [ -43.264376057722011, -22.864820039445199 ] } },
+]
+
+
+}
