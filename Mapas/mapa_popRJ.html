@@ -57,10 +57,7 @@
 	var bounds = [
 [-24.058757,-45.794344], // Southwest coordinates
 [-20.154359,-39.428599]  // Northeast coordinates
-];
-
-	
-	
+];	
 	var map = L.map('map', {
 	center: [coord1 ,coord2],
 	zoom: 9,
@@ -82,11 +79,6 @@
 {foo: 'bar',
 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
 // Parametros da area onde aparecerao as informações na tela
-
-
-
-
-
 	var info = L.control({position: 'bottomleft'});
 		info.onAdd = function (map) {
 			this._div = L.DomUtil.create('div', 'info');
@@ -265,25 +257,8 @@ var myIcon = L.icon({
 		"<span style='color: red'>Cidades/Polígonos</span>": poligonos
 };
 //Adiciona o controle de camadas ao mapa
-	var controle = L.control.layers(baseMaps, overlayMaps).addTo(map);
-	
-	
-	
-	
-	
-	
-	
-
-	
+	var controle = L.control.layers(baseMaps, overlayMaps).addTo(map);	
 			</script>
 		</div>
 	</body>
 </html>
-
-
-
-
-<br/><a href="http://www.sidra.ibge.gov.br/bda/territorio/infomun.asp?codmun=
-
-<hr><font size="4" face="Verdana"><P><a href="http://www.ibge.gov.br/cidadesat/xtras/perfil.php?codmun=3300100" target='blank'>InfoCidade</a><br/></font>
-
