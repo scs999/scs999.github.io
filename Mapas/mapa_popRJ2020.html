@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cidades - Rio de Janeiro </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+<!-- Estilo/CSS -->
+	<style>
+#map { position:absolute; top:40px; bottom:0; width:98%; margin: 1% 1% 1% 1% ; padding: 1% 1% 1% 1%; }
+.info {	width: 150px; height: 200px; padding: 2px 8px; font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 10px rgba(0,0,0,0.2);	border-radius: 5px;}
+.info h4 { text-align:center; margin: 0 0 5px; color: #777; }
+.legend {
+width: 150px; 
+height: 150px; 
+padding: 2px 8px; 
+font: 14px/16px Arial, Helvetica, sans-serif;
+background: white; 
+background: rgba(255,255,255,0.8); 
+box-shadow: 0 0 10px rgba(0,0,0,0.2);	
+border-radius: 5px;
+text-align: left;
+line-height: 18px; 
+color: #555;
+ }
+.legend i {	width: 18px; height: 18px; float: left;	margin-right: 8px; opacity: 0.7;}
+.teste_1{ position:absolute; margin-top: 10px; margin-left: 1px; height: 800px;	width:400px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+.teste_1 h1{ text-align: center;}
+	</style> <!-- Estilo/CSS -->
+<!-- Colocar link do(s) arquivo(s) com os dados GEOJSON/JS
+  <script type="text/javascript" src="leaflet_tutorial06.js"></script>
+  <script type="text/javascript" src="munic_maior06.geojson"></script>
+  <script type="text/javascript" src="massaRj_geo.geojson"></script>
+  <script type="text/javascript" src="massaRj_geo.geojson"></script>
+  <script type="text/javascript" src="dados_mapa03.geojson"></script>
+  <script type="text/javascript" src="clientes_pto.geojson"></script>
+  <script type="text/javascript" src="dados_mapa03_pol.geojson"></script>
+  <script type="text/javascript" src="munRj_geo3.geojson"></script>
+  <script type="text/javascript" src="leaflet_tutorial06.js"></script>
+  <script type="text/javascript" src="danglesGeo.geojson"></script>
+  <script type="text/javascript" src="pontesGeo.geojson"></script>
+  <script type="text/javascript" src="massaRjGeo.geojson"></script>
+ --> 
+  <script type="text/javascript" src="geojson/mapaPopRj2019.geojson"></script>
+ </head>
+	<body>
+		<h4><center>Rio de Janeiro - Cidades - População - 2020 </center></h4>
+
+		<div id='map'>
+<script type="text/javascript">
+//Define a variavel do arquivo GEOJSON de pontos (clientes)
+	var dataPoint = [];
+	var dataPolygon2 = [];
+//Define a variavel do arquivo GEOJSON de linhas (clientes)
+	var dataLine = [];
+//Define a variavel do arquivo GEOJSON de pontos (clientes)
+	var dataPolygon = [mapaPopRj];
+// Definir rotulos da legenda
+// DEVE SER ESCRITO CONFORME ESTÁ NO ARQUIVO
+	var op1 = 100;
+	var op2 = 300;
+	var op3 = 500;	
+//Definir cores das descriçoes da legenda
+	var color1 = '#F3E4B1';
+	var color2 = '#D2B48C';
+	var color3 = '#D2691E';
+	var color4 = '#A0522D';
+// Definir visao inicial do mapa, zoom
+// Visão inicial do mapa que será carregado
+	var coord1 = '-22.152981'; 	var coord2 = '-42.933096';
+	var bounds = [
+[-24.058757,-45.794344], // Southwest coordinates
+[-20.154359,-39.428599]  // Northeast coordinates
+];
+
+	var map = L.map('map', {
+	center: [coord1 ,coord2],
+	zoom: 9,
+//	maxBounds: bounds, // Sets bounds as max
+	layers: []
+	});
+//	var map = L.map('map').setView([-22.858301185701318,-43.265667844388076], 16);
+	// Camada principal
+	var principal = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 25,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.light'
+	}).addTo(map);
+// Camada OpenStreetMap
+	var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', 
+{foo: 'bar',
+attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+// Parametros da area onde aparecerao as informações na tela
+
+	var info = L.control({position: 'bottomleft'});
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+				return this._div;
+	};
+// Descrição do que sera apresentado na tela
+	info.update = function (props) {
+		this._div.innerHTML = '<h4>Informações</h4><\hr>' +  (props ?
+			 "<hr/>Geocodigo: <span style='color: red; font-size:15px;' >" + props.CD_GEOCMU + '</span><hr/>' 
+    			 + "<hr/>Nome: <span style='color: red; font-size:15px;' >" + props.NM_MUNICIP + '</span><hr/>'
+	    			 + "<hr/>População: <span style='color: red; font-size:15px;' >" + props.populacao + '</span><hr/>'
+
+			: 'Selecione um local no mapa.');
+	};
+		info.addTo(map);
+// Preenche as cores de acordo com referencia do atributo selecionado
+	function getColor(d) {
+		return  d > op3  ? color4 :
+				d > op2  ? color3 :
+				d > op1  ? color2 :
+						   color1 ;
+	}
+// Estilo da linha, borda ao carregar
+	function style(feature) {
+		return {
+			weight: 3, // Espessura da linha
+			color: '#1C1C1C', //Cor da linha
+			dashArray: 1, //Pontilhado
+			fillOpacity: 1, //preenchimento transparencia
+			// Preenche as cores de acordo com referencia do atributo relacionado
+			fillColor: getColor(feature.properties.populacao/1.000)
+		};
+	}
+// Estilo da linha, borda ao carregar
+	function style2(feature) {
+		return {
+			weight: 3, // Espessura da linha
+			color: 'white', //Cor da linha
+			dashArray: 1, //Pontilhado
+			fillOpacity: 0.2, //preenchimento transparencia
+			// Preenche as cores de acordo com referencia do atributo relacionado
+			fillColor: getColor(feature.properties.populacao/1.000)
+		};
+	}
+	// Estilo da linha, borda ao passar o mouse
+	function highlightFeature(e) {
+		var layer = e.target;
+			layer.setStyle({
+			weight: 1, // Espessura da linha
+			color: 'yellow', //Cor da linha
+			dashArray: 1, //Pontilhado
+			fillOpacity: 0.1, //preenchimento transparencia
+		});
+		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+			layer.bringToFront();
+		}
+	info.update(layer.feature.properties);
+	}
+ // Aumenta o zoom e traz pro centro da tela ao clicar no item 
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+// Função para exibir descrição dos atributos ao clicar
+	function onEachFeature(feature, layer) {
+		strg = (feature.properties.NM_MUNICIP).toLowerCase().split(" ").join("-");// Coloca '-' no lugar dos espaços
+		parsed = strg.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Retira caracteres especiais
+		var popupContent =
+			"Geocodigo: " + "<span style='color:"+ getColor(feature.properties.populacao/1.000) + "; font-size:30px;' >" + feature.properties.CD_GEOCMU + "</span>"
+			+ "</br>Descrição: <span style='color:"+ getColor(feature.properties.populacao/1.000) + "; font-size:25px;' >"
+			+ feature.properties.NM_MUNICIP + "</span>"  + "</br>População: <span style='color:"+ getColor(feature.properties.populacao/1.000) + "; font-size:30px;' >"
+			+ feature.properties.populacao + "</span>"
+			// Caso seja ponto as coordenadas sao mostradas é exibido
+				if (feature.properties && feature.properties.CD_GEOCMU && feature.geometry.type == 'MultiPolygon' ) {
+				popupContent += '</br><span style="color: red; font-size:20px;" ><a href = "https://cidades.ibge.gov.br/brasil/'
+				+ 'rj/' + parsed + '/panorama" target="blank" >'
+				+ 'IBGE/INFOCIDADE' +'</a> </span></a>';
+		}
+		
+// Ao clicar na feição abre um POPUP com as informações
+	layer.bindPopup(popupContent);
+		layer.bindTooltip("CLIQUE PARA EXIBIR");
+// Função para exibir descrição dos atributos ao passar o mouse sobre
+	layer.on({
+		mouseover: highlightFeature,
+		mouseout: resetHighlight,
+		click: zoomToFeature,
+		});
+	}
+//Informar dados referentes a pesquisa
+//	geojson = L.geoJson([dados_mp01, pto_mp01, dados_polig01], {
+//Camada poligonos
+	var poligonos = L.geoJson(dataPolygon, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+	function resetHighlight(e) {
+		poligonos.resetStyle(e.target);
+		info.update();
+	}
+//Camada poligonos
+	var marcas = L.geoJson(dataPolygon2, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+	function resetHighlight(e) {
+		marcas.resetStyle(e.target);
+		info.update();
+	}
+//Camada ruas(linhas)
+	var linhas = L.geoJson(linhas, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+//Personalizar icone
+var myIcon = L.icon({
+    iconUrl: 'icon-google.png',
+    iconSize: [20, 20],
+    iconAnchor: [21, 21],
+    popupAnchor: [-10, -25],
+    shadowUrl: 'favicon.ico',
+    shadowSize: [0, 0],
+    shadowAnchor: [0, 0]
+});
+//Camada pontos
+	var pontos = L.geoJSON(dataPoint, {
+		style: style,
+	onEachFeature: onEachFeature,
+	pointToLayer: function (feature, latlng) {
+/**
+//Formato de icones
+	return  L.marker(latlng, {icon: myIcon
+			});
+**/
+//Formato de circulos
+	return L.circleMarker(latlng, {
+			radius: 8,
+			fillColor: getColor(feature.properties.Total),
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 1,
+			});
+	}
+}).addTo(map);
+//Atribuição do mapa
+	map.attributionControl.addAttribution('Locais data &copy; <a href="http://#/">Locais</a>');
+// Função para adicionar/exibir legenda
+	var legend = L.control({position: 'bottomright'});
+	legend.onAdd = function (map) {
+		var div = L.DomUtil.create('div', 'legend'),
+			grades = [0, op1, op2, op3],
+			labels = ["População \n ( x 1.000 Habitantes) <hr/>"],
+			from, to;
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+			labels.push(
+				'<b><i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+</b>')); //&ndash = traço
+		}
+		div.innerHTML = labels.join('<br/>');
+		return div;
+	};
+	legend.addTo(map);
+//Controle de camadas
+//Camada(s) base
+	var baseMaps = {
+		"<span style='color: blue'>Mapa Base</span>": principal,
+		"<span style='color: blue'>OpenStreetMap</span>": osm
+};
+//Camada de sobreposições
+	var overlayMaps = {
+		"<span style='color: red'>***</span>": pontos,
+		"<span style='color: red'>***</span>": linhas,
+		"<span style='color: red'>***</span>": marcas,
+		"<span style='color: red'>Cidades</span>": poligonos
+};
+//Adiciona o controle de camadas ao mapa
+	var controle = L.control.layers(baseMaps, overlayMaps).addTo(map);	
+			</script>
+		</div>
+	</body>
+</html>

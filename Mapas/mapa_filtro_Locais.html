@@ -8,26 +8,26 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-
+        #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
 </head>
 <body>
 <style>
 #map {
     position:absolute;
-    left:1%;
+    left:25%;
     top:0;
     bottom:0;
-    width: 100%;
+    width: 75%;
 }
 .map-overlay {
     position: absolute;
-    width: 50%;
+    width: 25%;
     top: 0;
     bottom: 0;
     left: 0;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-
+    background-color: #fff;
     max-height: 100%;
     overflow: hidden;
 }
@@ -37,12 +37,11 @@
     border: none;
     padding: 10px;
     margin: 0;
-    width: 50%;
 }
 .map-overlay input {
     display: block;
     border: none;
-    width: auto;
+    width: 100%;
     border-radius: 3px;
     padding: 10px;
     margin: 0;
@@ -51,93 +50,47 @@
     overflow: auto;
     max-height: 100%;
     font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    color: black;
+    background: #f0f0f0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: gray;
-    width: 40%;
-	opacity:1.0;
+    color: #404;
 }
 .map-overlay .listing > * {
     display: block;
     padding: 5px 10px;
     margin: 0;
-    width: 50%;
-    color: black;
 }
 .map-overlay .listing a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    color: black;
+    color: #404;
     text-decoration: none;
-    width: 50%;
 }
 .map-overlay .listing a:last-child {
     border: none;
 }
 .map-overlay .listing a:hover {
-
+    background: white;
     color: blue;
-    font: 18px/25px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    width: auto;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .map-overlay .listing a:hover a:before {
-
+    background: white;
     color: blue;
-    font: 18px/25px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    width: 50%;
+    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .mapboxgl-popup {
     max-width: 400px;
     font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    background: transparent;
+    background: #f0f0f0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #404;
 }
-
-	.legend {
-    background-color: #fff;
-    border-radius: 3px;
-    bottom: 30px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    padding: 10px;
-    position: absolute;
-    right: 10px;
-    z-index: 1;
-	opacity:0.7;
-	}
-	.legend h4 {
-    margin: 0 0 10px;
-	}
-	.legend div span {
-    border-radius: 50%;
-    display: inline-block;
-    height: 10px;
-    margin-right: 5px;
-    width: 10px;
-	}
 </style>
 <div id='map'></div>
-
-<div id='state-legend' class='legend'>
-    <h4>Rio de Janeiro - Cidade</h4>
-    <h4>População - Bairros</h4>
-<hr/>
-
-	    <h6> * Proj 2020</h6>
-</div>
-
-<div id='county-legend' class='legend' style='display: none;'>
-    <h4>...</h4>
-</div>
-
-<div class='map-overlay'>
-<div class='titulo'>
-<h3><center>População</center></h3>
-</div>
+<div class='map-overlay'>Locais
     <fieldset>
-        <input id='feature-filter' type='text' placeholder='Filtrar por nome' />
+        <input id='feature-filter' type='text' placeholder='Filter results by name' />
     </fieldset>
-    <div id='feature-listing' class='listing'></div>
+    <div id='feature-listing' class='listing'>Locais</div>
 </div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
@@ -147,15 +100,10 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/scs999999/cjxryon3s6xpo1dpl62xinjwy',
     center: [coord2,coord1],
     maxZoom: 18,
-    minZoom: 10,
+    minZoom: 6,
     zoom: 12
 });
 
-//Controle de Navegação
-    var nav = new mapboxgl.NavigationControl();
-    map.addControl(nav, 'top-right');
-
-var zoomThreshold = 14;
 function divideCoord1(coords) {
     return coords.slice(1,2);
 }
@@ -179,13 +127,13 @@ function renderListings(features) {
 		  var coordd2 = divideCoord2(feature.geometry.coordinates);
 		  var prop = feature.properties;
             var item = document.createElement('a');
-            item.href ='https://www.google.com.br/maps?q='+ feature.properties.place_name + '&amp;output=embed';
+            item.href ='https://www.google.com.br/maps/@'+ coordd1 + ',' + coordd2 + ',20z';
             item.target = '_blank';
-            item.textContent = prop.place_name + ' ( ' + prop.pop + '  )';
+            item.textContent = prop.Nome + ' ( ' + prop.End2 + ' )';
             item.addEventListener('mouseover', function() {
                 // Highlight corresponding feature on the map
                 popup.setLngLat(feature.geometry.coordinates)
-                    .setText(feature.properties.place_name)
+                    .setText(feature.properties.Nome)
                     .addTo(map);
             });
             listingEl.appendChild(item);
@@ -201,12 +149,18 @@ function renderListings(features) {
         filterEl.parentNode.style.display = 'none';
 
         // remove features filter
-        map.setFilter('bairros', ['has', 'place_name']);
+        map.setFilter('locais', ['has', 'Nome']);
     }
 }
 function normalize(string) {
     return string.trim().toLowerCase();
 }
+
+
+
+
+
+
 function getUniqueFeatures(array, comparatorProperty) {
     var existingFeatureKeys = {};
     // Because features come from tiled vector data, feature geometries may be split
@@ -223,10 +177,29 @@ function getUniqueFeatures(array, comparatorProperty) {
     return uniqueFeatures;
 }
 map.on('load', function() {
+        map.addSource('airports', {
+            'type': 'vector',
+            'url': 'scs999999.cknanmgot3x4k28qq7imq1mza-41v81'
+        });
+        map.addLayer({
+            'id': 'airport',
+            'source': 'airports',
+            'source-layer': 'ne_10m_airports',
+            'type': 'symbol',
+            'layout': {
+                'icon-image': 'airport-15',
+                'icon-padding': 0,
+                'icon-allow-overlap': true
+            }
+        });
+
+
+
+
     map.on('moveend', function() {
-        var features = map.queryRenderedFeatures({layers:['bairros']});
+        var features = map.queryRenderedFeatures({layers:['locais']});
         if (features) {
-            var uniqueFeatures = getUniqueFeatures(features, "place_name");
+            var uniqueFeatures = getUniqueFeatures(features, "Nome");
             // Populate features for the listing overlay.
             renderListings(uniqueFeatures);
             // Clear the input container
@@ -236,17 +209,17 @@ map.on('load', function() {
             roads = uniqueFeatures;
         }
     });
-    map.on('mousemove', 'bairros', function(e) {
+    map.on('mousemove', 'locais', function(e) {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
 
         // Populate the popup and set its coordinates based on the feature.
         var feature = e.features[0];
         popup.setLngLat(feature.geometry.coordinates)
-            .setText(feature.properties.place_name + ' ( ' + feature.properties.pop + ' Habitantes)')
+            .setText(feature.properties.End2)
             .addTo(map);
     });
-    map.on('mouseleave', 'bairros', function() {
+    map.on('mouseleave', 'locais', function() {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
@@ -254,30 +227,19 @@ map.on('load', function() {
         var value = normalize(e.target.value);
         // Filter visible features that don't match the input value.
         var filtered = roads.filter(function(feature) {
-            var name = normalize(feature.properties.place_name);
+            var name = normalize(feature.properties.Nome);
             return name.indexOf(value) > -1 ;
         });
         // Populate the sidebar with filtered results
         renderListings(filtered);
         // Set the filter to populate features into the layer.
-        map.setFilter('bairros', ['match', ['get', 'place_name'], filtered.map(function(feature) {
-            return feature.properties.place_name;
+        map.setFilter('locais', ['match', ['get', 'Nome'], filtered.map(function(feature) {
+            return feature.properties.Nome;
         }), true, false]);
     });
     // Call this function on initialization
     // passing an empty array to render an empty state
     renderListings([]);
-});
-var stateLegendEl = document.getElementById('state-legend');
-var countyLegendEl = document.getElementById('county-legend');
-map.on('zoom', function() {
-    if (map.getZoom() > zoomThreshold) {
-        stateLegendEl.style.display = 'none';
-        countyLegendEl.style.display = 'block';
-    } else {
-        stateLegendEl.style.display = 'block';
-        countyLegendEl.style.display = 'none';
-    }
 });
 </script>
 </body>

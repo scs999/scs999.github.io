@@ -1,0 +1,9 @@
+
+
+   {'type': 'Feature', 'properties': {'Name': 'A', 'popupContent': 'A', 'Bustype': 'Showroom', 'icon': 'fa-home', 'color': '#d53f3a'
+                }, 'geometry': {'type': 'Point', 'coordinates': [
+                        -2.2671,
+                        57.139383
+                    ]
+                }
+            },

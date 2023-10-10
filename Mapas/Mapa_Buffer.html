@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Style circles with a data-driven property</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+	
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+    <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/@mapbox/polyline@1.1.0/src/polyline.min.js"></script>
+    <script async defer src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+</head>
+
+<body>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js">
+    </script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+        type="text/css" />
+    <div class='viewport-full relative scroll-hidden'>
+        <div id='map' class='bg-darken10 viewport-twothirds viewport-full-ml absolute top left right bottom'></div>
+        <div class="absolute top-ml left z1 w-full w300-ml py12 px12">
+            <div
+                class="viewport-third h-auto-ml hmax-full bg-gray-dark prose--dark round-ml shadow-lighten25 scroll-auto">
+                <div class="px12 py12 scroll-auto">
+                    <h3 class="txt-m txt-bold mb6">
+                        Seleção de buffer da linha de rota</h3>
+                    <p>Use o Mapbox GL JS v1.9.0 + para selecionar recursos a uma determinada distância de uma linha de rota.
+                    </p> <br>
+                    <form id="params">
+                        <h4 class="txt-m txt-bold mb6">
+Escolha uma distância para procurar POI na linha de rota:</h4>
+                        <div id="duration" class="mb12 mr12 toggle-group align-center"> <label class="toggle-container">
+                                <input name="duration" type="radio" value="250" checked="">
+                                <div class="toggle toggle--active-null toggle--null">250 m</div>
+                            </label> <label class="toggle-container"> <input name="duration" type="radio" value="500">
+                                <div class="toggle toggle--active-null toggle--null">500 m</div>
+                            </label><label class="toggle-container"> <input name="duration" type="radio" value="750">
+                                <div class="toggle toggle--active-null toggle--null">750 m</div>
+                            </label> 
+                        </label><label class="toggle-container"> <input name="duration" type="radio" value="1000">
+                            <div class="toggle toggle--active-null toggle--null">1 km</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        mapboxgl.accessToken =      'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/scs999999/cjxryon3s6xpo1dpl62xinjwy?optimize=true',
+            zoom: 10,
+            bearing: 0,
+            hash: true,
+            center: [-43.259645, -22.8565832]
+        });
+        var directions = new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            unit: 'metric',
+            profile: 'mapbox/driving',
+			language: 'pt-br'
+        });
+        map.addControl(directions, 'top-right');
+        const params = {
+            distance: 250
+        };
+        params_html = document.getElementById('params')
+        params.distance = 250;
+
+        params_html.addEventListener("change", e => {
+            if (e.target.name === "duration") {
+                params.distance = e.target.value;
+            }
+        });
+        map.on('load', function () {
+            directions.on('route', function (e) {
+                var line = polyline.toGeoJSON(e.route[0].geometry);
+                var buffered_line = turf.buffer(line, params.distance, {units: 'meters'});
+                map.setFilter('locais', ['within', buffered_line]);
+                map.setFilter('transit-label', ['within', buffered_line]);
+                map.setFilter('road-label', ['within', buffered_line]);
+                map.easeTo({
+                    pitch: 0
+                });
+                // Update the polygon visual reference
+                if (map.getLayer('polygon')) {
+                    map.getSource('polygon').setData(buffered_line);
+                } else {
+                    map.addSource('polygon', {
+                        'type': 'geojson',
+                        'data': buffered_line
+                    });
+                    map.addLayer({
+                        'id': 'polygon',
+                        'source': 'polygon',
+                        'type': 'fill',
+                        'paint': {
+                            'fill-opacity': 0.1,
+                            'fill-color': 'red'
+                        }
+                    }, 'poi-label');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
