@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mapa Isochrone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+    <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <style>
+ 
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #instructions {
+            height: 75px;
+            width: 150px;
+            position: absolute;
+            bottom: 40px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, .9);
+            padding: 15px;
+            text-align: center;
+        }
+        .legend {
+            background-color: #fff;
+            border-radius: 3px;
+            bottom: 30px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+            text-align: left;
+        }
+            
+        .legend h4 {
+            margin: 0 0 10px;
+        }
+            
+        .legend div span {
+            /* border-radius: 50%; */
+            display: inline-block;
+            height: 10px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip">AJUDA
+  <span class="tooltiptext">Selecione no menu as opçoes desejadas, em seguida clique em uma área do mapa para verificar o raio de abrangência.</span>
+</div>
+		
+		
+		
+		
+    </style>
+
+<!--ARQUIVO DE DADOS -->
+	<script src="geojson/dados_cad.geojson" type="text/javascript"></script>
+	
+</head>
+
+<body>
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>&nbsp&nbsp&nbsp&nbsp&nbsp Mapa Isocrone
+  <span class="w3-bar-item w3-right">SCSCYBER</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left " style="z-index:3;width:250px; height:500px; " id="mySidebar">
+
+  <hr>
+
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Fechar Menu</a>
+	    <a href="../index.html" target="_self" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-map fa-fw"></i>INICIO</a>
+
+
+                    <p>Use o Mapbox GL JS v1.9.0 + para selecionar locais, dentro de um determinado tempo de viagem de um local clicado.
+                    </p> 
+
+      
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <div class='viewport-full relative scroll-hidden'>
+
+<div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="1046" height="1007" style="width: 1046px; height: 1007px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=streets-v10&amp;access_token=pk.eyJ1IjoiZ3JhZmEiLCJhIjoiY2pxbjFhMTg1MDJ2MzQ0bXJpZ2c5NjM3eCJ9.XDmc8knZy11F1omDy_P22w" target="_blank" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
+    </div>
+    <script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
+var map = new mapboxgl.Map({
+container: 'map', // container id
+//style: 'mapbox://styles/mapbox/dark-v10?optimize=true', //hosted style id
+style: 'mapbox://styles/scs999999/cjxryon3s6xpo1dpl62xinjwy', //hosted style id
+center: [-43.265983,-22.855412], // starting position
+zoom: 13, // starting zoom
+minZoom: 9 // keep it local
+});
+
+  // initialize the map canvas to interact with later
+var canvas = map.getCanvasContainer();
+
+// create a function to make a isochrone request
+function getFence(loc) {
+    // make directions request using cycling profile
+
+    var url = 'https://api.mapbox.com/isochrone/v1/mapbox/cycling/' + loc + '?contours_minutes=5,10,15&contours_colors=6706ce,04e813,4286f4&polygons=true&access_token=' + mapboxgl.accessToken;
+// https://api.mapbox.com/isochrone/v1/{profile}/{coordinates}?{contours_minutes|contours_meters}
+    // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+    var req = new XMLHttpRequest();
+    req.responseType = 'json';
+    req.open('GET', url, true);
+    req.onload  = function() {
+        var data = req.response.features;
+        console.log(data);
+        data.forEach(contour => {
+            console.log(contour);
+            // if the poly already exists on the map, we'll reset it using setData
+            let cp = contour.properties;
+            var layerID = 'fence' + cp.contour;
+            if (map.getSource('fence' + cp.contour)) {
+                map.getSource('fence'+ cp.contour).setData(contour);
+            }
+            // otherwise, we'll make a new request
+            else {
+                map.addLayer({
+                    "id": layerID,
+                    "type": "fill",
+                    "source": {
+                        "type": "geojson",
+                        "data": contour
+                    },
+                    "layout": {
+                    },
+                    "paint": {
+                        "fill-color": cp.fillColor,
+                        "fill-opacity": cp.fillOpacity
+                    }
+                }, 'water');
+            };
+        });
+    };
+    req.send();
+};
+
+map.on('load', function(){
+    // Add destination to the map
+    map.addLayer({
+        "id": "point",
+        "type": "circle",
+        "source": {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.66206798535438,45.52363989427619]
+                }
+            }]
+        }
+        },
+        "paint": {
+        "circle-radius": 10,
+        "circle-color": "#f30"
+        }
+    });
+
+    // allow the user to click the map to change the destination
+    map.on('click', function(e) {
+        var coordsObj = e.lngLat;
+        canvas.style.cursor = '';
+        var coords = Object.keys(coordsObj).map(function (key) { return coordsObj[key]; });
+        var end = {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": coords
+                }
+            }]
+        };
+        if (map.getLayer('point')) {
+            map.getSource('point').setData(end);
+        } else {
+            map.addLayer({
+            "id": "point",
+                "type": "circle",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [{
+                            "type": "Feature",
+                            "properties": {},
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": coords
+                            }
+                        }]
+                    }
+                },
+                "paint": {
+                    "circle-radius": 10,
+                    "circle-color": "#f30"
+                }
+            });
+        };
+        getFence(coords);
+    });
+});
+
+	
+    </script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>	
+	
+	
+</body>
+
+</html>
+
+
+
+
+
+
