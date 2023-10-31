@@ -33,25 +33,13 @@ color: #555;
 .teste_1 h1{ text-align: center;}
 	</style> <!-- Estilo/CSS -->
 <!-- Colocar link do(s) arquivo(s) com os dados GEOJSON/JS
-  <script type="text/javascript" src="leaflet_tutorial06.js"></script>
-  <script type="text/javascript" src="munic_maior06.geojson"></script>
-  <script type="text/javascript" src="massaRj_geo.geojson"></script>
-  <script type="text/javascript" src="massaRj_geo.geojson"></script>
-  <script type="text/javascript" src="dados_mapa03.geojson"></script>
-  <script type="text/javascript" src="clientes_pto.geojson"></script>
-  <script type="text/javascript" src="dados_mapa03_pol.geojson"></script>
-  <script type="text/javascript" src="munRj_geo3.geojson"></script>
-  <script type="text/javascript" src="leaflet_tutorial06.js"></script>
-  <script type="text/javascript" src="danglesGeo.geojson"></script>
-  <script type="text/javascript" src="pontesGeo.geojson"></script>
-  <script type="text/javascript" src="massaRjGeo.geojson"></script>
- --> 
+   --> 
   <script type="text/javascript" src="mapaPopRj.geojson"></script>
  </head>
-	<body>
-		<h4><center>Rio de Janeiro - Cidades - População - 2022 </center></h4>
+<body>
+	<h4><center>Rio de Janeiro - Cidades - População - 2022 </center></h4>
 <a href="mapa_popBrasil.html"><center>Brasil População </center></a>
-		<div id='map'>
+<div id='map'>
 <script type="text/javascript">
 //Define a variavel do arquivo GEOJSON de pontos (clientes)
 	var dataPoint = [];
@@ -77,7 +65,6 @@ color: #555;
 [-24.058757,-45.794344], // Southwest coordinates
 [-20.154359,-39.428599]  // Northeast coordinates
 ];
-
 	var map = L.map('map', {
 	center: [coord1 ,coord2],
 	zoom: 9,
@@ -98,7 +85,6 @@ color: #555;
 {foo: 'bar',
 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
 // Parametros da area onde aparecerao as informações na tela
-
 	var info = L.control({position: 'bottomleft'});
 		info.onAdd = function (map) {
 			this._div = L.DomUtil.create('div', 'info');
@@ -111,7 +97,6 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
 			 "<hr/>Geocodigo: <span style='color: red; font-size:15px;' >" + props.CD_GEOCMU + '</span><hr/>' 
     			 + "<hr/>Nome: <span style='color: red; font-size:15px;' >" + props.NM_MUNICIP + '</span><hr/>'
 	    			 + "<hr/>População: <span style='color: red; font-size:15px;' >" + props.populacao + '</span><hr/>'
-
 			: 'Selecione um local no mapa.');
 	};
 		info.addTo(map);
@@ -177,7 +162,6 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
 				+ 'rj/' + parsed + '/panorama" target="blank" >'
 				+ 'IBGE/INFOCIDADE' +'</a> </span></a>';
 		}
-		
 // Ao clicar na feição abre um POPUP com as informações
 	layer.bindPopup(popupContent);
 		layer.bindTooltip("CLIQUE PARA EXIBIR");
