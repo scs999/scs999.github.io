@@ -229,7 +229,6 @@ var poi = pontos;
       poi.features.forEach(function(store, i){
         store.properties.id = i;
       });
-
       /**
        * Wait until the map loads to make changes to the map.
       */
@@ -312,7 +311,6 @@ var poi = pontos;
           buildLocationList(poi);
           /* Open a popup for the closest store. */
           createPopUp(poi.features[0]);
-
           /** Highlight the listing for the closest store. */
           var activeListing = document.getElementById('listing-' + poi.features[0].properties.id);
           activeListing.classList.add('active');
