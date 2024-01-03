@@ -106,7 +106,7 @@ $(window).on('load', function() {
 
       // If icon contains '.', assume it's a path to a custom icon,
       // otherwise create a Font Awesome icon
-      var iconSize = point['Custom Size'];
+      var iconSize = point['Tamanho'];
       var size = (iconSize.indexOf('x') > 0)
         ? [parseInt(iconSize.split('x')[0]), parseInt(iconSize.split('x')[1])]
         : [32, 32];
