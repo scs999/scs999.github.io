@@ -1,0 +1,49 @@
+X,Y,id,LatLong,End1,Nome,Bairro,Celular,Categoria
+-43.266831,-22.856329,0050bd3b5188cdafd3319f8eb58d6ae5,"-22.856329, -43.266831","Largo De Itarare, 14 - Olaria, Rio de Janeiro - RJ, 21061-230, Brazil",Farma Xavier,Ramos,,Farmácia
+-43.266162,-22.858399,11478c78d94835e4b86e873de3f51845,"-22.858399, -43.266162","Baiana - Complexo do Alemão, Rio de Janeiro - RJ, 21061-650, Brazil",Teleférico da Baiana,Ramos,,Ponto_de_Interesse
+-43.26821,-22.856271,147a9c118e815cc69b9385fe8f55b525,"-22.856271, -43.268210","R. Paranhos, 127 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",FAETEC - Alemão,Olaria,,Escola
+-43.264352,-22.856867,23a6d9acb7b9eba416089ac4b2dfde59,"-22.856867, -43.264352","R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Escola Walt Disney,Ramos,,Escola
+-43.268045,-22.861692,292e6eea828399bc1df5d12436e7a90f,,,Colegio Tim Lopes,Ramos,,Escola
+-43.26178,-22.853587,2a34489767b23e8153c40d1a01022f9d,"-22.853587, -43.261780","R. Uranos, 1098 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",Lar das Tintas,Ramos,,Comercio
+-43.262953,-22.85618,2f57a4a0dee802750889d8cddfbdc5d7,"-22.856180, -43.262953","R. Professor Lacé, 235 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Imperatriz Leopoldinense,Ramos,,Lazer
+-43.266039,-22.855481,2fce0d02f2290ec017db213a60a56a0b,"-22.855481, -43.266039","Rua Diomedes Trota, 420A - Ramos, Rio de Janeiro - RJ, 21060-010, Brazil",Restaurante Cowboy,Ramos,,Outros
+-43.262191,-22.854316,36e8510e0741650f61c2d32a7980f6d1,"-22.854316, -43.262191","R. Euclídes Faria, 30 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Bradesco,Ramos,,Banco
+-43.267193,-22.856993,371ee5acb1a852bc88cc7271ba2a09ed,"-22.856993, -43.267193","R. Paranhos, 1 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",Radi Mat Construções,Ramos,,Mat.Construção
+-43.26639,-22.8563,394edaca0923a4e3b1cd933a7b597e27,"-22.856300, -43.266390","R. Vinte e Três de Agosto, 32 - Ramos, Rio de Janeiro - RJ, 21061-680, Brazil",Casa & Vídeo,Ramos,,Comercio
+-43.260438,-22.855057,3cd9af352de6ba88f019bdcf6a2ef3f3,"-22.855057, -43.260438","R. Uranos, 1013 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",Laelia Flores,Ramos,,Outros
+-43.260961,-22.854406,3d774ad2d8442a20ee227aa5df1c5025,"-22.854406, -43.260961","R. Uranos, 1047 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",Casa do Biscoito,Ramos,,Comercio
+-43.259688,-22.856506,4a60cbc3f17887e158a356378be50f82,"-22.856506, -43.259688","R. Uranos, 945 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",Supermercado Mundial,Ramos,,Supermercado
+-43.260779,-22.854589,576c8b75f3c1c2fd9abd0042127cdc51,"-22.854589, -43.260779","R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",Drogarias Mundial,Ramos,,Farmácia
+-43.264291,-22.855601,5be3a5e93cae34e2e8a6e83204a8058b,"-22.855601, -43.264291","R. Euclídes Faria, 139 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Bombeiros ,Ramos,,Serviço_Público
+-43.263389,-22.855168,698adf3e152089f465c0fe628d713f73,"-22.855168, -43.263389","R. Euclídes Faria, 99 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Bob's,Ramos,,Alimentação
+-43.260677,-22.854752,6bd6b24a2556510658cf4e69bebcb36d,"-22.854752, -43.260677","R. Uranos, 1031 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",Drogarias Pacheco,Ramos,,Farmácia
+-43.264942,-22.854753,72c8b179e6757d51923fb446399c836c,,,Clinica Valter Felisbino,Ramos,,Saude
+-43.261836,-22.854523,766c65f7b4206b0367152516a8182a35,"-22.854523, -43.261836","R. Euclídes Faria, 27 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Caixa,Ramos,,Banco
+-43.261295,-22.854181,8253a344b0ac6590c8499df6998a7ad7,"-22.854181, -43.261295","R. Uranos, 1065 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",Ousado,Ramos,,Comercio
+-43.259949,-22.856813,867cdd03d779cb18d108860ed459a7dc,"-22.856813, -43.259949","R. Roberto Silva, 76 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",Igreja NS das Mercês,Ramos,,Igreja
+-43.261328,-22.855001,87136bf5e324d4bf6bc8c3fbdb1ca3ca,"-22.855001, -43.261328","R. Professor Lacé, 86 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Banco do Brasil ,Ramos,,Banco
+-43.2662,-22.847391,8be44a6761fd6b62c0e69809afcf5256,"-22.847391, -43.266200","Olaria - Olaria, Rio de Janeiro - RJ, 21060-020, Brazil",Estação Olaria ,Olaria,,Mobilidade
+-43.264008,-22.854948,8d64893a926ee4928c221bc7320283f5,"-22.854948, -43.264008","R. Teixeira Franco, 38 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",Sesc Ramos,Ramos,,Lazer
+-43.261371,-22.856573,94a6541ff740b832d076f86dc2ed0e1c,"-22.856573, -43.261371","R. Áureliano Lessa, 97 - Ramos, Rio de Janeiro - RJ, 21060-080, Brazil",Social Ramos Clube,Ramos,,Lazer
+-43.261882,-22.856535,9b48c0da603f68603ac5956fa74d3d78,"-22.856535, -43.261882","Rua Dr. Miguel Vieira Ferreira, 392 - Ramos, Rio de Janeiro - RJ, 21060-090, Brazil",Escola Municipal João Barbalho,Ramos,,Escola
+-43.260051,-22.855125,a118f0e0efb360e579887e9864dcd8ff,"-22.855125, -43.260051","Ramos - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",Estação Ramos,Ramos,,Mobilidade
+-43.261926,-22.855706,a138da851d1f005994e99024be9fe8e9,"-22.855706, -43.261926","R. Professor Lacé, 157 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Escola Municipal Carneiro Ribeiro,Ramos,,Escola
+-43.264204,-22.856439,abea324c38b11375e830d6f235db7766,"-22.856439, -43.264204","R. Professor Lacé, 406 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Oficina Transcar,Ramos,,Outros
+-43.261931,-22.854704,bbed4232c479f56e384f6b5bfeb4bfe0,"-22.854704, -43.261931","R. Euclídes Faria, 21 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Itau,Ramos,,Banco
+-43.255245,-22.867549,bdb25253f6738b9ea9f2e1be4c249cdc,"-22.867549, -43.255245","Bonsucesso - Bonsucesso, Rio de Janeiro - RJ, 21041-050, Brazil",Estação Bonsucesso ,Bonsucesso,,Mobilidade
+-43.278569,-22.840203,c0c9767b5aa6ee7a420fd5fd5337a0ab,"-22.840203, -43.278569","Penha - Rua Jose Mauricio - Penha, Rio de Janeiro - RJ, 21070-150, Brazil",Estação Penha,Penha,,Mobilidade
+-43.267022,-22.856635,cda28c46a8ad0366fa647b64d7791ce6,"-22.856635, -43.267022","Estrada do Itararé, 62 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",Ferragens Paranhos,Ramos,,Mat.Construção
+-43.26699,-22.856488,cec281bf824fd48f37c16f0dadc16bce,"-22.856488, -43.266990",#ERROR!,Igreja Universal,Ramos,,Igreja
+-43.26348,-22.855212,cfe08bf9e83d151726721bed35898ff7,"-22.855212, -43.263480","R. Teixeira Franco, 47 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",Posto Ale,Ramos,,Posto Combustivel
+-43.261524,-22.854269,d4dcd269cfc63cc124b6149d40eb534a,"-22.854269, -43.261524","R. Euclídes Faria, 9 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Subway,Ramos,,Outros
+-43.275512,-22.832685,d596457363fb2dfea149f3895ce7d978,"-22.832685, -43.275512","R. Belizário Pena, 534 - Penha, Rio de Janeiro - RJ, 21020-010, Brazil",Correios Belisario Pena,Penha,,Utilidades
+-43.267564,-22.859504,d6e0540d829b29c627faf0b783a2292f,"-22.859504, -43.267564","Estrada do Itararé, 340 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",Padaria da Grota,Ramos,,Padaria
+-43.265393,-22.850355,d7f13598ea9f34167b6f785d5d992206,"-22.850355, -43.265393","R. Uranos, 1293 - Olaria, Rio de Janeiro - RJ, 21060-005, Brazil",Supermercado Prezunic,Olaria,,Supermercado
+-43.261082,-22.85432,e04748b91795da46f12b62294e4caf6e,"-22.854320, -43.261082","R. Uranos, 1055c - Ramos, Rio de Janeiro - RJ, 21060-505, Brazil",Correios Uranos,Ramos,,Utilidades
+-43.267855,-22.86043,e85c3c187ba659822f8a4948a4eb6d8f,,,Clinica Rodrigo Roig,Ramos,,Saude
+-43.264309,-22.857047,e9590f2d0214659cb2d2d1c45dc11ed1,"-22.857047, -43.264309","R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Escola Padre Manuel da Nóbrega,Ramos,,Escola
+-43.267994,-22.856115,f0df73721d2feff1dad9b8e31f558157,"-22.856115, -43.267994","R. Paranhos, 124 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",Educandário Molina,Olaria,,Escola
+-43.265163,-22.85726,f5df9877804363269181b16c1214872b,"-22.857260, -43.265163","R. Professor Lacé, 529 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",Igreja de Jesus Cristo dos Santos dos Últimos Dias,Ramos,,Igreja
+-43.259705,-22.857075,fb860355ef29c4b7c4f7746b7f9def62,"-22.857075, -43.259705","R. Roberto Silva, 71 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",Instituto Pio XI,Ramos,,Escola
+-43.260742,-22.854653,fde35f20f2fd249de94d4b589a5be5c4,"-22.854653, -43.260742","R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",Lojas Americanas,Ramos,,Comercio
+-43.261639,-22.854001,fe0f6f716454fad141d2ae69f1186cd9,"-22.854001, -43.261639","R. Euclídes Faria, 2 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",Santander,Ramos,,Banco

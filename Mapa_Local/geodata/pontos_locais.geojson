@@ -1,0 +1,965 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856329, -43.266831",
+        "End1": "Largo De Itarare, 14 - Olaria, Rio de Janeiro - RJ, 21061-230, Brazil",
+        "End2": "Largo De Itarare, 14 - Olaria, Rio de Janeiro - RJ, 21061-230, Brazil",
+        "Nome": "Farma Xavier",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Farmácia"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.266831,
+          -22.856329
+        ],
+        "type": "Point"
+      },
+      "id": "0050bd3b5188cdafd3319f8eb58d6ae5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.858399, -43.266162",
+        "End1": "Baiana - Complexo do Alemão, Rio de Janeiro - RJ, 21061-650, Brazil",
+        "End2": "Baiana - Complexo do Alemão, Rio de Janeiro - RJ, 21061-650, Brazil",
+        "Nome": "Teleférico da Baiana",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Ponto_de_Interesse"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.266162,
+          -22.858399
+        ],
+        "type": "Point"
+      },
+      "id": "11478c78d94835e4b86e873de3f51845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856271, -43.268210",
+        "End1": "R. Paranhos, 127 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "End2": "R. Paranhos, 127 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "Nome": "FAETEC - Alemão",
+        "Bairro": "Olaria",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.26821,
+          -22.856271
+        ],
+        "type": "Point"
+      },
+      "id": "147a9c118e815cc69b9385fe8f55b525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856867, -43.264352",
+        "End1": "R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Escola Walt Disney",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264352,
+          -22.856867
+        ],
+        "type": "Point"
+      },
+      "id": "23a6d9acb7b9eba416089ac4b2dfde59"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Bairro": "Ramos",
+        "Categoria": "Escola",
+        "Celular": "",
+        "End1": "",
+        "End2": "",
+        "LatLong": "",
+        "Nome": "Colegio Tim Lopes"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.268045,
+          -22.861692
+        ],
+        "type": "Point"
+      },
+      "id": "292e6eea828399bc1df5d12436e7a90f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.853587, -43.261780",
+        "End1": "R. Uranos, 1098 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "End2": "R. Uranos, 1098 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "Nome": "Lar das Tintas",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Comercio"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.26178,
+          -22.853587
+        ],
+        "type": "Point"
+      },
+      "id": "2a34489767b23e8153c40d1a01022f9d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856180, -43.262953",
+        "End1": "R. Professor Lacé, 235 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 235 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Imperatriz Leopoldinense",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Lazer"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.262953,
+          -22.85618
+        ],
+        "type": "Point"
+      },
+      "id": "2f57a4a0dee802750889d8cddfbdc5d7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855481, -43.266039",
+        "End1": "Rua Diomedes Trota, 420A - Ramos, Rio de Janeiro - RJ, 21060-010, Brazil",
+        "End2": "Rua Diomedes Trota, 420A - Ramos, Rio de Janeiro - RJ, 21060-010, Brazil",
+        "Nome": "Restaurante Cowboy",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Outros"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.266039,
+          -22.855481
+        ],
+        "type": "Point"
+      },
+      "id": "2fce0d02f2290ec017db213a60a56a0b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854316, -43.262191",
+        "End1": "R. Euclídes Faria, 30 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 30 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Bradesco",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Banco"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.262191,
+          -22.854316
+        ],
+        "type": "Point"
+      },
+      "id": "36e8510e0741650f61c2d32a7980f6d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856993, -43.267193",
+        "End1": "R. Paranhos, 1 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "End2": "R. Paranhos, 1 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "Nome": "Radi Mat Construções",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Mat.Construção"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.267193,
+          -22.856993
+        ],
+        "type": "Point"
+      },
+      "id": "371ee5acb1a852bc88cc7271ba2a09ed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856300, -43.266390",
+        "End1": "R. Vinte e Três de Agosto, 32 - Ramos, Rio de Janeiro - RJ, 21061-680, Brazil",
+        "End2": "R. Vinte e Três de Agosto, 32 - Ramos, Rio de Janeiro - RJ, 21061-680, Brazil",
+        "Nome": "Casa & Vídeo",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Comercio"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.26639,
+          -22.8563
+        ],
+        "type": "Point"
+      },
+      "id": "394edaca0923a4e3b1cd933a7b597e27"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855057, -43.260438",
+        "End1": "R. Uranos, 1013 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "End2": "R. Uranos, 1013 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "Nome": "Laelia Flores",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Outros"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260438,
+          -22.855057
+        ],
+        "type": "Point"
+      },
+      "id": "3cd9af352de6ba88f019bdcf6a2ef3f3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854406, -43.260961",
+        "End1": "R. Uranos, 1047 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "End2": "R. Uranos, 1047 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "Nome": "Casa do Biscoito",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Comercio"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260961,
+          -22.854406
+        ],
+        "type": "Point"
+      },
+      "id": "3d774ad2d8442a20ee227aa5df1c5025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856506, -43.259688",
+        "End1": "R. Uranos, 945 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",
+        "End2": "R. Uranos, 945 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",
+        "Nome": "Supermercado Mundial",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Supermercado"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.259688,
+          -22.856506
+        ],
+        "type": "Point"
+      },
+      "id": "4a60cbc3f17887e158a356378be50f82"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854589, -43.260779",
+        "End1": "R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "End2": "R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "Nome": "Drogarias Mundial",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Farmácia"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260779,
+          -22.854589
+        ],
+        "type": "Point"
+      },
+      "id": "576c8b75f3c1c2fd9abd0042127cdc51"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855601, -43.264291",
+        "End1": "R. Euclídes Faria, 139 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 139 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Bombeiros ",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Serviço_Público"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264291,
+          -22.855601
+        ],
+        "type": "Point"
+      },
+      "id": "5be3a5e93cae34e2e8a6e83204a8058b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855168, -43.263389",
+        "End1": "R. Euclídes Faria, 99 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 99 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Bob's",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Alimentação"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.263389,
+          -22.855168
+        ],
+        "type": "Point"
+      },
+      "id": "698adf3e152089f465c0fe628d713f73"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854752, -43.260677",
+        "End1": "R. Uranos, 1031 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",
+        "End2": "R. Uranos, 1031 - Ramos, Rio de Janeiro - RJ, 21060-425, Brazil",
+        "Nome": "Drogarias Pacheco",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Farmácia"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260677,
+          -22.854752
+        ],
+        "type": "Point"
+      },
+      "id": "6bd6b24a2556510658cf4e69bebcb36d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Bairro": "Ramos",
+        "Categoria": "Saude",
+        "Celular": "",
+        "End1": "",
+        "End2": "",
+        "LatLong": "",
+        "Nome": "Clinica Valter Felisbino"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264942,
+          -22.854753
+        ],
+        "type": "Point"
+      },
+      "id": "72c8b179e6757d51923fb446399c836c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854523, -43.261836",
+        "End1": "R. Euclídes Faria, 27 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 27 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Caixa",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Banco"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261836,
+          -22.854523
+        ],
+        "type": "Point"
+      },
+      "id": "766c65f7b4206b0367152516a8182a35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854181, -43.261295",
+        "End1": "R. Uranos, 1065 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "End2": "R. Uranos, 1065 - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "Nome": "Ousado",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Comercio"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261295,
+          -22.854181
+        ],
+        "type": "Point"
+      },
+      "id": "8253a344b0ac6590c8499df6998a7ad7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856813, -43.259949",
+        "End1": "R. Roberto Silva, 76 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",
+        "End2": "R. Roberto Silva, 76 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",
+        "Nome": "Igreja NS das Mercês",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Igreja"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.259949,
+          -22.856813
+        ],
+        "type": "Point"
+      },
+      "id": "867cdd03d779cb18d108860ed459a7dc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855001, -43.261328",
+        "End1": "R. Professor Lacé, 86 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 86 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Banco do Brasil ",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Banco"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261328,
+          -22.855001
+        ],
+        "type": "Point"
+      },
+      "id": "87136bf5e324d4bf6bc8c3fbdb1ca3ca"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.847391, -43.266200",
+        "End1": "Olaria - Olaria, Rio de Janeiro - RJ, 21060-020, Brazil",
+        "End2": "Olaria - Olaria, Rio de Janeiro - RJ, 21060-020, Brazil",
+        "Nome": "Estação Olaria ",
+        "Bairro": "Olaria",
+        "Celular": "",
+        "Categoria": "Mobilidade"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.2662,
+          -22.847391
+        ],
+        "type": "Point"
+      },
+      "id": "8be44a6761fd6b62c0e69809afcf5256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854948, -43.264008",
+        "End1": "R. Teixeira Franco, 38 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",
+        "End2": "R. Teixeira Franco, 38 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",
+        "Nome": "Sesc Ramos",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Lazer"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264008,
+          -22.854948
+        ],
+        "type": "Point"
+      },
+      "id": "8d64893a926ee4928c221bc7320283f5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856573, -43.261371",
+        "End1": "R. Áureliano Lessa, 97 - Ramos, Rio de Janeiro - RJ, 21060-080, Brazil",
+        "End2": "R. Áureliano Lessa, 97 - Ramos, Rio de Janeiro - RJ, 21060-080, Brazil",
+        "Nome": "Social Ramos Clube",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Lazer"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261371,
+          -22.856573
+        ],
+        "type": "Point"
+      },
+      "id": "94a6541ff740b832d076f86dc2ed0e1c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856535, -43.261882",
+        "End1": "Rua Dr. Miguel Vieira Ferreira, 392 - Ramos, Rio de Janeiro - RJ, 21060-090, Brazil",
+        "End2": "Rua Dr. Miguel Vieira Ferreira, 392 - Ramos, Rio de Janeiro - RJ, 21060-090, Brazil",
+        "Nome": "Escola Municipal João Barbalho",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261882,
+          -22.856535
+        ],
+        "type": "Point"
+      },
+      "id": "9b48c0da603f68603ac5956fa74d3d78"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855125, -43.260051",
+        "End1": "Ramos - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "End2": "Ramos - Ramos, Rio de Janeiro - RJ, 21060-070, Brazil",
+        "Nome": "Estação Ramos",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Mobilidade"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260051,
+          -22.855125
+        ],
+        "type": "Point"
+      },
+      "id": "a118f0e0efb360e579887e9864dcd8ff"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855706, -43.261926",
+        "End1": "R. Professor Lacé, 157 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 157 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Escola Municipal Carneiro Ribeiro",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261926,
+          -22.855706
+        ],
+        "type": "Point"
+      },
+      "id": "a138da851d1f005994e99024be9fe8e9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856439, -43.264204",
+        "End1": "R. Professor Lacé, 406 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 406 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Oficina Transcar",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Outros"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264204,
+          -22.856439
+        ],
+        "type": "Point"
+      },
+      "id": "abea324c38b11375e830d6f235db7766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854704, -43.261931",
+        "End1": "R. Euclídes Faria, 21 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 21 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Itau",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Banco"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261931,
+          -22.854704
+        ],
+        "type": "Point"
+      },
+      "id": "bbed4232c479f56e384f6b5bfeb4bfe0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.867549, -43.255245",
+        "End1": "Bonsucesso - Bonsucesso, Rio de Janeiro - RJ, 21041-050, Brazil",
+        "End2": "Bonsucesso - Bonsucesso, Rio de Janeiro - RJ, 21041-050, Brazil",
+        "Nome": "Estação Bonsucesso ",
+        "Bairro": "Bonsucesso",
+        "Celular": "",
+        "Categoria": "Mobilidade"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.255245,
+          -22.867549
+        ],
+        "type": "Point"
+      },
+      "id": "bdb25253f6738b9ea9f2e1be4c249cdc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.840203, -43.278569",
+        "End1": "Penha - Rua Jose Mauricio - Penha, Rio de Janeiro - RJ, 21070-150, Brazil",
+        "End2": "Penha - Rua Jose Mauricio - Penha, Rio de Janeiro - RJ, 21070-150, Brazil",
+        "Nome": "Estação Penha",
+        "Bairro": "Penha",
+        "Celular": "",
+        "Categoria": "Mobilidade"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.278569,
+          -22.840203
+        ],
+        "type": "Point"
+      },
+      "id": "c0c9767b5aa6ee7a420fd5fd5337a0ab"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856635, -43.267022",
+        "End1": "Estrada do Itararé, 62 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",
+        "End2": "Estrada do Itararé, 62 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",
+        "Nome": "Ferragens Paranhos",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Mat.Construção"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.267022,
+          -22.856635
+        ],
+        "type": "Point"
+      },
+      "id": "cda28c46a8ad0366fa647b64d7791ce6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856488, -43.266990",
+        "End1": "#ERROR!",
+        "End2": "Largo De Itarare, 22 - Olaria, Rio de Janeiro - RJ, 21061-230, Brazil",
+        "Nome": "Igreja Universal",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Igreja"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.26699,
+          -22.856488
+        ],
+        "type": "Point"
+      },
+      "id": "cec281bf824fd48f37c16f0dadc16bce"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.855212, -43.263480",
+        "End1": "R. Teixeira Franco, 47 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",
+        "End2": "R. Teixeira Franco, 47 - Ramos, Rio de Janeiro - RJ, 21060-130, Brazil",
+        "Nome": "Posto Ale",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Posto Combustivel"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.26348,
+          -22.855212
+        ],
+        "type": "Point"
+      },
+      "id": "cfe08bf9e83d151726721bed35898ff7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854269, -43.261524",
+        "End1": "R. Euclídes Faria, 9 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 9 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Subway",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Outros"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261524,
+          -22.854269
+        ],
+        "type": "Point"
+      },
+      "id": "d4dcd269cfc63cc124b6149d40eb534a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.832685, -43.275512",
+        "End1": "R. Belizário Pena, 534 - Penha, Rio de Janeiro - RJ, 21020-010, Brazil",
+        "End2": "R. Belizário Pena, 534 - Penha, Rio de Janeiro - RJ, 21020-010, Brazil",
+        "Nome": "Correios Belisario Pena",
+        "Bairro": "Penha",
+        "Celular": "",
+        "Categoria": "Utilidades"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.275512,
+          -22.832685
+        ],
+        "type": "Point"
+      },
+      "id": "d596457363fb2dfea149f3895ce7d978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.859504, -43.267564",
+        "End1": "Estrada do Itararé, 340 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",
+        "End2": "Estrada do Itararé, 340 - Ramos, Rio de Janeiro - RJ, 21061-240, Brazil",
+        "Nome": "Padaria da Grota",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Padaria"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.267564,
+          -22.859504
+        ],
+        "type": "Point"
+      },
+      "id": "d6e0540d829b29c627faf0b783a2292f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.850355, -43.265393",
+        "End1": "R. Uranos, 1293 - Olaria, Rio de Janeiro - RJ, 21060-005, Brazil",
+        "End2": "R. Uranos, 1293 - Olaria, Rio de Janeiro - RJ, 21060-005, Brazil",
+        "Nome": "Supermercado Prezunic",
+        "Bairro": "Olaria",
+        "Celular": "",
+        "Categoria": "Supermercado"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.265393,
+          -22.850355
+        ],
+        "type": "Point"
+      },
+      "id": "d7f13598ea9f34167b6f785d5d992206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854320, -43.261082",
+        "End1": "R. Uranos, 1055c - Ramos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "End2": "R. Uranos, 1055c - Ramos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "Nome": "Correios Uranos",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Utilidades"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261082,
+          -22.85432
+        ],
+        "type": "Point"
+      },
+      "id": "e04748b91795da46f12b62294e4caf6e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Bairro": "Ramos",
+        "Categoria": "Saude",
+        "Celular": "",
+        "End1": "",
+        "End2": "",
+        "LatLong": "",
+        "Nome": "Clinica Rodrigo Roig"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.267855,
+          -22.86043
+        ],
+        "type": "Point"
+      },
+      "id": "e85c3c187ba659822f8a4948a4eb6d8f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.857047, -43.264309",
+        "End1": "R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 437 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Escola Padre Manuel da Nóbrega",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.264309,
+          -22.857047
+        ],
+        "type": "Point"
+      },
+      "id": "e9590f2d0214659cb2d2d1c45dc11ed1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.856115, -43.267994",
+        "End1": "R. Paranhos, 124 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "End2": "R. Paranhos, 124 - Olaria, Rio de Janeiro - RJ, 21073-460, Brazil",
+        "Nome": "Educandário Molina",
+        "Bairro": "Olaria",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.267994,
+          -22.856115
+        ],
+        "type": "Point"
+      },
+      "id": "f0df73721d2feff1dad9b8e31f558157"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.857260, -43.265163",
+        "End1": "R. Professor Lacé, 529 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "End2": "R. Professor Lacé, 529 - Ramos, Rio de Janeiro - RJ, 21060-120, Brazil",
+        "Nome": "Igreja de Jesus Cristo dos Santos dos Últimos Dias",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Igreja"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.265163,
+          -22.85726
+        ],
+        "type": "Point"
+      },
+      "id": "f5df9877804363269181b16c1214872b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.857075, -43.259705",
+        "End1": "R. Roberto Silva, 71 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",
+        "End2": "R. Roberto Silva, 71 - Ramos, Rio de Janeiro - RJ, 21060-230, Brazil",
+        "Nome": "Instituto Pio XI",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Escola"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.259705,
+          -22.857075
+        ],
+        "type": "Point"
+      },
+      "id": "fb860355ef29c4b7c4f7746b7f9def62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854653, -43.260742",
+        "End1": "R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "End2": "R. Uranos, 1037 - Manguinhos, Rio de Janeiro - RJ, 21060-505, Brazil",
+        "Nome": "Lojas Americanas",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Comercio"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.260742,
+          -22.854653
+        ],
+        "type": "Point"
+      },
+      "id": "fde35f20f2fd249de94d4b589a5be5c4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LatLong": "-22.854001, -43.261639",
+        "End1": "R. Euclídes Faria, 2 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "End2": "R. Euclídes Faria, 2 - Ramos, Rio de Janeiro - RJ, 21060-100, Brazil",
+        "Nome": "Santander",
+        "Bairro": "Ramos",
+        "Celular": "",
+        "Categoria": "Banco"
+      },
+      "geometry": {
+        "coordinates": [
+          -43.261639,
+          -22.854001
+        ],
+        "type": "Point"
+      },
+      "id": "fe0f6f716454fad141d2ae69f1186cd9"
+    }
+  ],
+  "type": "FeatureCollection"
+}
