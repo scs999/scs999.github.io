@@ -87,9 +87,9 @@ $(window).on('load', function() {
       layers = undefined;
     } else {
       for (var i in groups) {
-        var name = groups[i];
-        layers[name] = L.layerGroup();
-        layers[name].addTo(map);
+        var Nome = groups[i];
+        layers[Nome] = L.layerGroup();
+        layers[Nome].addTo(map);
       }
     }
     return layers;
@@ -127,9 +127,9 @@ $(window).on('load', function() {
 
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
-          .bindPopup("<b>" + point['Name'] + '</b><br>' +
+          .bindPopup("<b>" + point['Nome'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
-          point['Description']);
+          point['Descrição']);
 
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
@@ -826,7 +826,7 @@ $(window).on('load', function() {
 
           polylinesLegend.addOverlay(line,
             '<i class="color-line" style="background-color:' + p[index]['Color']
-            + '"></i> ' + p[index]['Display Name']);
+            + '"></i> ' + p[index]['Display Nome']);
 
           if (index == 0) {
             if (polylinesLegend._container) {
