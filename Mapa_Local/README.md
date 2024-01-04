@@ -1,11 +1,11 @@
 # Leaflet Maps with Google Sheets
 Customize Leaflet maps with a linked Google Sheets template or CSV files and GeoJSON data on GitHub
 
-![Preview](preview.jpg)
+![Preview](navigation.png)
 
-## Live links (replace with your own)
-- Leaflet Map https://scs999.github.io/Mapa_Local/
-- Google Sheets template [https://docs.google.com/spreadsheets/d/1G1H7zEI8HHBL16Tw0bkTWrKUnBnRe3k2gcmn7xupTBM/edit#gid=0](https://docs.google.com/spreadsheets/d/1-GwANoUOCefOw_Uljv7Ul66BLaU15sfRGTMjVYVoJFA/edit#gid=670446197)
+## Live links
+- Mapa https://scs999.github.io/Mapa_Local/
+- Planilha [https://docs.google.com/spreadsheets/d/1G1H7zEI8HHBL16Tw0bkTWrKUnBnRe3k2gcmn7xupTBM/edit#gid=0](https://docs.google.com/spreadsheets/d/1-GwANoUOCefOw_Uljv7Ul66BLaU15sfRGTMjVYVoJFA/edit#gid=670446197)
 
 ## Create your own
 See step-by-step tutorial in *Hands-On Data Visualization* https://handsondataviz.org/leaflet-maps-with-google-sheets.html
@@ -25,33 +25,30 @@ See Steps G or H in the tutorial https://handsondataviz.org/leaflet-maps-with-go
 ## Update your code for any pre-October 2020 maps before January 2021
 If you used our code to create a map prior to October 2020, you will need to update your version before January 26, 2021 for it to continue to work. Google announced that it will [migrate from Google Sheets API v3 to v4 in Jan 2021](https://developers.google.com/sheets/api/v3), and we updated our code to v1.2 on September 29th to address Google's changes.
 
-Four options to update your code:
+Quatro opções para atualizar seu código:
 
-Option A: Use your existing code and pull your data from CSV files rather than a linked Google Sheet. This avoids the need for a Google Sheets API key, but does not take advantage of our other code updates.
+Opção A: 
+use seu código existente e extraia seus dados de arquivos CSV em vez de uma planilha do Google vinculada. Isso evita a necessidade de uma chave de API do Planilhas Google, mas não aproveita nossas outras atualizações de código.
+1. Vá para sua Planilha Google vinculada e, para cada guia, *Arquivo > Baixar* em formato CSV e renomeie-os desta forma: Options.csv, Points.csv, etc.
+2. Faça login na interface da web do seu repositório de mapas GitHub.
+3. Crie uma nova subpasta chamada `csv` em seu repositório GitHub, selecionando *Adicionar arquivo > Criar um arquivo* e digitando `csv/`. A barra indica que é uma pasta, não um arquivo.
+4. Em seu repositório GitHub, carregue cada arquivo CSV criado nesta nova subpasta `csv`.
+5. Em seu repositório Github, abra o arquivo `google-doc-url.js`, vá até o final da página e exclua-o.
+Agora o código procura automaticamente dados na sua pasta CSV, em vez de na Planilha Google. Se desejar, você pode continuar usando a Planilha Google para editar o conteúdo do seu mapa e carregar essas alterações sempre na pasta CSV ou editar os arquivos CSV diretamente.
 
-1. Go to your linked Google Sheet, and for each tab, *File > Download* in CSV format, and rename them this way: Options.csv, Points.csv, etc.
-2. Log into the web interface of your GitHub map repo.
-3. Create a new subfolder named `csv` in your GitHub repo, by selecting *Add file > Create a file* and typing in `csv/`. The forward slash indicates it is a folder, not a file.
-4. In your GitHub repo, upload each CSV file you created into this new `csv` subfolder.
-5. In your Github repo, open the `google-doc-url.js` file, scroll to the bottom of the page, and delete it.
-Now the code automatically searches for data in your CSV folder, rather than your Google Sheet. If desired, you can continue to use the Google Sheet to edit your map content and upload those changes to the CSV folder each time, or edit the CSV files directly.
+Opção B: 
+se você entende (ou deseja aprender) [GitHub Desktop](https://handsondataviz.org/github-desktop-atom.html), use-o para mover cópias do código mais recente (index.html, pasta de scripts, style.css, etc.) em seu repositório por meio de seu computador local. No arquivo `google-doc-url.js`, copie e cole a chave da API do Planilhas Google que aparece na metade inferior do nosso código, mas mantenha seu próprio ID do Planilhas Google que aparece na metade superior do seu código.
 
-OR 
+Opção C:
+se você originalmente "forkou" uma cópia de nosso código, crie uma "solicitação pull" do GitHub para atualizar seu repositório com nossas revisões de código, incluindo a chave da API do Planilhas Google. Recomendamos esta opção apenas se você entender (ou estiver disposto a aprender sobre) pull requests do GitHub e puder lidar com a resolução de conflitos entre seu código e nosso código atualizado.
+Aviso: Como esta operação pode substituir parte do seu código, vá para *Código > Baixar ZIP* para fazer um backup em seu computador local.
+1. Faça login na interface da web do repositório de mapas históricos do GitHub.
+2. Clique em *Solicitações pull* e clique no botão verde para uma *Nova solicitação pull*.
+3. Na página *Comparando alterações*, use os menus para extrair o código *para* seu repositório *do* repositório original, denominado HandsOnDataViz/leaflet-maps-with-google-sheets. O GitHub pode avisar que você não pode mesclar os arquivos automaticamente, mas prossiga mesmo assim.
+4. Talvez seja necessário clicar no botão *Resolver conflitos* na próxima tela, o que significa que você precisa decidir quais partes do seu código manter e quais partes do nosso código aceitar. De modo geral, você deve aceitar nossas atualizações para index.html, style.css e a maioria dos scripts.js, enquanto mantém seu próprio conteúdo para README.md, mídia e conteúdo da pasta geojson. No arquivo google-doc-url.js, você deve manter seu próprio ID do Planilhas Google, mas adicionar temporariamente nossa chave de API do Planilhas Google até criar a sua própria. No GitHub, você pode resolver conflitos de código excluindo/mantendo linhas em arquivos específicos.
 
-Option B: If you understand (or are willing to learn about) [GitHub Desktop](https://handsondataviz.org/github-desktop-atom.html), use it to move copies of the newer code (index.html, scripts folder, style.css, etc.) into your repo via your local computer. In the `google-doc-url.js` file, copy and paste the Google Sheets API key that appears in the lower half of our code, but keep your own Google Sheets ID that appears in the upper-half of your code.
-
-OR
-
-Option C: If you originally "forked" a copy of our code, create a GitHub "pull request" to update your repo with our code revisions, including the Google Sheets API key. We recommend this option only if you understand (or are willing to learn about) GitHub pull requests, and can deal with resolving conflicts between your code and our updated code.
-Warning: Since this operation might overwrite some of your code, go to *Code > Download ZIP* to make a backup to your local computer.
-1. Log into the web interface of your GitHub storymap repository.
-2. Click *Pull requests* and click the green button for a *New pull request*.
-3. On the *Comparing Changes* page, use the menus to pull code *into* your repo *from* the original repo, named HandsOnDataViz/leaflet-maps-with-google-sheets. GitHub may warn that you cannot automatically merge the files, but proceed anyways.
-4. You may need to click the *Resolve conflicts* button on the next screen, which means you need to sort out which portions of your code to keep and which portions of our code to accept. Generally speaking, you should accept our updates for index.html, style.css, and most scripts.js, while keeping your own content for README.md, media, and geojson folder content. In the google-doc-url.js file, you should keep your own Google Sheet ID, but temporarily add our Google Sheets API key until you create your own. In GitHub, you can resolve code conflicts by deleting/keeping lines in specific files.
-
-OR
-
-Option D: Start over with a brand-new repo, and migrate your existing map content. Make a copy of our newer code by clicking the green 'Use template' button. Migrate any media folder or geodata folder content from your old repo to your new repo, by downloading to your local computer and uploading to GitHub. Reconnect your Google Sheet ID to the `google-doc-url.js` file in your new repo.
+Opção D:
+recomeçar com um repositório totalmente novo e migrar o conteúdo do mapa existente. Faça uma cópia do nosso código mais recente clicando no botão verde ‘Usar modelo’. Migre qualquer conteúdo de pasta de mídia ou pasta de dados geográficos do seu repositório antigo para o novo, baixando-o para o seu computador local e carregando-o no GitHub. Reconecte seu ID da Planilha Google ao arquivo `google-doc-url.js` em seu novo repositório.
 
 ## Credits (and licenses)
 Developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Trinity College CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause)
