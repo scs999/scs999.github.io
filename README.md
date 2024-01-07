@@ -13,6 +13,6 @@
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
 ## Unicarioca - Trabalhos Pós-Graduação
 - Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
-- 
+- Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
 ## Credits (and licenses)
 Silvio Cesar
