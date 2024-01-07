@@ -16,9 +16,9 @@
 - Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
 ### Estatística
 - https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb
-- ### Python
-- Python https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb
-- ### Machine Learning
-- Machine Learning https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb
+### Python
+- https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb
+### Machine Learning
+- https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb
 ## Credits (and licenses)
 Silvio Cesar
