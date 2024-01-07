@@ -11,5 +11,8 @@
 - FlyTo_Locais proximos https://scs999.github.io/Mapas/Flyto_Locais_Proximos.html
 - Bairros https://scs999.github.io/Mapas/mapa_filtro_Bairros.html
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
+
+Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
+- 
 ## Credits (and licenses)
 Silvio Cesar
