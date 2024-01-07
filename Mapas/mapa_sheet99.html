@@ -1,0 +1,472 @@
+   
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title></title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  <style>
+body { margin:0; padding:0; }
+	#map { position:absolute; top:10%; bottom:0; width:98%; margin: 1% 1% 1% 1% ; padding: 1% 1% 1% 1%; }
+    #menu {
+		text-align: center;
+		background: gray;
+		padding: 10px;
+		font-family: 'Open Sans', sans-serif;
+		height: 15%;
+    }
+	.mapboxgl-popup {
+	padding-bottom: 5px;
+	width: auto;
+	height: auto;
+	}
+	.mapboxgl-popup-close-button {
+	display: none;
+	}
+	.mapboxgl-popup-content {
+	padding: 0;
+	width: auto;
+	height: auto;
+	border-radius: 10%;
+	opacity: 0.9;
+	line-height:0.8;
+		word-wrap: break-word;
+	}
+	.mapboxgl-popup-content-wrapper {
+	padding: 1%;
+	width: auto;
+	height: auto;
+	word-wrap: break-word;
+	}
+	.mapboxgl-popup-content h3 {
+	font: bold 15px 'Source Sans Pro', 'Helvetica Neue', 'Sans-serif';
+	color: #0404B4;
+	text-align: left;
+	margin: 0;
+	display: block;
+	padding: 5px;
+	margin-top: 5px;
+	line-height:1.2;
+		word-wrap: break-word;
+	}
+	.mapboxgl-popup-content h4 {
+	font: bold 12px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+	text-align: left;
+	margin: 0;
+	display: block;
+	padding: 5px;
+	line-height:0.9;
+	color: #0174DF;
+		word-wrap: break-word;
+	}
+	.mapboxgl-container {
+	cursor: pointer;
+	}
+	.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+	margin-top: 3px;
+	}
+	.mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+	border-bottom-color: rgb(61, 59, 59);
+	}
+	/*Estilos dos marcadores */
+	.marker_Supermercado {
+	background-image: url('../mapas/img_mapa/grocery-15.svg');
+    background-color: #e5e5a8;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #ffd208;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+	.marker_Escola {
+	background-image: url('../mapas/img_mapa/college-15.svg');
+        background-color: #e5fded;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #42f5bc;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+	.marker_Farmácia {
+	background-image: url('../mapas/img_mapa/pharmacy-15.svg');
+        background-color: #f3e699;
+	background-size: cover;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Mat_Construção {
+	background-image: url('../mapas/img_mapa/warehouse-15.svg');
+        background-color: #f7f9b0;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #fcde47;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Padaria {
+	background-image: url('../mapas/img_mapa/Padaria.svg');
+        background-color: #f9fbcb;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #fcd847;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Mobilidade {
+	background-image: url('../mapas/img_mapa/rail-15.svg');
+        background-color: #eebcb6;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #ff0000;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Comercio {
+	background-image: url('../mapas/img_mapa/ic_compras.svg');
+        background-color: #f1f57c;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #f5da42;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Utilidades {
+	background-image: url('../mapas/img_mapa/commercial-15.svg');
+        background-color: gray;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #575654;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Banco {
+	background-image: url('../mapas/img_mapa/bank-15.svg');
+        background-color: #89a6f6;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #4275f5;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Serviço_Público {
+	background-image: url('../mapas/img_mapa/building-15.svg');
+        background-color: #7cf5a4;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #42f578;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Igreja {
+	background-image: url('../mapas/img_mapa/place-of-worship-15.svg');
+        background-color: #b0f9c8;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #42f5ad;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}			
+		.marker_Lazer {
+	background-image: url('../mapas/img_mapa/theatre-15.svg');
+        background-color: #c2eaca;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #42f5e3;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}	
+		.marker_Ponto_de_Interesse {
+	background-image: url('../mapas/img_mapa/tourist_view_point.svg');
+        background-color: #dd7a6d;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #ff2a26;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}		
+		.marker{
+	background-image: url('img_mapa/marker-15.svg');
+        background-color: #cdcbcb;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #6e6b6b;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}	
+		.marker_Alimentação {
+	background-image: url('../mapas/img_mapa/restaurant-15.svg');
+        background-color: #f9fbcb;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #f5e942;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+		.marker_Informática {
+	background-image: url('../mapas/img_mapa/logo_01.jpg');
+        background-color: #f9fbcb;
+	background-size: cover;
+	width: 3em;
+	height: 3em;
+    border-style:groove;
+	border-color: #0000ff;
+    border-width:5px;  
+	border-radius: 50%;
+	cursor: pointer;
+	}
+
+	.geocoder {
+	position:fixed;
+	z-index:2;
+	width:40%;
+	left:1%;
+	margin-left:1%;
+	top:10%;
+	}
+
+	/*FORMATAR EXIBIÇÃO TELEFONE */
+	a[href^="tel:"]:before {
+    content: "\260E";
+	color: #800000;
+    margin-right: 0.5em;
+}
+    #zoom  {
+        display: block;
+        position: fixed;
+        margin: 1px 80px 20px;
+        width: 8%;
+        height: 6%;
+        padding: 10px;
+        border-radius: 3px;
+        font-size: 1em;
+        text-align: center;
+        background: #ee8a65;
+        background-image: url('../mapas/img_mapa/search-plus.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        border: 2px solid #000;	
+    }
+	    #inicial  {
+        display: block;
+        position: fixed;
+        margin: 1px 180px 20px;
+        width: 8%;
+        height: 6%;
+        padding: 10px;
+        border-radius: 3px;
+        font-size: 1em;
+        background: #ee8a65;
+        background-image: url('../mapas/img_mapa/search-minus.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff; 
+        border: 2px solid #000; 
+    }
+.draw {
+position:absolute;
+z-index:1;
+width:auto;
+right:20px;
+top:20%;
+}
+
+#footer  {
+font-size: 20px;
+
+color: red;
+}
+
+	.nome {
+	font: bold 15px 'Source Sans Pro', 'Helvetica Neue', 'Sans-serif';
+	color: #0404B4;
+	text-align: left;
+	margin: 0;
+	display: block;
+	padding: 5px;
+	margin-top: 5px;
+	line-height:1.2;
+	word-wrap: break-word;
+	}
+  </style>
+</head>
+
+<body>
+
+  <div id='map'></div>
+  <script>
+
+    var transformRequest = (url, resourceType) => {
+      var isMapboxRequest =
+        url.slice(8, 22) === "api.mapbox.com" ||
+        url.slice(10, 26) === "tiles.mapbox.com";
+      return {
+        url: isMapboxRequest
+          ? url.replace("?", "?pluginName=sheetMapper&")
+          : url
+      };
+    };
+    //YOUR TURN: add your Mapbox token
+    
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
+//LATITUDE/LOGITUDE VISUALIZAÇÃO
+var latY = '-22.857908530829693'; 	var longX = ' -43.26589696787081';	  
+
+  var map = new mapboxgl.Map({
+	container: 'map', // container id
+	style: 'mapbox://styles/scs999999/cjxryon3s6xpo1dpl62xinjwy',
+//SELECIONAR ESTILO MAPBOX https://docs.mapbox.com/api/maps/#styles
+	center: [longX,latY], // POSIÇÃO INICIAL [LONG, LAT]
+	zoom: 11, // ZOOM INICIAL
+	minZoom: 4, // 
+	maxZoom: 22
+//	transformRequest: transformRequest
+//		maxBounds: bounds // Sets bounds as max
+  });
+
+    $(document).ready(function () {
+      $.ajax({
+        type: 'GET',
+        //YOUR TURN: Replace with csv export link
+    
+         url: "https://docs.google.com/spreadsheets/d/1PimRFI1BZOYdXX6RHy-ECMtBbeEukfKMMkkYxXXzrCk/gviz/tq?tqx=out:csv&sheet=Pagina2",
+	    dataType: 'text',
+        success: function (csvData) { makeGeoJSON(csvData); }
+      });
+
+
+
+      function makeGeoJSON(csvData) {
+        csv2geojson.csv2geojson(csvData, {
+          latfield: 'Latitude',
+          lonfield: 'Longitude',
+          delimiter: ','
+        }, function (err, data) {
+          map.on('load', function () {
+
+            //Add the the layer to the map
+            map.addLayer({
+              'id': 'csvData',
+              'type': 'circle',
+              'source': {
+                'type': 'geojson',
+                'data': data
+              },
+              'paint': {
+                'circle-radius': 10,
+                'circle-color': "purple"
+              }
+            });
+
+
+            // When a click event occurs on a feature in the csvData layer, open a popup at the
+            // location of the feature, with description HTML from its properties.
+            map.on('click', 'csvData', function (e) {
+              var coordinates = e.features[0].geometry.coordinates.slice();
+
+              //set popup text
+              //You can adjust the values of the popup to match the headers of your CSV.
+              // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
+              var description = '<h3>' + e.features[0].properties.UF + '</h3>' + '<h4>' + '<b>' + 'Endereço: ' + '</b>' + e.features[0].properties.Capital + '</h4>' + '<h4>' + '<b>' + 'Telefone: ' + '</b>' + e.features[0].properties.Região + '</h4>';
+
+              // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+
+              //add Popup to map
+var el = document.createElement('div');
+el.className = 'marker';
+el.style.backgroundImage = 'url(img_mapa/marca_azul.svg)';
+
+              new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+            });
+//SUBSTITUIDO PARAMETRO MARKER(el)
+//PASSANDO 
+// crie uma variável para sua marcação e adicione-a ao mapa
+	  var marker = new mapboxgl.Marker(el)
+		.setLngLat([coordinates])
+		.setPopup(popup)
+		.addTo(map); // add the marker to the map
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'csvData', function () {
+              map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'csvData', function () {
+              map.getCanvas().style.cursor = '';
+            });
+
+            var bbox = turf.bbox(data);
+            map.fitBounds(bbox, { padding: 50 });
+
+          });
+
+        });
+      };
+    });
+
+
+
+
+  </script>
+
+</body>
+
+</html>
