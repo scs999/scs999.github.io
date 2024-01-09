@@ -12,13 +12,13 @@
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
 ## Unicarioca - Trabalhos Pós-Graduação
 ### Inteligência Artificial
-- Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
-- Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
+- Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf  (PDF)
+- Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf (PDF)
 ### Estatística
-- https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb
+- https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb (Python/Collab)
 ### Python
-- https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb
+- https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb (Python/Collab)
 ### Machine Learning
-- https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb
+- https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
 ## Credits (and licenses)
 Silvio Cesar
