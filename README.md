@@ -9,7 +9,7 @@
 ## Mapas
 - Mapa_Sheet https://scs999.github.io/Mapas/mapa_sheet.html
 - Mapa_Sheet2 https://scs999.github.io/Mapa_Local/index.html
-- FlyTo_Estados https://scs999.github.io/Flyto_Brasil_Estados.html
+- FlyTo_Estados https://scs999.github.io/Mapas/Flyto_Brasil_Estados.html
 - FlyTo_Locais proximos https://scs999.github.io/Mapas/Flyto_Locais_Proximos.html
 - Bairros Filtro https://scs999.github.io/Mapas/mapa_filtro_Bairros.html
 - Bairros 2020 https://scs999.github.io/Mapas/mapa_BairrosRJ.html
