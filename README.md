@@ -2,10 +2,10 @@
 ## Principal
 - Site https://scs999.github.io/
 ## CENSO_2022
-- RJ_Cidades_Totais_Raça https://scs999.github.io/Mapas/Censo22_RJ_Cidades_Raca.html
 - Censo_Areas_Supervisão https://scs999.github.io/Mapas/Areas_Censo22.html
 - População RJ_Cidades_2022 https://scs999.github.io/Mapas/mapa_popRJ.html
 - População Brasil 2022 https://scs999.github.io/Mapas/mapa_popBrasil.html
+- (Tabela)RJ_Cidades_Totais_Raça https://scs999.github.io/Mapas/Censo22_RJ_Cidades_Raca.html
 ## Mapas
 - Mapa_Sheet https://scs999.github.io/Mapas/mapa_sheet.html
 - Mapa_Sheet2 https://scs999.github.io/Mapa_Local/index.html
