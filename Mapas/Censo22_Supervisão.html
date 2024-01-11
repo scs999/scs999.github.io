@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<title>CENSO22-Supervisão</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>Menu</button>
+  <span class="w3-bar-item w3-right">CENSO22</span>
+</div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src=".Mapas/img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>CENSO <strong>22</strong></span><br>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>CENSO22</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Principal</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  2</a>
+    <a href="#" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  4</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  5</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  6</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  7</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  8</a><br><br>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> CENSO2022 - Supervisão</b></h5>
+  </header>
+  <div class="w3-row-padding w3-margin-bottom">
+	  <!-- 1º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-gray w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+	       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.8606129,-43.2797102,15.26z/data=!4m2!6m1!1s1KkM_j61eHxvkUk-8HKTVCwwgLJMrriU?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h4>Alemão</h4></a>
+      </div>
+    </button>
+  	  <!-- 2º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-green w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+			       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.8455427,-43.2774754,14.52z/data=!4m2!6m1!1s18H7BYtnLxwOjW87GDHmd0A3ACDit3Pw?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h4>Ramos1</h4></a>
+        
+      </div>
+    </button>
+  	  <!-- 3º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+			       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.8649684,-43.2728487,14z/data=!4m2!6m1!1s1N0jJTskZrTLjmyB-qO7LzDuRvyucbtA?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h4>Ramos2</h4></a>
+      </div>
+    </button>
+
+
+  	  <!-- 2a linha 1º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-yellow w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+			       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.865223,-42.9953446,13z/data=!3m1!4b1!4m2!6m1!1s1hgBRbSYTY28V3BpL9hkSLhBHNEVonBQ?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h6>São Gonçalo-Ipiiba</h6></a>
+      </div>
+    </button>
+  	  <!-- 2a linha 2º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-black w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+			       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.2711096,-42.5918432,12.46z/data=!4m2!6m1!1s1D39vV_7QZBgL9h_dG8Xd2pM-oNlExew?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h4>Nova Friburgo</h4></a>
+      </div>
+    </button>
+			  <!-- 2 Linha 3º Quadro -->
+    <button class="w3-third">
+      <div class="w3-container w3-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>2023</h3>
+        </div>
+        <div class="w3-clear"></div>
+	       <div class="w3-col s3">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="https://www.google.com.br/maps/@-22.8998994,-43.1299686,15.5z/data=!4m2!6m1!1s19jFcZXnaQwI0UTPoel6KaUVcUTtFgcM?entry=ttu" target="_blank" class="w3-bar-item w3-button w3-padding">
+	<i class="fa fa-eye fa-fw"></i><h4>Niteroi Norte</h4></a>
+      </div>
+    </button>
+
+	
+  </div>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <h5>Mapa</h5>
+
+      </div>
+      <div class="w3-twothird">
+        <h5>Períodos</h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-gray w3-large"></i></td>
+            <td>Alemão</td>
+            <td><i>01/08/22 a 28/05/2023</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-green w3-large"></i></td>
+            <td>Ramos 1</td>
+            <td><i>15/12/22 a 15/01/2023</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-blue w3-large"></i></td>
+            <td>Ramos 2</td>
+            <td><i>16/01/22 a 02/02/2023</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-yellow w3-large"></i></td>
+            <td>São Gonçalo-Ipiiba</td>
+            <td><i>03/02/23 a 28/02/2023</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-black w3-large"></i></td>
+            <td>Nova Friburgo</td>
+            <td><i>27/03/23 a 06/04/2023</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users fa-fw w3-text-white w3-large"></i></td>
+            <td>Niteroi-Norte</td>
+            <td><i>22/05/23 a 28/05/2023</i></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+   </div>
+  <hr>
+  <div class="w3-container">
+  </div>
+  <hr>
+  <div class="w3-container">
+  </div>
+  <hr>
+  <div class="w3-container">
+
+  </div>
+  <br>
+  <div class="w3-container w3-dark-grey w3-padding-32">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">1</h5>
+        <p>Censo22</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">2</h5>
+        <p>Censo22</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">3</h5>
+        <p>Censo22</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4></h4>
+    <p>Powered by SCSCyber 2024</p>
+  </footer>
+  <!-- End page content -->
+</div>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+</body>
+</html>
