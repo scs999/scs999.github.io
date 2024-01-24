@@ -12,7 +12,7 @@ var estados = {
         "properties": {
           "id": "1",
           "geocodigo": "3304557",
-          "estado": "Rio de Janeiro",
+          "estado": "RIO DE JANEIRO",
           "capital": "Rio de Janeiro",
           "country": "",
           "população": '16.055.174',
@@ -20,7 +20,6 @@ var estados = {
           "state": ""
         }
       },
-
       {
         "type": "Feature",
         "geometry": {
@@ -32,7 +31,7 @@ var estados = {
         "properties": {
           "id": "2",
           "geocodigo": "00",
-          "estado": "São Paulo",
+          "estado": "SÃO PAULO",
           "capital": "São Paulo",
           "country": "",
           "população": "44.411.238",
@@ -40,7 +39,6 @@ var estados = {
           "state": ""
         }
       },
- 
       {
         "type": "Feature",
         "geometry": {
@@ -52,7 +50,7 @@ var estados = {
         "properties": {
           "id": "3",
           "geocodigo": "00",
-          "estado": "Minas Gerais",
+          "estado": "MINAS GERAIS",
           "capital": "Belo Horizonte",
           "country": "",
           "população": "20.539.989",
@@ -60,7 +58,6 @@ var estados = {
           "state": ""
         }
       },
-
       {
         "type": "Feature",
         "geometry": {
@@ -72,14 +69,13 @@ var estados = {
         "properties": {
           "id": "4",
           "geocodigo": "00",
-          "estado": "Espirito Santo",
+          "estado": "ESPÍRITO SANTO",
           "capital": "Vitoria",
           "country": "",
           "população": "3.833.712",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
 	       {
         "type": "Feature",
@@ -92,14 +88,13 @@ var estados = {
         "properties": {
           "id": "5",
           "geocodigo": "00",
-          "estado": "Rio Grande do Sul ",
+          "estado": "RIO GRANDE DO SUL ",
           "capital": "Porto Alegre",
           "country": "",
           "população": "10.882.965",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
 	       {
         "type": "Feature",
@@ -112,14 +107,13 @@ var estados = {
         "properties": {
           "id": "6",
           "geocodigo": "00",
-          "estado": "Santa Catarina",
+          "estado": "SANTA CATARINA",
           "capital": "Florianopolis",
           "country": "",
           "população": "7.610.361",
           "postalCode": "",
           "state": ""
-        }
-       
+        }       
       },
 	       {
         "type": "Feature",
@@ -132,14 +126,13 @@ var estados = {
         "properties": {
           "id": "7",
           "geocodigo": "00",
-          "estado": "Paraná",
+          "estado": "PARANÁ",
           "capital": "Curitiba",
           "country": "",
           "população": "11.444.380",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
 	       {
         "type": "Feature",
@@ -152,14 +145,13 @@ var estados = {
         "properties": {
           "id": "8",
           "geocodigo": "00",
-          "estado": "Bahia",
+          "estado": "BAHIA",
           "capital": "Salvador",
           "country": "",
           "população": "14.141.626",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
 	       {
         "type": "Feature",
@@ -172,14 +164,13 @@ var estados = {
         "properties": {
           "id": "9",
           "geocodigo": "00",
-          "estado": "Sergipe",
+          "estado": "SERGIPE",
           "capital": "Aracaju",
           "country": "",
           "população": "2.210.004",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
 	       {
         "type": "Feature",
@@ -192,16 +183,14 @@ var estados = {
         "properties": {
           "id": "10",
           "geocodigo": "00",
-          "estado": "Alagoas",
+          "estado": "ALAGOAS",
           "capital": "Maceio",
           "country": "",
           "população": "3.127.683",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },	  
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -213,16 +202,14 @@ var estados = {
         "properties": {
           "id": "11",
           "geocodigo": "00",
-          "estado": "Pernambuco",
+          "estado": "PERNAMBUCO",
           "capital": "Recife",
           "country": "",
           "população": "9.058.931",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },	  
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -234,16 +221,14 @@ var estados = {
         "properties": {
           "id": "12",
           "geocodigo": "00",
-          "estado": "Paraiba",
+          "estado": "PARAÍBA",
           "capital": "João Pessoa",
           "country": "",
           "população": "3.974.687",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -255,16 +240,14 @@ var estados = {
         "properties": {
           "id": "13",
           "geocodigo": "00",
-          "estado": "Rio Grande do Norte",
+          "estado": "RIO GRANDE DO NORTE",
           "capital": "Natal",
           "country": "",
           "população": "3.302.729",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -276,16 +259,14 @@ var estados = {
         "properties": {
           "id": "14",
           "geocodigo": "00",
-          "estado": "Ceara",
+          "estado": "CEARÁ",
           "capital": "Fortaleza",
           "country": "",
           "população": "8.794.957",
           "postalCode": "",
           "state": ""
-        }
-       
+        }       
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -297,16 +278,14 @@ var estados = {
         "properties": {
           "id": "15",
           "geocodigo": "00",
-          "estado": "Piaui",
+          "estado": "PIAUÍ",
           "capital": "Terezina",
           "country": "",
           "população": "3.271.199",
           "postalCode": "",
           "state": ""
-        }
-       
-      },
-	  
+        }      
+      },	  
 	       {
         "type": "Feature",
         "geometry": {
@@ -318,17 +297,15 @@ var estados = {
         "properties": {
           "id": "16",
           "geocodigo": "00",
-          "estado": "Maranhão",
-          "capital": "São Luiz",
+          "estado": "MARANHÃO",
+          "capital": "São Luis",
           "country": "",
           "população": "6.776.699",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },	  
-	  
-	       {
+	  	       {
         "type": "Feature",
         "geometry": {
           "type": "Point",
@@ -339,16 +316,14 @@ var estados = {
         "properties": {
           "id": "17",
           "geocodigo": "00",
-          "estado": "Pará",
+          "estado": "PARÁ",
           "capital": "Belem",
           "country": "",
           "população": "8.120.131",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },	  
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -360,18 +335,14 @@ var estados = {
         "properties": {
           "id": "18",
           "geocodigo": "00",
-          "estado": "Amapá",
+          "estado": "AMAPÁ",
           "capital": "Macapá",
           "country": "",
           "população": "733.759",
           "postalCode": "",
           "state": ""
-        }
-       
-      },	  
-	  
-	  
-	  
+        }    
+      },	  	  
 	       {
         "type": "Feature",
         "geometry": {
@@ -383,16 +354,14 @@ var estados = {
         "properties": {
           "id": "19",
           "geocodigo": "00",
-          "estado": "Amazonas",
+          "estado": "AMAZONAS",
           "capital": "Manaus",
           "country": "",
           "população": "3.941.613",
           "postalCode": "",
           "state": ""
-        }
-       
-      },	
-	  
+        }     
+      },	  
 	       {
         "type": "Feature",
         "geometry": {
@@ -404,16 +373,14 @@ var estados = {
         "properties": {
           "id": "20",
           "geocodigo": "00",
-          "estado": "Acre",
+          "estado": "ACRE",
           "capital": "Rio Branco",
           "country": "",
           "população": "830.018",
           "postalCode": "",
           "state": ""
-        }
-       
+        }    
       },	  
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -425,16 +392,14 @@ var estados = {
         "properties": {
           "id": "21",
           "geocodigo": "00",
-          "estado": "Roraima",
+          "estado": "RORAIMA",
           "capital": "Boa Vista",
           "country": "",
           "população": "636.707",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -446,16 +411,14 @@ var estados = {
         "properties": {
           "id": "22",
           "geocodigo": "00",
-          "estado": "Rondonia",
+          "estado": "RONDÔNIA",
           "capital": "Porto Velho",
           "country": "",
           "população": "1.581.196",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -467,16 +430,14 @@ var estados = {
         "properties": {
           "id": "23",
           "geocodigo": "00",
-          "estado": "Mato Grosso",
+          "estado": "MATO GROSSO",
           "capital": "Cuiabá",
           "country": "",
           "população": "3.658.649",
           "postalCode": "",
           "state": ""
-        }
-       
+        }      
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -488,16 +449,14 @@ var estados = {
         "properties": {
           "id": "24",
           "geocodigo": "00",
-          "estado": "Mato Grosso do sul",
+          "estado": "MATO GROSSO DO SUL",
           "capital": "Campo Grande",
           "country": "",
           "população": "2.757.013",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },
-
 	       {
         "type": "Feature",
         "geometry": {
@@ -509,16 +468,14 @@ var estados = {
         "properties": {
           "id": "25",
           "geocodigo": "00",
-          "estado": "Goias",
+          "estado": "GOIÁS",
           "capital": "Goiania",
           "country": "",
           "população": "7.056.495",
           "postalCode": "",
           "state": ""
-        }
-       
+        }    
       },	  
-	  
 	       {
         "type": "Feature",
         "geometry": {
@@ -530,16 +487,14 @@ var estados = {
         "properties": {
           "id": "26",
           "geocodigo": "00",
-          "estado": "Tocantins",
+          "estado": "TOCANTINS",
           "capital": "Palmas",
           "country": "",
           "população": "1.511.460",
           "postalCode": "",
           "state": ""
-        }
-       
+        }     
       },	  
-	  
 	       {
         "type": "Feature",
         "geometry": {
@@ -551,20 +506,13 @@ var estados = {
         "properties": {
           "id": "27",
           "geocodigo": "00",
-          "estado": "Distrito Federal",
-          "capital": "Brasilia",
+          "estado": "DISTRITO FEDERAL",
+          "capital": "Brasília",
           "country": "",
           "população": "2.817.381",
           "postalCode": "",
           "state": ""
         }
-       
       },	  
-
-
-
-	  
-
-	  
 	  ]
     }
