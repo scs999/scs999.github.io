@@ -1,0 +1,518 @@
+var estados = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-43.2003, -22.9129
+          ]
+        },
+        "properties": {
+          "id": "1",
+          "geocodigo": "3304557",
+          "estado": "RIO DE JANEIRO",
+          "capital": "Rio de Janeiro",
+          "country": "",
+          "população": '16.055.174',
+          "postalCode": "",
+          "state": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+			-46.6395, -23.5329
+          ]
+        },
+        "properties": {
+          "id": "2",
+          "geocodigo": "00",
+          "estado": "SÃO PAULO",
+          "capital": "São Paulo",
+          "country": "",
+          "população": "44.411.238",
+          "postalCode": "",
+          "state": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+			-43.9266, -19.9102
+          ]
+        },
+        "properties": {
+          "id": "3",
+          "geocodigo": "00",
+          "estado": "MINAS GERAIS",
+          "capital": "Belo Horizonte",
+          "country": "",
+          "população": "20.539.989",
+          "postalCode": "",
+          "state": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		  -40.3128, -20.3155
+          ]
+        },
+        "properties": {
+          "id": "4",
+          "geocodigo": "00",
+          "estado": "ESPÍRITO SANTO",
+          "capital": "Vitoria",
+          "country": "",
+          "população": "3.833.712",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-51.2065, -30.0318
+          ]
+        },
+        "properties": {
+          "id": "5",
+          "geocodigo": "00",
+          "estado": "RIO GRANDE DO SUL ",
+          "capital": "Porto Alegre",
+          "country": "",
+          "população": "10.882.965",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-48.5477, -27.5945
+          ]
+        },
+        "properties": {
+          "id": "6",
+          "geocodigo": "00",
+          "estado": "SANTA CATARINA",
+          "capital": "Florianopolis",
+          "country": "",
+          "população": "7.610.361",
+          "postalCode": "",
+          "state": ""
+        }       
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-49.2646, -25.4195
+          ]
+        },
+        "properties": {
+          "id": "7",
+          "geocodigo": "00",
+          "estado": "PARANÁ",
+          "capital": "Curitiba",
+          "country": "",
+          "população": "11.444.380",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-38.5011, -12.9718
+          ]
+        },
+        "properties": {
+          "id": "8",
+          "geocodigo": "00",
+          "estado": "BAHIA",
+          "capital": "Salvador",
+          "country": "",
+          "população": "14.141.626",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-37.0677, -10.9091
+          ]
+        },
+        "properties": {
+          "id": "9",
+          "geocodigo": "00",
+          "estado": "SERGIPE",
+          "capital": "Aracaju",
+          "country": "",
+          "população": "2.210.004",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-35.735, -9.66599
+          ]
+        },
+        "properties": {
+          "id": "10",
+          "geocodigo": "00",
+          "estado": "ALAGOAS",
+          "capital": "Maceio",
+          "country": "",
+          "população": "3.127.683",
+          "postalCode": "",
+          "state": ""
+        }     
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-34.87719, -8.046669
+          ]
+        },
+        "properties": {
+          "id": "11",
+          "geocodigo": "00",
+          "estado": "PERNAMBUCO",
+          "capital": "Recife",
+          "country": "",
+          "população": "9.058.931",
+          "postalCode": "",
+          "state": ""
+        }     
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-34.8641, -7.11509
+          ]
+        },
+        "properties": {
+          "id": "12",
+          "geocodigo": "00",
+          "estado": "PARAÍBA",
+          "capital": "João Pessoa",
+          "country": "",
+          "população": "3.974.687",
+          "postalCode": "",
+          "state": ""
+        }     
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-35.1986, -5.79357
+          ]
+        },
+        "properties": {
+          "id": "13",
+          "geocodigo": "00",
+          "estado": "RIO GRANDE DO NORTE",
+          "capital": "Natal",
+          "country": "",
+          "população": "3.302.729",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-38.5423, -3.71664
+          ]
+        },
+        "properties": {
+          "id": "14",
+          "geocodigo": "00",
+          "estado": "CEARÁ",
+          "capital": "Fortaleza",
+          "country": "",
+          "população": "8.794.957",
+          "postalCode": "",
+          "state": ""
+        }       
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-42.8034, -5.09194
+          ]
+        },
+        "properties": {
+          "id": "15",
+          "geocodigo": "00",
+          "estado": "PIAUÍ",
+          "capital": "Terezina",
+          "country": "",
+          "população": "3.271.199",
+          "postalCode": "",
+          "state": ""
+        }      
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-44.2825, -2.53874
+          ]
+        },
+        "properties": {
+          "id": "16",
+          "geocodigo": "00",
+          "estado": "MARANHÃO",
+          "capital": "São Luis",
+          "country": "",
+          "população": "6.776.699",
+          "postalCode": "",
+          "state": ""
+        }     
+      },	  
+	  	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-48.4898, -1.4554
+          ]
+        },
+        "properties": {
+          "id": "17",
+          "geocodigo": "00",
+          "estado": "PARÁ",
+          "capital": "Belem",
+          "country": "",
+          "população": "8.120.131",
+          "postalCode": "",
+          "state": ""
+        }      
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-51.0694, 0.034934
+          ]
+        },
+        "properties": {
+          "id": "18",
+          "geocodigo": "00",
+          "estado": "AMAPÁ",
+          "capital": "Macapá",
+          "country": "",
+          "população": "733.759",
+          "postalCode": "",
+          "state": ""
+        }    
+      },	  	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-60.0212, -3.11866
+          ]
+        },
+        "properties": {
+          "id": "19",
+          "geocodigo": "00",
+          "estado": "AMAZONAS",
+          "capital": "Manaus",
+          "country": "",
+          "população": "3.941.613",
+          "postalCode": "",
+          "state": ""
+        }     
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-67.8243, -9.97499
+          ]
+        },
+        "properties": {
+          "id": "20",
+          "geocodigo": "00",
+          "estado": "ACRE",
+          "capital": "Rio Branco",
+          "country": "",
+          "população": "830.018",
+          "postalCode": "",
+          "state": ""
+        }    
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-60.6753, 2.82384
+          ]
+        },
+        "properties": {
+          "id": "21",
+          "geocodigo": "00",
+          "estado": "RORAIMA",
+          "capital": "Boa Vista",
+          "country": "",
+          "população": "636.707",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-63.8999, -8.76077
+          ]
+        },
+        "properties": {
+          "id": "22",
+          "geocodigo": "00",
+          "estado": "RONDÔNIA",
+          "capital": "Porto Velho",
+          "country": "",
+          "população": "1.581.196",
+          "postalCode": "",
+          "state": ""
+        }     
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-56.0974, -15.601
+          ]
+        },
+        "properties": {
+          "id": "23",
+          "geocodigo": "00",
+          "estado": "MATO GROSSO",
+          "capital": "Cuiabá",
+          "country": "",
+          "população": "3.658.649",
+          "postalCode": "",
+          "state": ""
+        }      
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-54.6295, -20.4486
+          ]
+        },
+        "properties": {
+          "id": "24",
+          "geocodigo": "00",
+          "estado": "MATO GROSSO DO SUL",
+          "capital": "Campo Grande",
+          "country": "",
+          "população": "2.757.013",
+          "postalCode": "",
+          "state": ""
+        }     
+      },
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-49.2643, -16.6864
+          ]
+        },
+        "properties": {
+          "id": "25",
+          "geocodigo": "00",
+          "estado": "GOIÁS",
+          "capital": "Goiania",
+          "country": "",
+          "população": "7.056.495",
+          "postalCode": "",
+          "state": ""
+        }    
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-48.3558, -10.24
+          ]
+        },
+        "properties": {
+          "id": "26",
+          "geocodigo": "00",
+          "estado": "TOCANTINS",
+          "capital": "Palmas",
+          "country": "",
+          "população": "1.511.460",
+          "postalCode": "",
+          "state": ""
+        }     
+      },	  
+	       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+		-47.9297, -15.7795
+          ]
+        },
+        "properties": {
+          "id": "27",
+          "geocodigo": "00",
+          "estado": "DISTRITO FEDERAL",
+          "capital": "Brasília",
+          "country": "",
+          "população": "2.817.381",
+          "postalCode": "",
+          "state": ""
+        }
+      },	  
+	  ]
+    }
