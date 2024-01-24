@@ -2,7 +2,7 @@
 ## Principal
 - Site https://scs999.github.io/
 ## CENSO_2022
-- Censo_2022_UF https://scs999.github.io/Mapa_Censo2022_BR.html
+- Censo_2022_UF https://scs999.github.io/Mapas/Mapa_Censo2022_BR.html
 - Censo_Areas_Supervisão https://scs999.github.io/Mapas/Areas_Censo22.html
 - Censo_Areas_Supervisão 2 https://scs999.github.io/Mapas/Censo22_Supervisão.html
 - População RJ_Cidades_2022 https://scs999.github.io/Mapas/mapa_popRJ.html
