@@ -26,6 +26,6 @@
 ### Machine Learning
 - https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
 - ### Linguagem R - Estatistica Aplicada
-- 
+- https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb
 #### Credits (and licenses)
 Silvio Cesar
