@@ -4,7 +4,7 @@
       "type": "Feature",
       "properties": {
         "nome": "Rua Itajubara",
-        "Tipo": "Principal"
+        "line_type":"on-road"
       },
       "geometry": {
         "coordinates": [
@@ -72,7 +72,7 @@
     {
       "type": "Feature",
       "properties": {
-        "Tipo": "Principal",
+        "line_type":"on-road",
         "nome": "Rua Vista Alegre"
       },
       "geometry": {
@@ -117,7 +117,7 @@
     {
       "type": "Feature",
       "properties": {
-        "Tipo": "Principal",
+        "line_type":"on-road",
         "nome": "Rua Jorge Gomes"
       },
       "geometry": {
