@@ -15,17 +15,19 @@
 - Bairros Filtro https://scs999.github.io/Mapas/mapa_filtro_Bairros.html
 - Bairros 2020 https://scs999.github.io/Mapas/mapa_BairrosRJ.html
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
-## Unicarioca - Trabalhos Pós-Graduação
-### Inteligência Artificial
+## Unicarioca - Trabalhos Pós-Graduação (2023/2024)
+### Inteligência Artificial (Prof. Paulo)
 - Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf  (PDF)
 - Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf (PDF)
-### Estatística
+### Estatística (Prof. Manoel)
 - https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb (Python/Collab)
-### Python
+### Python (Prof. Sergio)
 - https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb (Python/Collab)
-### Machine Learning
+### Machine Learning (Prof. Fábio)
 - https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
-- ### Linguagem R - Estatistica Aplicada
-- https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb
+### Visualização de dados - Aplicação negócios (Prof. Leonardo / Andréa)
+- 
+### Linguagem R - Estatistica Aplicada (Prof. Sergio / Manoel)
+- https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb (Python/Collab)
 #### Credits (and licenses)
 Silvio Cesar
