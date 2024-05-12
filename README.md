@@ -29,6 +29,7 @@
 - https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
 ### Visualização de dados - Aplicação negócios (Prof. Leonardo / Andréa)
 - https://bit.ly/trabalho_unicarioca_data_science
+- https://bit.ly/dashboardunicarioca1 (Dashboard Power BI)
 ### Linguagem R - Estatistica Aplicada (Prof. Sergio / Manoel)
 - https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb (Python/Collab)
 #### Credits (and licenses)
