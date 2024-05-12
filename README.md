@@ -16,6 +16,8 @@
 - Bairros 2020 https://scs999.github.io/Mapas/mapa_BairrosRJ.html
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
 ## Unicarioca - Trabalhos Pós-Graduação (2023/2024)
+### Data Warehouse (Prof. Tavares)
+-
 ### Inteligência Artificial (Prof. Paulo)
 - Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf  (PDF)
 - Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf (PDF)
@@ -26,7 +28,7 @@
 ### Machine Learning (Prof. Fábio)
 - https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
 ### Visualização de dados - Aplicação negócios (Prof. Leonardo / Andréa)
-- 
+- https://bit.ly/trabalho_unicarioca_data_science
 ### Linguagem R - Estatistica Aplicada (Prof. Sergio / Manoel)
 - https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb (Python/Collab)
 #### Credits (and licenses)
