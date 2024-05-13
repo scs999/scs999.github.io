@@ -15,6 +15,7 @@
 - Bairros Filtro https://scs999.github.io/Mapas/mapa_filtro_Bairros.html
 - Bairros 2020 https://scs999.github.io/Mapas/mapa_BairrosRJ.html
 - Locais https://scs999.github.io/Mapas/mapa_filtro_Locais.html
+- Locais/Bairros https://scs999.github.io/Mapas/mapa_filtro_layer.html
 ## Unicarioca - Trabalhos Pós-Graduação (2023/2024)
 ### Data Warehouse (Prof. Tavares)
 -
