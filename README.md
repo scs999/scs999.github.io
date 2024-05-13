@@ -19,18 +19,18 @@
 ### Data Warehouse (Prof. Tavares)
 -
 ### Inteligência Artificial (Prof. Paulo)
-- Optuna https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf  (PDF)
-- Segmentação Semantica https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf (PDF)
+- Optuna: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
+- Segmentação Semantica: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
 ### Estatística (Prof. Manoel)
-- https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb (Python/Collab)
+- (Python/Collab) https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb
 ### Python (Prof. Sergio)
-- https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb (Python/Collab)
+- (Python/Collab) https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb
 ### Machine Learning (Prof. Fábio)
-- https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb (Python/Collab)
+- (Python/Collab) https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb
 ### Visualização de dados - Aplicação negócios (Prof. Leonardo / Andréa)
-- https://bit.ly/trabalho_unicarioca_data_science
-- https://bit.ly/dashboardunicarioca1 (Dashboard Power BI)
+- (Power Point) https://bit.ly/trabalho_unicarioca_data_science 
+- (Dashboard Power BI) https://bit.ly/dashboardunicarioca1
 ### Linguagem R - Estatistica Aplicada (Prof. Sergio / Manoel)
-- https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb (Python/Collab)
+- (R/Collab) https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb
 #### Credits (and licenses)
 Silvio Cesar
