@@ -22,16 +22,16 @@
 ### Inteligência Artificial (Prof. Paulo)
 - Optuna: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
 - Segmentação Semantica: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
-### Estatística (Prof. Manoel)
+### Estatística (Prof. Manuel)
 - (Python/Collab) https://scs999.github.io/Pos_unicarioca/Estatistica_Trabalho_final.ipynb
-### Python (Prof. Sergio)
+### Python (Prof. Sérgio)
 - (Python/Collab) https://scs999.github.io/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb
 ### Machine Learning (Prof. Fábio)
 - (Python/Collab) https://scs999.github.io/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb
 ### Visualização de dados - Aplicação negócios (Prof. Leonardo / Andréa)
 - (Power Point) https://bit.ly/trabalho_unicarioca_data_science 
 - (Dashboard Power BI) https://bit.ly/dashboardunicarioca1
-### Linguagem R - Estatistica Aplicada (Prof. Sergio / Manoel)
+### Linguagem R - Estatistica Aplicada (Prof. Sérgio / Manuel)
 - (R/Collab) https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb
 #### Credits (and licenses)
 Silvio Cesar
