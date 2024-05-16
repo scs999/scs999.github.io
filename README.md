@@ -18,7 +18,7 @@
 - Locais/Bairros https://scs999.github.io/Mapas/mapa_filtro_layer.html
 ## Unicarioca - Trabalhos Pós-Graduação (2023/2024)
 ### Data Warehouse (Prof. Tavares)
--
+-(PDF) https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf
 ### Inteligência Artificial (Prof. Paulo)
 - Optuna: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf
 - Segmentação Semantica: (PDF) https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf
