@@ -15,7 +15,6 @@
     <!-- Turf.js plugin -->
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
     <style>
-
       body {
         color:#404040;
         font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
@@ -23,13 +22,11 @@
         padding:0;
         -webkit-font-smoothing:antialiased;
       }
-
       * {
         -webkit-box-sizing:border-box;
         -moz-box-sizing:border-box;
         box-sizing:border-box;
       }
-
       .sidebar {
         position:absolute;
         width:30%;
@@ -39,16 +36,14 @@
         border-right:1px solid rgba(0,0,0,0.25);
       }
       .pad2 {
-        padding:20px;
+        padding:10px;
       }
-
       .map {
         position:absolute;
         left:40.3333%;
         width:70%;
         top:0;bottom:0;
       }
-
       h1 {
         font-size:22px;
         margin:0;
@@ -56,18 +51,15 @@
         line-height: 20px;
         padding: 20px 2px;
       }
-
       a {
         color:#404040;
         text-decoration:none;
       }
-
       a:hover {
         color:#101010;
       }
-
       .heading {
-        margin:40px;
+        margin:20px;
         background:#fff;
         border-bottom:1px solid #eee;
         min-height:60px;
@@ -76,28 +68,24 @@
         background-color: #00853e;
         color: #fff;
       }
-
       .listings {
-        margin:20px;
+        margin:10px;
         height:90%;
         overflow:auto;
         padding-bottom:80px;
       }
-
       .listings .item {
         display:block;
         border-bottom:1px solid #eee;
         padding:10px;
         text-decoration:none;
       }
-
       .listings .item:last-child { border-bottom:none; }
       .listings .item .title {
         display:block;
         color:#00853e;
         font-weight:700;
       }
-
       .listings .item .title small { font-weight:400; }
       .listings .item.active .title,
       .listings .item .title:hover { color:#8cc63f; }
@@ -117,17 +105,15 @@
         background:#00853e;
         border-radius:0;
       }
-
       .marker {
         border: none;
         cursor: pointer;
-        height: 30px;
+        height: 40px;
         width: 30px;
         background-image: url(img_mapa/mapa.jpg);
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: cover; /* Resize the background image to cover the entire container */
       }
-
       .clearfix { display:block; }
       .clearfix:after {
         content:'.';
@@ -136,12 +122,10 @@
         clear:both;
         visibility:hidden;
       }
-
       /* Marker tweaks */
       .mapboxgl-popup {
         padding-bottom: 50px;
       }
-
       .mapboxgl-popup-close-button {
         display:block;
       }
@@ -163,30 +147,24 @@
         font-weight:700;
         margin-top:-15px;
       }
-
       .mapboxgl-popup-content h4 {
         margin:0;
         display:block;
         padding: 10px 10px 10px 10px;
         font-weight:400;
       }
-
       .mapboxgl-popup-content div {
         padding:10px;
       }
-
       .mapboxgl-container .leaflet-marker-icon {
         cursor:pointer;
       }
-
       .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
         margin-top: 15px;
       }
-
       .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
         border-bottom-color: #91c949;
       }
-
       .mapboxgl-ctrl-geocoder {
         border: 2px solid #00853e;
         border-radius: 0;
@@ -196,7 +174,6 @@
         margin-top: 0;
         border: 0;
       }
-
       .mapboxgl-ctrl-geocoder > div {
         min-width:100%;
         margin-left:0;
@@ -211,8 +188,7 @@
       <div id='listings' class='listings'></div>
     </div>
 	<!-- CAMINHO/ARQUIVO ONDE ESTÃO AS INFORMAÇÕES -->	
-	<script src="dados_cad.geojson" type="text/javascript"></script>
-	
+	<script src="dados_cad.geojson" type="text/javascript"></script>	
     <div id='map' class='map'> </div>
     <script>
       /* This will let you use the .remove() function later on */
@@ -223,7 +199,6 @@
           }
         };
       }
-
 //ADICIONAR Mapbox access token 
   mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
 //LATITUDE/LOGITUDE VISUALIZAÇÃO
@@ -245,8 +220,7 @@ var latY = '-22.8565832'; 	var longX = '-43.259645';
 
 //		maxBounds: bounds, // Sets bounds as max
   });
-
-<!-- VARIAVEL DOS DADOS -->  
+// VARIAVEL DOS DADOS 
 var poi = pontos;
       /**
        * Assign a unique id to each store. You'll use this `id`
@@ -256,7 +230,6 @@ var poi = pontos;
       poi.features.forEach(function(store, i){
         store.properties.id = i;
       });
-
       /**
        * Wait until the map loads to make changes to the map.
       */
@@ -269,7 +242,6 @@ var poi = pontos;
           "type": "geojson",
           "data": poi
         });
-
         /**
          * Create a new MapboxGeocoder instance.
         */
@@ -279,7 +251,6 @@ var poi = pontos;
             marker: true,
             bbox: [ -43.286694, -22.867859, -43.239925,-22.829615]
         });
-
         /**
          * Add all the things to the page:
          * - The location listings on the side of the page
@@ -289,7 +260,6 @@ var poi = pontos;
         buildLocationList(poi);
         map.addControl(geocoder, 'top-left');
         addMarkers();
-
         /**
          * Listen for when a geocoder result is returned. When one is returned:
          * - Calculate distances
@@ -303,7 +273,6 @@ var poi = pontos;
 
           /* Get the coordinate of the search result */
           var searchResult = ev.result.geometry;
-
           /**
            * Calculate distances:
            * For each store, use turf.disance to calculate the distance
@@ -319,7 +288,6 @@ var poi = pontos;
               configurable: true
             });
           });
-
           /**
            * Sort stores by distance from closest to the `searchResult`
            * to furthest.
@@ -333,7 +301,6 @@ var poi = pontos;
             }
             return 0; // a must be equal to b
           });
-
           /**
            * Rebuild the listings:
            * Remove the existing listings and build the location
@@ -347,11 +314,9 @@ var poi = pontos;
 
           /* Open a popup for the closest store. */
           createPopUp(poi.features[0]);
-
           /** Highlight the listing for the closest store. */
           var activeListing = document.getElementById('listing-' + poi.features[0].properties.id);
           activeListing.classList.add('active');
-
           /**
            * Adjust the map camera:
            * Get a bbox that contains both the geocoder result and
@@ -363,7 +328,6 @@ var poi = pontos;
           });
         });
       });
-
       /**
        * Using the coordinates (lng, lat) for
        * (1) the search result and
@@ -388,7 +352,6 @@ var poi = pontos;
           [sortedLons[1], sortedLats[1]]
         ];
       }
-
       /**
        * Add a marker to the map for every store listing.
       **/
@@ -401,7 +364,6 @@ var poi = pontos;
           el.id = "marker-" + marker.properties.id;
           /* Assign the `marker` class to each marker for styling. */
           el.className = 'marker';
-
           /**
            * Create a marker using the div element
            * defined above and add it to the map.
@@ -409,7 +371,6 @@ var poi = pontos;
           new mapboxgl.Marker(el, {offset: [0, -23]})
           .setLngLat(marker.geometry.coordinates)
           .addTo(map);
-
           /**
            * Listen to the element and when it is clicked, do three things:
            * 1. Fly to the point
@@ -429,7 +390,6 @@ var poi = pontos;
           });
         });
       }
-
       /**
        * Add a listing for each store to the sidebar.
       **/
@@ -440,7 +400,6 @@ var poi = pontos;
            * which will be used several times below.
           **/
           var prop = store.properties;
-
           /* Add a new listing section to the sidebar. */
           var listings = document.getElementById('listings');
           var listing = listings.appendChild(document.createElement('div'));
@@ -448,14 +407,12 @@ var poi = pontos;
           listing.id = "listing-" + prop.id;
           /* Assign the `item` class to each listing for styling. */
           listing.className = 'item';
-
           /* Add the link to the individual listing created above. */
           var link = listing.appendChild(document.createElement('a'));
           link.href = '#';
           link.className = 'title';
           link.id = "link-" + prop.id;
           link.innerHTML = prop.Nome;
-
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.Endereco;
@@ -466,7 +423,6 @@ var poi = pontos;
             var roundedDistance = Math.round(prop.distance*100)/100;
             details.innerHTML += '<p><strong>' + roundedDistance + ' Metros</strong></p>';
           }
-
           /**
            * Listen to the element and when it is clicked, do four things:
            * 1. Update the `currentFeature` to the store associated with the clicked link
@@ -490,7 +446,6 @@ var poi = pontos;
           });
         });
       }
-
       /**
        * Use Mapbox GL JS's `flyTo` to move the camera smoothly
        * a given center point.
@@ -502,7 +457,6 @@ var poi = pontos;
             zoom: 18
           });
       }
-
       /**
        * Create a Mapbox GL JS `Popup`.
       **/
@@ -516,7 +470,6 @@ var poi = pontos;
             '<h4>' + currentFeature.properties.Endereco + '</h4>')
           .addTo(map);
       }
-
     </script>
   </body>
 </html>
