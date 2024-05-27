@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+	<title>Censo 2022</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- ICONE TITULO/ABA -->
+    <link rel="shortcut icon" href="./images/" size="50x50" />
+	<meta name="msapplication-TileImage" content="" />
+  <style>
+	.jumbotron {
+		background-color: #123456;
+		color: #fff;
+		padding: 100px 25px;
+	}
+	.container-fluid {
+		padding: 10px 10px;
+	}
+	.bg-grey {
+		background-color: #f6f6f6 ;
+	}
+	.logo-zap {
+		color: #00c853;
+		font-size: 20px;
+		width: 90%;
+		height: 90%;
+		margin-bottom: 10px;
+	}
+	.logo-small {
+		color: #3F729B;
+		font-size: 40px;
+	}
+    .logo-small2 {
+		color: #00695c;
+		font-size: 30px;
+	}
+    .logo-med {
+		color: #3F729B;
+		font-size: 60px;
+	}
+	.logo {
+		color: #3F729B;
+		font-size: 200px;
+	}
+	.thumbnail {
+		padding: 0 0 15px 0;
+		border: none;
+		border-radius: 0;
+	}
+	.thumbnail img {
+		width: 50%;
+		height: 50%;
+		margin-bottom: 10px;
+	}
+	.carousel-control.right, .carousel-control.left {
+		background-image: none;
+		color: #f4511e;
+	}
+	.carousel-indicators li {
+		border-color: #f4511e;
+	}
+	.carousel-indicators li.active {
+		background-color: #f4511e;
+	}
+		p {
+		font-size: 12px;
+		line-height: 1.375em;
+		font-weight: 400;
+		font-style: italic;
+	}
+	.item h4 {
+		font-size: 19px;
+		line-height: 1.375em;
+		font-weight: 400;
+		font-style: italic;
+		margin: 70px 0;
+	}
+    .item h3 {
+		font-size: 25px;
+		line-height: 1.375em;
+		font-weight: 500;
+		font-style: italic;
+		margin: 50px 50px;
+	    color: #0d47a1;
+	}
+	.item span {
+		font-style: normal;
+	}
+	.panel {
+		border: 1px solid #80cbc4; 
+		border-radius:0 !important;
+		transition: box-shadow 0.5s;
+	}
+	.panel:hover {
+		box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+	}
+	.panel-footer .btn:hover {
+		border: 1px solid #f4511e;
+		background-color: #fff !important;
+		color: #f4511e;
+	}
+	.panel-heading {
+		color: #fff !important;
+		background-color: #80cbc4 !important;
+		padding: 25px;
+		border-bottom: 1px solid transparent;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+	    width: 80%;
+		height: 50%;
+	}
+	.panel-footer {
+		background-color: white !important;
+	}
+	.panel-footer h3 {
+		font-size: 32px;
+	}
+	.panel-footer h4 {
+		color: #aaa;
+		font-size: 14px;
+	}
+	.panel-footer .btn {
+		margin: 15px 0;
+		background-color: #80cbc4;
+		color: #fff;
+	}
+	.navbar {
+		margin-bottom: 0;
+		background-color: #1565c0;
+		z-index: 9999;
+		border: 0;
+		font-size: 12px !important;
+		line-height: 1.42857143 !important;
+		letter-spacing: 4px;
+		border-radius: 0;	
+	}
+	.navbar li a, .navbar .navbar-brand {
+		color: #fff !important;
+	}
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+		color: #f4511e !important;
+		background-color: #fff !important;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: #fff;
+		color: #fff !important;
+	}
+	footer .glyphicon {
+		font-size: 20px;
+		margin-bottom: 20px;
+		color: #f4511e;
+	}
+	@media screen and (max-width: 768px) {
+    .col-sm-4 {
+		text-align: center;
+		margin: 25px 0;
+    }
+  }
+  body{
+	margin-top: 120px;
+  }  
+	</style>
+	<script language="JavaScript">
+	function protegercodigo() {
+	if (event.button==2||event.button==3){
+		alert('SCSCyber');}
+	}
+	document.onmousedown=protegercodigo;
+	</script>	
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10" >
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container ">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		<span class="">Menu</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>                        
+		</button>
+		
+		<a class="navbar-brand" href="#myPage"> CENSO22</a>
+			 <img src="./img_mapa/log_censo.png" class="img-responsive" style="width:60px"/>
+			<a href="../index.html">Página Principal</a>	
+		</div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="#myCarousel"></a></li>
+		<li><a href="#services"></a></li>
+		<li><a href=""></a></li>
+		<li><a href="#contact"></a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+	  <h2>Censo2022</h2>
+      <span class="glyphicon glyphicon-map-small"></span>    
+    </div>
+  </div>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" align="center"  width="200" height="60" >
+	      <div class="item active">	  
+	  <img src="./images/" alt="img1" width="200" height="60">
+      </div>
+	      <div class="item ">
+	  <img src="./images/" alt="img2"   width="200" height="60">
+      </div>
+	      <div class="item ">
+	  <img src="./images/" alt="img3"   width="200" height="60">
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> 
+    <!-- Carousel #2 -->  
+    <!-- Carousel #2 -->   
+</div>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+
+  <iframe title="Report Section" width="600" height="373.5" 
+src="https://app.powerbi.com/view?r=eyJrIjoiMDFiNTBlMGMtMzgxNC00ZjkwLTkzOWItMzAzN2FlMGJiZGMyIiwidCI6ImJjZjRlNDU1LTY4NzItNDU1NC05NDcxLTc2NDMxYTBkZjQ2OCJ9" 
+frameborder="0" allowFullScreen="true"></iframe>
+
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTATO</h2>
+  <div class="row">
+    <div class="col-sm-8">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Ramos, Rio de Janeiro</p>
+      <p><span class="glyphicon glyphicon-phone"></span> ...</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> scscyber999@gmail.com</p>	  
+    </div>
+  </div>
+  	<!-- Container (Contact Section) -->
+<div> 
+  </div>
+</div>
+<!--RODAPÉ-->
+<footer id="footer" class="page-footer unique-color-dark mt-4">
+  <div class="info-color-dark text-center py-4">
+    <!--Newsletter-->
+    <!--GitHub-->
+    <a rel="nofollow" target="_blank" id="footer-link-github" href="https://github.com/">
+      <i class="fab fa-github white-text mr-4"> </i>
+    </a>
+    <!--Youtube-->
+    <a rel="nofollow" target="_blank" id="footer-link-youtube" href="https://www.youtube.com/">
+      <i class="fab fa-youtube white-text mr-4"> </i>
+    </a>
+    <!--Facebook-->
+    <a rel="nofollow" target="_blank" id="footer-link-facebook" href="https://www.facebook.com/">
+      <i class="fab fa-facebook-f white-text mr-4"> </i>
+    </a>
+    <!--Twitter-->
+    <a rel="nofollow" target="_blank" id="footer-link-twitter" href="https://twitter.com/">
+      <i class="fab fa-twitter white-text"> </i>
+    </a>
+  </div>
+  <!--Footer Links-->
+  </div>
+  <!--/.Footer Links-->
+  <!-- Copyright-->
+  <div class="footer-copyright py-3 text-center">
+    &copy; 2024 Copyright:
+    <a href="">
+      <strong> SCSCYBER</strong>
+    </a>
+  </div>
+  <!--/.Copyright -->
+</footer>
+<!--/.Footer-->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== ""){
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+// popovers initialization - on hover
+$('[data-toggle="popover-hover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+// popovers initialization - on click
+$('[data-toggle="popover-click"]').popover({
+  html: true,
+  trigger: 'click',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+//bar
+var ctxB = document.getElementById("barChart").getContext('2d');
+var myBarChart = new Chart(ctxB, {
+type: 'bar',
+data: {
+labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+datasets: [{
+label: '# of Votes',
+data: [12, 19, 3, 5, 2, 3],
+backgroundColor: [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)',
+'rgba(255, 159, 64, 0.2)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+</script>
+</body>
+</html>
