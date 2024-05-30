@@ -1,6 +1,6 @@
 {"type":"FeatureCollection","features":
 [
-{"type":"Feature","properties":{"mag":1.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"January 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
+{"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"January 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
 
 {"type":"Feature","properties":{"mag":2.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"February 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
 
