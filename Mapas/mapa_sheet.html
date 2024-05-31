@@ -107,13 +107,13 @@
         success: function (csvData) { makeGeoJSON(csvData); }
       });
 
-
+var symbol = features[0].properties.Categoria,
 	    
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
           lonfield: 'Longitude',
-          delimiter: ','
+	  delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
             //Add the the layer to the map
@@ -133,7 +133,7 @@
 						"text-transform" : "uppercase",
 						"text-pitch-alignment": "viewport",
 					"icon-pitch-alignment": "viewport",	
-                    "icon-image": 'img_mapa/log_censo.png',
+                    "icon-image": symbol,
                     "icon-size": 1,
 //					"icon-color": "#000000",
 					"icon-anchor": "bottom",
