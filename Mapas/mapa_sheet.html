@@ -124,9 +124,23 @@
                 'type': 'geojson',
                 'data': data
               },
-              'paint': {
-                'circle-radius': 5,
-                'circle-color': "purple"
+		                    "layout": {
+						"text-field": "{Nome}" +"\n" + "{Endereco}" ,
+						"text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+						"text-size": 9,
+						"text-offset": [0,0],
+						"text-anchor": "top",
+						"text-transform" : "uppercase",
+						"text-pitch-alignment": "viewport",
+					"icon-pitch-alignment": "viewport",	
+                    "icon-image": symbol + "-15",
+                    "icon-size": 1,
+//					"icon-color": "#000000",
+					"icon-anchor": "bottom",
+                    "icon-allow-overlap": true
+     //         'paint': {
+       //         'circle-radius': 5,
+         //       'circle-color': "purple"
               }
             });
             // When a click event occurs on a feature in the csvData layer, open a popup at the
