@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset='utf-8' />
   <title></title>
@@ -14,27 +15,34 @@
       margin: 0;
       padding: 0;
     }
+
     #map {
       position: absolute;
       top: 0;
       bottom: 0;
       width: 100%;
     }
+
     /* Popup styling */
+
     .mapboxgl-popup {
       padding-bottom: 5px;
     }
+
     .mapboxgl-popup-close-button {
       display: none;
     }
+
     .mapboxgl-popup-content {
       font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
       padding: 0;
       width: 250px;
     }
+
     .mapboxgl-popup-content-wrapper {
       padding: 1%;
     }
+
     .mapboxgl-popup-content h3 {
       background: rgb(61, 59, 59);
       text-align: center;
@@ -45,6 +53,7 @@
       font-weight: 700;
       margin-top: -5px;
     }
+
     .mapboxgl-popup-content h4 {
       margin: 0;
       display: block;
@@ -55,26 +64,22 @@
     .mapboxgl-container {
       cursor: pointer;
     }
+
     .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
       margin-top: 3px;
     }
+
     .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
       border-bottom-color: rgb(61, 59, 59);
     }
-	        .marker {
-        border: none;
-        cursor: pointer;
-        height: 30px;
-        width: 30px;
-        background-image: url(img_mapa/log_censo.png);
-		background-repeat: no-repeat; /* Do not repeat the image */
-		background-size: cover; /* Resize the background image to cover the entire container */
-      }
   </style>
 </head>
+
 <body>
+
   <div id='map'></div>
   <script>
+
     var transformRequest = (url, resourceType) => {
       var isMapboxRequest =
         url.slice(8, 22) === "api.mapbox.com" ||
@@ -85,7 +90,8 @@
           : url
       };
     };
-    //YOUR TURN: add your Mapbox token    
+    //YOUR TURN: add your Mapbox token
+    
   mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA'; //Mapbox token 
 	var latY = '-22.857908530829693'; 	var longX = ' -43.26589696787081';	  
   var map = new mapboxgl.Map({
@@ -95,27 +101,25 @@
       zoom: 10,// starting zoom
       transformRequest: transformRequest
     });
+
     $(document).ready(function () {
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-	      //https://docs.google.com/spreadsheets/d/1kehXJvHxMdR9oUZJ4HU3VRh0I6bQwNLM-dQFs15mb0Y/
-	      //https://docs.google.com/spreadsheets/d/1mJmEYJV_Oyuw9tQvE1_hbcUp_7DnZlDJ6ILQ83Qg4KM/
-	      
-        url: 'https://docs.google.com/spreadsheets/d/1kehXJvHxMdR9oUZJ4HU3VRh0I6bQwNLM-dQFs15mb0Y/gviz/tq?tqx=out:csv&sheet=Sheet1',
+        url: 'https://docs.google.com/spreadsheets/d/1mJmEYJV_Oyuw9tQvE1_hbcUp_7DnZlDJ6ILQ83Qg4KM/gviz/tq?tqx=out:csv&sheet=Pagina1',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
 
-var symbol = features[0].properties.Categoria,
-	    
+
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
           lonfield: 'Longitude',
-	  delimiter: ','
+          delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
+
             //Add the the layer to the map
             map.addLayer({
               'id': 'csvData',
@@ -124,21 +128,22 @@ var symbol = features[0].properties.Categoria,
                 'type': 'geojson',
                 'data': data
               },
-	
-             'paint': {
-               'circle-radius': 5,
-              'circle-color': "purple"
-            }
+              'paint': {
+                'circle-radius': 5,
+                'circle-color': "purple"
+              }
             });
+
+
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
             map.on('click', 'csvData', function (e) {
               var coordinates = e.features[0].geometry.coordinates.slice();
+
               //set popup text
               //You can adjust the values of the popup to match the headers of your CSV.
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
-		//var description = '<h3>' + e.features[0].properties.Nome + '</h3>' + '<h4>' + '<b>' + 'Status:' + '</b>' + e.features[0].properties.Status + '</h4>' + '<h4>' + '<b>' + 'Status:' + '</b>' + e.features[0].properties.Status + '</h4>';
-              var description = '<h3>' + e.features[0].properties.Nome + '</h3>' + '<h4>' + '<b>' + 'Endereço:' + '</b>' + e.features[0].properties.Endereço + '</h4>' + '<h4>' + '<b>' + 'Categoria:' + '</b>' + e.features[0].properties.Categoria + '</h4>';
+              var description = '<h3>' + e.features[0].properties.Name + '</h3>' + '<h4>' + '<b>' + 'Address:' + '</b>' + e.features[0].properties.Address + '</h4>' + '<h4>' + '<b>' + 'Phone:' + '</b>' + e.features[0].properties.Phone + '</h4>';
 
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
@@ -146,26 +151,39 @@ var symbol = features[0].properties.Categoria,
               while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
               }
+
               //add Popup to map
+
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(description)
                 .addTo(map);
             });
+
             // Change the cursor to a pointer when the mouse is over the places layer.
             map.on('mouseenter', 'csvData', function () {
               map.getCanvas().style.cursor = 'pointer';
             });
+
             // Change it back to a pointer when it leaves.
             map.on('mouseleave', 'places', function () {
               map.getCanvas().style.cursor = '';
             });
+
             var bbox = turf.bbox(data);
             map.fitBounds(bbox, { padding: 50 });
+
           });
+
         });
       };
     });
+
+
+
+
   </script>
+
 </body>
+
 </html>
