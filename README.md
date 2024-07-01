@@ -35,5 +35,7 @@
 - (Dashboard Power BI) https://bit.ly/dashboardunicarioca1
 ### Linguagem R - Estatistica Aplicada (Prof. Sérgio / Manuel)
 - (R/Collab) https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb
+### Big Data para negocios (Prof. Andréa)
+- https://github.com/scs999/pos_unicarioca/blob/main/Trabalho%20bigData.pdf
 #### Credits (and licenses)
 Silvio Cesar
