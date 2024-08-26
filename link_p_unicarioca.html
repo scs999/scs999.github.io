@@ -12,43 +12,55 @@
 <body class="w3-light-grey">
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-	<button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>Menu</button>
-	<span class="w3-bar-item w3-right">SCSCyber</span>
+	<button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();">
+	<i class="fa fa-bars"></i></button>
+	<span class="w3-bar-item w3-center">SCSCyber</span>
 </div>
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="./Mapas/img_mapa/logo_01.jpg" class="w3-circle w3-margin-right" style="z-index:3;width:100px;height:100px;>
+      <img src="./Pos_unicarioca/img_01.jpeg" class="w3-circle w3-margin-right" style="z-index:3;width:100px;height:100px";/>
     </div>
     <div class="w3-col s8 w3-bar">
+	  <a href="#" class="w3-bar-item w3-right w3-button w3-padding-5 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu">
+  <i class="fa fa-remove fa-fw"></i>Fechar</a>
     </div>
   </div>
-  <hr>
+  <hr/>
   <div class="w3-container">
     <h5>SCSCYBER Informática</h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>Fechar</a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding w3-black"><i class="fa fa-users fa-fw"></i>PRINCIPAL</a>
-    <a href="link_mapas.html" class="w3-bar-item w3-button w3-padding w3-black"><i class="fa fa-users fa-fw"></i>MAPAS</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding w3-white">
+        <i class="fa fa-home fa-fw"></i>PRINCIPAL</a>
+    <a href="link_mapas.html" class="w3-bar-item w3-button w3-padding w3-white">
+    	<span><i class="fa fa-map fa-fw"></i>MAPAS</span></a>
     <span class="w3-bar-item w3-button w3-padding w3-black">
-    <span class="w3-bar-item w3-button w3-padding w3-white"><i class="fa fa-users fa-fw"></i>UNICARIOCA/PÓS GRADUAÇÃO</span>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>Data Warehouse</a>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow"><i class="fa fa-users fa-fw"></i>Machine Learning</a>	  
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>Python</a>	  
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Estatistica_Trabalho_final.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow"><i class="fa fa-users fa-fw"></i>Estatística</a>	  
-    <a href="https://bit.ly/dashboardunicarioca1" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>Visualização dados/Aplicação Negócios</a>
-    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow"><i class="fa fa-users fa-fw"></i>IA/Optuna</a>	  
-    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>IA/Segmentação Semantica</a>	  
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow"><i class="fa fa-users fa-fw"></i>Trabalho R/Estatística</a>
-  </span>
+    	<i class="fa fa-book fa-fw"></i>UNICARIOCA/PÓS GRADUAÇÃO</span>		
+    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue">
+    	<i class="fa fa-book fa-fw"></i>Data Warehouse</a>
+    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow">
+    	<i class="fa fa-book fa-fw"></i>Machine Learning</a>	  
+    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue">
+    	<i class="fa fa-book fa-fw"></i>Python</a>	  
+    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Estatistica_Trabalho_final.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow">
+    	<i class="fa fa-book fa-fw"></i>Estatística</a>	  
+    <a href="https://bit.ly/dashboardunicarioca1" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue">
+    	<i class="fa fa-book fa-fw"></i>Visualização dados/Aplicação Negócios</a>
+    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow">
+    	<i class="fa fa-book fa-fw"></i>IA/Optuna</a>	  
+    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-blue">
+	    <i class="fa fa-book fa-fw"></i>IA/Segmentação Semantica</a>	  
+    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding w3-yellow">
+     	<i class="fa fa-book fa-fw"></i>Trabalho R/Estatística</a>
   </br>
   </br>
   </br>
   </div>
 	</nav>
 	  </div>
+
 <!-- Github 	  
 ## Principal
 - Site https://scs999.github.io/
@@ -97,108 +109,56 @@
 	  <!-- 1º Quadro -->
     <button class="w3-quarter">
       <div class="w3-container w3-gray w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h4>DataWarehouse</h4>
+          <h3>2023</h3>
         </div>
         <div class="w3-clear"></div>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>DataWarehouse</a>
-        <h5>DW</h5>
+	       <div class="w3-col s4">
+      <img src="./img_mapa/log_censo.png" class="w3-circle w3-margin-right">
+    </div>
+    <a href="" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>A</a>
+        <h4>A</h4>
       </div>
     </button>
   	  <!-- 2º Quadro -->
     <button class="w3-quarter">
       <div class="w3-container w3-green w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h4>Machine Learning</h4>
+          <h3>2023</h3>
         </div>
         <div class="w3-clear"></div>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_ML_PosUnicarioca.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>Machine Learning</a>
-        <h5>ML</h5>
+    <a href="" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>B</a>
+        <h4>B</h4>
       </div>
     </button>
   	  <!-- 3º Quadro -->
     <button class="w3-quarter">
       <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h4>Python</h4>
+          <h3>2023</h3>
         </div>
         <div class="w3-clear"></div>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Pos_Ciência_de_Dados_Python(Final).ipynb" target="_blank" class="w3-bar-item w3-button w3-padding">	  
-<i class="fa fa-eye fa-fw"></i>Python</a>
-        <h5>PY</h5>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>C</a>
+        <h4>C</h4>
       </div>
     </button>
 	  <!-- 4º Quadro -->
     <button class="w3-quarter">
       <div class="w3-container w3-yellow w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
+        <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h4>Estatística</h4>
+          <h3>2024</h3>
         </div>
         <div class="w3-clear"></div>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Estatistica_Trabalho_final.ipynb" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>Estatística</a>
-        <h5>EST</h5>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>D</a>
+        <h4>D</h4>
       </div>
     </button>
   </div>
 		  <!-- Final quadros -->
-
-  <div class="w3-row-padding w3-margin-bottom">
-	  <!-- 1º Quadro -->
-    <button class="w3-quarter">
-      <div class="w3-container w3-gray w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h4>BI/NEGÓCIOS</h4>
-        </div>
-        <div class="w3-clear"></div>
-    <a href="https://bit.ly/dashboardunicarioca1"  target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>Visualização Dados</a>
-        <h5>BI/NEG</h5>
-      </div>
-    </button>
-  	  <!-- 2º Quadro -->
-    <button class="w3-quarter">
-      <div class="w3-container w3-green w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h4>IA</h4>
-        </div>
-        <div class="w3-clear"></div>
-    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Optuna.pdf"  target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>IA/Optuna</a>
-        <h5>IA/Optuna</h5>
-      </div>
-    </button>
-  	  <!-- 3º Quadro -->
-    <button class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h4>IA</h4>
-        </div>
-        <div class="w3-clear"></div>
-    <a href="https://scs999.github.io/Pos_unicarioca/Relatorio_Segmentação_Semantica_UNET.pdf" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>IA/SegSemantica</a>
-        <h5>IA/SS</h5>
-      </div>
-    </button>
-	  <!-- 4º Quadro -->
-    <button class="w3-quarter">
-      <div class="w3-container w3-yellow w3-padding-16">
-        <div class="w3-left"><i class="fa fa-map-o w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h4>R/Estatística</h4>
-        </div>
-        <div class="w3-clear"></div>
-    <a href="https://github.com/scs999/scs999.github.io/blob/master/Pos_unicarioca/Trabalho_PosUnicarioca_R.ipynb"  target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>R/Estatística</a>
-        <h5>R/EST</h5>
-      </div>
-    </button>
-  </div>
-
-
-	
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-third">
@@ -248,7 +208,7 @@ Mapa	      -->
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4></h4>
-    <p><i></i> SCSCYBER 2024</i></p>
+    <p><i></i> &copy; SCSCYBER 2024</i></p>
   </footer>
   <!-- End page content -->
 </div>
