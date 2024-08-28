@@ -1,4 +1,4 @@
-var setCens_Ramos = {
+{
 "type": "FeatureCollection",
 "features": [
 { "type": "Feature", "properties": { "CD_SETOR": "330455705150104", "CD_SIT": "1", "NM_SIT": "Área Urbana de Alta Densidade de Edificações", "CD_UF": "33", "NM_UF": "Rio de Janeiro", "SIGLA_UF": "RJ", "CD_MUN": "3304557", "NM_MUN": "Rio de Janeiro", "CD_DIST": "330455705", "NM_DIST": "Rio de Janeiro", "CD_SUBDIST": "33045570515", "NM_SUBDIST": "Ramos", "ACS": "R2_5" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -43.252393033, -22.855671125999898 ], [ -43.253020778999897, -22.856244816999901 ], [ -43.253033763999895, -22.856234161 ], [ -43.2533253779999, -22.855994856999899 ], [ -43.253009192, -22.855713092 ], [ -43.253192195999901, -22.855526783 ], [ -43.252886281, -22.855246678999897 ], [ -43.2529008919999, -22.855056912999899 ], [ -43.252892386, -22.855046054 ], [ -43.252393033, -22.855671125999898 ] ] ] ] } },
