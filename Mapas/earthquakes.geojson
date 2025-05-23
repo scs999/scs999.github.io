@@ -4,28 +4,17 @@
 {"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"February 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.266155,-22.858423]},"id":"us100049i1"},
 {"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"March 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.266155,-22.858423]},"id":"us100049i1"},
 {"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"April 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.266155,-22.858423]},"id":"us100049i1"},
-{"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"October 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.266155,-22.858423]},"id":"us100049i1"},
-
-{"type":"Feature","properties":{"mag":2.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"February 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
+{"type":"Feature","properties":{"mag":6.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"October 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.266155,-22.858423]},"id":"us100049i1"},
+{"type":"Feature","properties":{"mag":6.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"February 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
 {"type":"Feature","properties":{"mag":3.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"March 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":4.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"April 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":2.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"May 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":6.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"June 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":3.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"July 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
-{"type":"Feature","properties":{"mag":8.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"August 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
-{"type":"Feature","properties":{"mag":5.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"September 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
+{"type":"Feature","properties":{"mag":8.8,"place":"42km WSW of Ashkasham, Afghanistan","time":"August 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
+{"type":"Feature","properties":{"mag":7.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"January 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
 {"type":"Feature","properties":{"mag":10.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"October 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":10.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"November 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"},
-
 {"type":"Feature","properties":{"mag":8.3,"place":"42km WSW of Ashkasham, Afghanistan","time":"December 17, 1995 03:24:00","updated":1455030240063,"tz":270,"alert":"green","status":"reviewed"},"geometry":{"type":"Point","coordinates":[-43.190164,-22.903664]},"id":"us100049i1"}
-
-],"bbox":[-178.7298,-55.755,5,179.1278,59.8935,664]}
+],
+"bbox":[-178.7298,-55.755,5,179.1278,59.8935,664]}
