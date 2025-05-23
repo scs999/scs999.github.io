@@ -1,6 +1,6 @@
 # MAPAS
 ## Principal
-- Site https://scs999.github.io/link_mapas.html
+- Site https://scs999.github.io/link_mapas.html target:BLANK
 
 ![Preview](img_mapa/mapa.jpg)
 ## CENSO_2022
