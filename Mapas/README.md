@@ -1,3 +1,5 @@
+# MAPAS
+![Preview](img_mapa/mapa.jpg)
 ## CENSO_2022
 - Censo_2022_UF https://scs999.github.io/Mapas/Mapa_Censo2022_BR.html
 - Censo_Areas_Supervisão https://scs999.github.io/Mapas/Areas_Censo22.html
