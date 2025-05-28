@@ -35,10 +35,10 @@
 	<script src='./geojson/Pop_BairrosRJ2022b_Point.geojson'></script>
 <style>
 	body { margin:0; padding:0; }
+	#map { position:absolute; top:40px; bottom:0; width:100%; }
 	p {  color: navy;
    	 text-indent: 1px;
 }
-	#map { position:absolute; top:40px; bottom:0; width:100%; }
 	.draw {
 	position: absolute;
 	z-index:1;
@@ -54,7 +54,7 @@
 	}
 	.geocoder {
 	position:absolute;
-	top:4px;
+	top:40px;
 	margin-left:1%;
 	height: 150px;
 	width:200px;
@@ -111,34 +111,32 @@
 </style>
 </head>
 <body>
-    <div><center><h4>Mapa População Bairros 2022</h4></center>/div>
+<center><h4>População Bairros 2022</h4></center>
 <div id='levelz1-legend' class='legend'>
-    <center><h5>Bairros Rio de Janeiro</h5>
-	    <h6>(Habitantes)</h6></center>
-    <div><span style='background-color: #8B0000'></span>Até 50 Mil</div>
-    <div><span style='background-color: #000080'></span>Acima de 50 Mil</div>
+    <center><h5>Rio de Janeiro</h5>
+	    <h6>População Bairros - 2022 (Habitantes)</h6></center>
+    <div><span style='background-color: #8B0000'></span>Até 50 mil</div>
+    <div><span style='background-color: #000080'></span>Acima de 50 mil</div>
 	<div><a href='https://sidra.ibge.gov.br/tabela/9923#resultado' target='_blank'>
 	Fonte: IBGE-CENSO2022 RESULTADOS OFICIAIS</a></div>
 	<div><a href='https://www.data.rio/datasets/PCRJ::censo-2022-popula%C3%A7%C3%A3o-e-domic%C3%ADlios-por-bairros-dados-preliminares/explore?showTable=true' target='_blank'>
 	Fonte: DATARIO(21/03/24) RESULTADOS</a></div>
-    <span style='background-color: white'></span>
     <div><p>(*Bairros: Jabour, Ilha de Guaratiba e Barra Olímpíca, 
 	    <br/>não estão no resultado do CENSO)</p>
     </div>
 </div>
 <div id='levelz2-legend' class='legend' style='display: none;'>
-    <center><h5>Bairros - Rio de Janeiro</h5>
-	    <h6>(Habitantes)</h6></center> <h5></h5>
-    <div><span style='background-color: #8B0000'></span>Até 50 Mil</div>
-    <div><span style='background-color: #000080'></span>Acima de 50 Mil</div>
+    <center><h5>Rio de Janeiro</h5>
+	    <h6>População Bairros - 2022</h6></center> <h5>CENSO2022</h5>
+    <div><span style='background-color: #8B0000'></span>Até 50 mil</div>
+    <div><span style='background-color: #000080'></span>Acima de 50 mil</div>
 </div>
 <div id='draw' class='draw'></div>
 <div id='geocoder' class='geocoder'></div>
     <div id="map" class="mapboxgl-map">
 	<div class="mapboxgl-canary" style="visibility: hidden;"></div>
 	<div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate">
-	<canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="1667" height="969" style="position: absolute; width: 1667px; height: 969px; cursor: default;">
-	</canvas>
+	<canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="1667" height="969" style="position: absolute; width: 1667px; height: 969px; cursor: default;"></canvas>
 	</div>
 	<div class="mapboxgl-control-container">
 	<div class="mapboxgl-ctrl-top-left"></div>
@@ -159,8 +157,6 @@
 	</div>
 	</div>
 	</div>
-	<div>
-</div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2NzOTk5OTk5IiwiYSI6ImNqd2NtZzcyazAydmwzem4yamhma3lndmQifQ.90vf0GojkCydVu979c-CoA';
 var map = new mapboxgl.Map({
