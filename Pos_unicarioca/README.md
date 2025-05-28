@@ -3,8 +3,8 @@
 
 ## 2023/2024
 
-- Mapa_Sheet https://scs999.github.io/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf
-Estatistica_Trabalho_final.ipynb
+- DataWarehouse https://scs999.github.io/Pos_unicarioca/DataWarehouse_ProfTavares_Trabalho.pdf
+- Estatistica_Trabalho_final.ipynb
 
 Pos_Ciência_de_Dados_Python(Final).ipynb
 
