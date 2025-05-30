@@ -207,14 +207,14 @@
   <body>
     <div class='sidebar'>
       <div class='heading2'>
-         <h2><center><a class="" href="../index.html">Voltar Início</a><center/></h2>
+         <h2><center><a class="" href="../index.html">Início</a><center/></h2>
       </div>
      <div class='heading'>
         <h1>CENSO2022 Resultados</h1>
       </div>
 	        <div class='heading3'>
         <h3><a class="" href="Censo22_Resultados.html">Informações</a></h3>
-        <h5>Visualização Power BI</h5>
+        <h5>Visualização</h5>
 
 		</div>
       <div id='listings' class='listings'></div>
@@ -465,10 +465,7 @@ var poi = estados;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = prop.capital;
-          if (prop.capital) {
             details.innerHTML += ' ·<p><strong>' + prop.população + ' Habitantes</strong></p>';
-          }
           if (prop.distance) {
             var roundedDistance = Math.round(prop.distance*100)/100;
             details.innerHTML += '<p><strong>' + roundedDistance + ' Metros</strong></p>';

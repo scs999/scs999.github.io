@@ -1,5 +1,5 @@
 ## MAPAS
-- Site https://scs999.github.io/link_mapas.html
+- Site https://scs999.github.io/Mapas/link_mapas.html
 
 ![Preview](img_mapa/mapa.jpg)
 
