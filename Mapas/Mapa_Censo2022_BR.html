@@ -81,7 +81,7 @@
         color: #fff;
       }
      .heading3 {
-	 align:center;
+	      align-items:center;
         margin:10px;
         background:#fff;
         border-bottom:1px solid #eee;
@@ -465,10 +465,10 @@ var poi = estados;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-            details.innerHTML += ' ·<p><strong>' + prop.população + ' Habitantes</strong></p>';
+            details.innerHTML = ' ·<p><strong>' + prop.população + ' Habitantes</strong></p>';
           if (prop.distance) {
             var roundedDistance = Math.round(prop.distance*100)/100;
-            details.innerHTML += '<p><strong>' + roundedDistance + ' Metros</strong></p>';
+            details.innerHTML = '<p><strong>' + roundedDistance + ' Metros</strong></p>';
           }
           /**
            * Listen to the element and when it is clicked, do four things:
